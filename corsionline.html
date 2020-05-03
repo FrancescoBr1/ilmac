@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Istituto Linguistico Mediterraneo - Corsi di lingue straniere a Pisa e Livorno - Corsi online</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600|Comfortaa&display=swap" rel="stylesheet">
+    
+    <link type="text/css" rel="stylesheet" href="css/normalize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/importatedamz.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/main.css"  media="screen,projection"/>
+    <link href="hamburgers/dist/hamburgers.css" rel="stylesheet">
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/757e1aabb2.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+
+    <!-- bottone back to top -->
+    <button class="waves-effect btn btn-top" onclick="topFunction()" id="btnTop" title="Go to top"> 
+        <span class="fas fa-angle-up"></span>
+    </button> 
+
+        <header>
+
+              <!-- navigazione mobile -->
+            <nav class="nav_mobile">
+                <a href="index.html"><img class="main-logo" src="asset/logo.svg" alt="Logo IlMac"></a>
+                <button class="hamburger hamburger--slider hambmenu" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                    <!-- <p class="p-std">Menu</p> -->
+                </button>
+            </nav>
+
+            <nav id="hamblist" class="">
+				<a href="chisiamo.html">Chi Siamo<span class="texthvr texthvr-nav"></span></a>
+                <a href="corsi.html">I Nostri Corsi<span class="texthvr texthvr-nav"></span></a>
+                <a href="traduzioni.html">Traduzioni<span class="texthvr texthvr-nav"></span></a>
+                <a href="peraziende.html">Per Le Aziende<span class="texthvr texthvr-nav"></span></a>
+                <a href="contatti.html">Contattaci<span class="texthvr texthvr-nav"></span></a>
+            </nav>
+        
+
+             <!-- navigazione desktop -->
+            <nav class="nav_desktop">
+                <a href="index.html"><img class="main-logo" src="asset/logo.svg" alt="Logo IlMac"></a>
+                <div>
+                    <a href="chisiamo.html">Chi Siamo<span class="texthvr texthvr-nav"></span></a>
+                    <a href="corsi.html">I Nostri Corsi<span class="texthvr texthvr-nav"></span></a>
+                    <a href="traduzioni.html">Traduzioni<span class="texthvr texthvr-nav"></span></a>
+                    <a href="peraziende.html">Per Le Aziende<span class="texthvr texthvr-nav"></span></a>
+                    <a href="contatti.html">Contattaci<span class="texthvr texthvr-nav"></span></a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="corsi-online">
+
+            <section class="online-top">
+                <div class="bgbars bgr-arancio online-topbg_left"></div>
+        
+                <div class="online-cont">
+                    <div class="online-top_left lmargin-offset">
+                        <h1>Corsi <span class="strong clr-arancio">online</span></h1>
+                        <p class="p-std">
+                            Vuoi studiare rimanendo sul divano di casa tua?
+                            Organizzare un corso con i nostri insegnanti madrelingua su Skype è <span class="strong">semplice ed efficace.</span>
+                            <br><br>
+                            Guarda il nostro metodo di insegnamento e conosci i nostri insegnanti in un <span class="strong">colloquio online gratuito</span> per stabilire il tuo livello iniziale e adattare il corso ai tuoi obiettivi.
+                            <span class="strong">Il risultato è garantito!</span>
+                        </p>
+                    </div>
+                    <img class="online-img" src="asset/corsi_lingue.svg" alt="certificazioni">
+                </div>   
+            </section>
+
+            <section class="online-center">
+                <p class="p-std">
+
+                    Fai un colloquio online e attiva il tuo pacchetto da <span class="strong">12 ore di corso online al prezzo strepitoso di € 210,00.</span>
+                    L’iscrizione è gratuita! :)
+                    E se sarai soddisfatto potrai rinnovare il tuo corso finchè non avrai ottenuto il tuo obiettivo!
+                    <br> <br>
+                    La Segreteria sarà a tua disposizione per qualsiasi necessità e potrai pagare il tuo corso online <span class="strong">anche con bonifico bancario</span>, senza spostarti da casa.
+
+                </p>
+        
+                <div class="highbox bgr-quasibianco">
+                    <h2><span class="strong clr-arancio">Cosa comprende</span> il corso online:</h2>
+                    <ul>
+                        <li class="p-std"><span class="strong">Colloquio online di 30 minuti</span> con uno dei nostri insegnanti per valutare il livello di partenza.</li>
+                        <li class="p-std"><span class="strong">Test di lingua gratuito</span> online.</li>
+                        <li class="p-std"><span class="strong">12 ore di lezioni individuali</span> con insegnante madrelingua.</li>
+                        <li class="p-std">Tutto il <span class="strong">materiale didattico necessario.</span></li>
+                        <li class="p-std"><span class="strong">Test di valutazione finale</span> per valutare il raggiungimento dei tuoi obiettivi.</li>
+                    </ul>
+                </div>  
+            </section>
+
+            <section class="cta cta_alt">
+                <h2>Contattaci se vuoi avere altre informazioni o <br> per iniziare subito il tuo corso!</h2>
+                <div>
+                    <a href="contatti.html"><button class="waves-effect btn btn-std btn__arancio">Contattaci</button></a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="bgbars footer-bg bgr-arancio"></div>
+            <div class="footer-left">
+                <h2>ILMac <span>Linguanova</span></h2>
+                <h3><span>Pisa:</span> via Cesare Battisti, 3 - 050 9913425</h3>
+                <p><span class="strong">Orari segreteria:</span> LUN - VEN 9.00 - 19.30; SAB 9.00 - 13.00</p>
+                <h3><span>Livorno:</span> via Borra, 35 - 0586 882965</h3>
+            </div>
+            <div class="footer-right">
+                <h2>Siamo anche su</h2>
+                <div class="socials">
+                    <a href="" target="_blank"><span class="fab fa-facebook hover-opacity9"></span></a>
+                    <a href="" target="_blank"><span class="fab fa-instagram hover-opacity9"></span></a>
+                    <a href="" target="_blank"><span class="fab fa-twitter hover-opacity9"></span></a>
+                </div>
+                <div class="mappa">
+                    <a href="index.html">Home</a>
+                    <a href="chisiamo.html">Chi Siamo</a>
+                    <a href="nostricorsi.html">I Nostri Corsi</a>
+                    <a href="traduzioni.html">Traduzioni</a>
+                    <a href="peraziende.html">Per le Aziende</a>
+                    <a href="contatti.html">Dove Siamo</a>
+                </div>
+            </div>
+            <a href="#">Politica sulla privacy</a>
+    
+        </footer>
+    
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
