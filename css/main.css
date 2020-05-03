@@ -1,2652 +1,1 @@
-html {font-size: 62.5%; /* imposta la dimensione del font in base a quella del browser (di default 16, quindi 10). Tutti i rem si baseranno su questa misura */
-    scroll-behavior: smooth; box-sizing:border-box;} 
-
-*,*:before,*:after{box-sizing:inherit;} /* importante, insieme col box-sizing dell'html */
-
-* {margin:0;}
-
-body {
-	font-family: "Poppins", Arial, Helvetica, sans-serif;
-}
-
-/* custom properties e altre fisse */
-
-:root {
-    --quasi-bianco: #EEEEEE;
-    --grigio-chiaro: #CCCCCC;
-    --quasi-nero: #303030;
-    --meno-nero: #424242;
-    --giallo1: #FCA51C;
-    --piugiallo: #FFC130;
-    --arancione: #F18033;
-    --arancione-scuro: #E26E1F;
-    --blu: #1C6EB8;
-
-    --radius: .3rem;
-    --ombra-light: .1rem .1rem .2rem rgba(0,0,0,.3);
-    --ombra-std: .2rem .1rem .7rem rgba(0,0,0,.3);
-    --ombra-str: .2rem .1rem .85rem rgba(0,0,0,.35);
-}
-
-a {
-    text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, p {
-    font-family: "Poppins", sans-serif;
-    color: var(--quasi-nero);
-    margin: 0;
-}
-
-.btn {
-    border: none;
-    border-radius: 10rem;
-    overflow: hidden;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: box-shadow .3s, color .3s, background-color .3s;
-    box-shadow: var(--ombra-light);
-}
-
-.btn-std {
-    width: 22rem;
-    height: 5.5rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 2.2rem;
-}
-
-.btn:hover {
-    box-shadow: var(--ombra-str);
-}
-
-.p-std {
-    font-family: "Poppins", sans-serif;
-    font-size: 2.2rem;
-    line-height: 3.5rem;
-    font-weight: 300;
-    color: var(--meno-nero);
-}
-
-.strong {
-    font-weight: 500;
-}
-
-.img-std {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-}
-
-.clr-quasinero {
-    color: var(--quasi-nero);
-}
-
-.clr-arancio {
-    color: var(--arancione)
-}
-
-.clr-blu {
-    color: var(--blu)
-}
-
-.clr-giallo {
-    color: var(--giallo1)
-}
-
-.clr-piugiallo {
-    color: var(--piugiallo)
-}
-
-.bgr-piugiallo {
-    background: var(--piugiallo)
-}
-
-.bgr-arancio {
-    background: var(--arancione)
-}
-
-.bgr-blu {
-    background: var(--blu)
-}
-
-.bgr-quasibianco {
-    background: var(--quasi-bianco);
-}
-
-.bgr-grigiochiaro {
-    background: var(--grigio-chiaro);
-}
-
-.alink {
-    position: relative;
-    font-weight: 600;
-}
-
-.bgbars {
-    position: absolute;
-    z-index: -1;
-}
-
-.highbox {
-    margin: 12rem auto;
-    margin-left: -6rem;
-    margin-right: -6rem;
-    padding: 6rem;
-}
-
-.highbox p {
-    font-size: 2.4rem;
-    line-height: 4.1rem;
-}
-
-:target { /* offset di ogni anchor su id di -10rem */ 
-    display: block;
-    position: relative;
-    top: -10rem; 
-    visibility: hidden;
-}
-
-.lmargin-offset { /* sposta il margine effettivo, ma non quello apparente, per nascondere le barre sotto lo sfondo bianco */
-    padding-left: 4rem !important;
-    margin-left: -4rem !important;
-    background: white;
-}
-
-.rmargin-offset {
-    padding-right: 5rem !important;
-    margin-right: -5rem !important;
-    background: white;
-}
-
-/* effetto di transizione on mouse hover per quella classe, definire la durata della transizione fuori dall'hover permette di avere la transizione anche in uscita */
-.hover-opacity9:hover {opacity: .85;}
-.hover-opacity9 {transition: all .3s;}
-
-h1 {
-    font-weight: 300;
-    color: var(--meno-nero);
-    font-size: 4.5rem;
-    text-transform: uppercase;
-    line-height: 6rem;
-}
-
-ul {
-    margin: 4rem 0 0;
-}
-
-ul li {
-    margin: 3.8rem 0 0;
-    padding: 0 2rem;
-}
-
-.text-init {
-    text-transform: initial!important;
-}
-
-/* navigazione */
-
-#btnTop {
-    font-size: 2.6rem;
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 2rem; /* Place the button at the bottom of the page */
-    right: 3.4rem; /* Place the button 30px from the right */
-    z-index: 9; /* Make sure it does not overlap */
-	padding: 1.3rem 2.1rem;
-	transition: color .3s, background-color .3s, box-shadow .3s;
-    color: white;
-    background: var(--arancione);
-}
-
-#btnTop:hover {
-    background: var(--blu);
-}
-
-
-#hamblist {
-    display: none;
-}
-
-header {
-    height: 17rem;
-}
-
-.nav_mobile {
-	display: none;
-}
-
-.nav_desktop {
-    margin: 0 auto;
-    max-width: 132rem;
-    padding: 3rem 1rem 0;
-    display: grid;
-    grid-template-columns: 3fr 9fr;
-    font-family: "Poppins", sans-serif;
-    color: var(--quasi-nero);
-    font-size: 2.35rem;
-    font-weight: 300;
-    text-align: center;
-}
-
-nav .main-logo {
-    width: 24rem;
-    margin: 0 auto;
-}
-
-.nav_desktop div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
-nav div a {
-    margin-top: 3rem;
-    position: relative;
-    color: var(--quasi-nero);
-    transition: all .4s;
-}
-
-.texthvr { /* decorazione del testo on hover */
-    position: absolute;
-    opacity: .8;
-    width: 0rem;
-    height: .5rem;
-    left: 1rem;
-    border-radius: 5rem;
-    transition: all .3s; 
-}
-
-.texthvr-main {
-    left: initial;
-    right: 1rem;
-    top: 4.2rem;
-    width: 7rem;
-}
-
-.texthvr-main_l {
-    top: 4.2rem;
-    width: 7rem;
-}
-
-.texthvr-std {
-    bottom: -.3rem;
-    width: 5rem;
-    height: .4rem;
-}
-
-.texthvr-nav { 
-    top: 3.2rem;
-    background: var(--piugiallo);
-}
-
-.nav_desktop a:hover .texthvr-nav { /* cambia la proprietà di un elemento sull'hover di un elemento genitore */
-    width: 13rem; 
-}
-
-a:hover .texthvr-std {
-    width: 11rem;
-}
-
-a:hover .texthvr-main, a:hover .texthvr-main_l {
-    width: 15rem; 
-}
-
-
-/* copertina */
-
-.hero-head {
-    margin-top: 10rem;
-    margin-bottom: 6rem;
-    overflow: hidden;
-    position: relative;
-}
-
-.hero-bg__left {
-    width: 23rem;
-    height: 16rem;
-    left: 0rem;
-    top: 2.8rem;
-    background: var(--piugiallo);
-}
-
-.hero-bg__right {
-    width: 50rem;
-    height: 19rem;
-    right: 0rem;
-    top: 24rem;
-    background: var(--arancione);
-}
-
-.hero-center {
-    width: 145rem;
-    height: 40rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 42% 58%;
-    grid-auto-rows: min-content;
-}
-
-.hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-cta {
-    display: grid;
-    justify-items: center;
-    padding: 2rem 6rem 2rem 0;
-    margin-left: 3rem;
-}
-
-.h1-main {
-    text-align: right;
-    padding: 0 .5rem 0 2rem;
-}
-
-.hero-cta h2 {
-    font-weight: 300;
-    text-align: right;
-    font-size: 2.8rem;
-    line-height: 4rem;
-    padding-right: .5rem;
-    margin: 5rem 0;
-    color: var(--quasi-nero);
-}    
-
-.h1-main span {
-    font-weight: 600;
-    color: var(--arancione)
-}
-
-.hero-cta div {
-    width: 100%;
-    display: grid;
-    justify-items: end;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-}
-
-.btn__arancio {
-    background-color: var(--arancione);
-    color: white;
-}
-
-.btn__blu2 {
-    background: none;
-    color: var(--blu);
-    border: .25rem solid;
-    border-color: var(--blu);
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 3.2rem 2rem;
-    margin: 1.5rem 28%;
-    width: 55%;
-}
-
-.steps div {
-    position: relative;
-}
-
-.steps .steps-cerchio {
-    position: absolute;
-    width: 7rem;
-    height: 7rem;
-    left: 2rem;
-    top: 6.5rem;
-    z-index: -1;
-    border-radius: 5rem;
-    transition: all .3s;
-}
-
-.steps h2 span {
-    display: block;
-    padding: 0 0 4.3rem 3.4rem;
-    font-weight: 500;
-    font-size: 8.5rem;
-}
-
-.steps h2 {
-    font-weight: 400;
-    margin-top: 3.4rem;
-    font-size: 2.3rem;
-    line-height: 3.1rem;
-    padding: 3.5rem 4rem 0;
-    color: var(--meno-nero);
-}
-
-/* inizio main - sezione centrale */
-
-main .main-area {
-    position: relative;
-    margin: 4rem auto;
-    overflow: hidden;
-}
-
-.main-area .highbox {
-    margin-left: auto;
-    margin-right: auto;
-    width: 137rem;
-}
-
-.highbox-home {
-    margin: 14rem auto;
-    width: 125rem;
-}
-
-.highbox-home p span:first-of-type {
-    display: block;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 3.5rem;
-}
-
-.main-bg__top-right {
-    display: none;
-    width: 25rem;
-    height: 12rem;
-    right: 0;
-    top: 5rem;
-    background: var(--blu);
-}
-
-.main-bg__left {
-    display: none;
-    width: 25rem;
-    height: 13rem;
-    left: 0;
-    top: 59rem;
-    background: var(--piugiallo);
-}
-
-.main-bg__right {
-    display: none;
-    width: 20rem;
-    height: 11rem;
-    right: 0;
-    top: 98rem;
-    background: var(--arancione);
-}
-
-.main-area > h2 {
-    position: relative;
-    color: white;
-    text-align: center;
-    font-size: 4.4rem;
-    font-weight: 300;
-    margin: 8rem 0 21rem;
-}
-
-.main-area > h2::before {
-    content: "";
-    background: var(--blu);
-    width: 100%;
-    height: 18rem;
-    position: absolute;
-    top: -4.5rem;
-    margin-left: -6rem;
-    z-index: -1;
-}
-
-.area {
-    align-items: center;
-    margin: 0 auto;
-    width: 125rem;
-    display: grid;
-    grid-template-columns: 4fr 6fr;
-    margin-bottom: 12rem;
-    position: relative;
-}
-
-.area img {
-    max-width: 58rem;
-}
-
-.area div {
-    margin-left: -5rem;
-    padding: 3rem 0;
-}
-
-.area div h2 {
-    font-size: 4.4rem;
-    line-height: 5.6rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin-bottom: 4rem;
-}
-
-.area div a {
-    font-size: 3.2rem;
-    font-weight: 500;
-    position: relative;
-    display: inline-block;
-    width: 30rem;
-    margin-top: 4rem;
-    text-align: right;
-    margin-left: 48%;
-}
-
-/* le opinioni dei nostri studenti */
-
-.opinioni {
-    background: var(--piugiallo);
-    position: relative;
-    width: 90%;
-    margin-top: 5rem;
-    padding: 2rem 12% 5rem 22%;
-    z-index: 0;
-}
-
-.opinioni-container {
-    margin: 0 auto;
-    max-width: 96rem;
-}
-
-.opinioni div > h2 {
-    font-size: 3.4rem;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    margin: 6rem 0;
-    position: relative;
-}
-
-.opinioni div > h2::before {
-    content: "";
-    background: var(--arancione);
-    width: 69rem;
-    height: 19rem;
-    position: absolute;
-    top: -4.5rem;
-    margin-left: -5rem;
-    z-index: -1;
-}
-
-.opinioni-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2rem;
-}
-
-.opinioni-grid .opinione {
-    position: relative;
-    background: white;
-    border-radius: var(--radius);
-    padding: 3rem 3.5rem 1.2rem;
-}
-
-.opinioni-grid .cliente {
-    margin-top: -5rem;
-    display: grid;
-    grid-template-columns: 1fr 10fr;
-}
-
-.opinioni-grid .opinione img {
-    border-radius: 10rem;
-    width: 7rem;
-    height: 7rem;
-    box-shadow: var(--ombra-light);
-}
-
-.opinioni-grid .opinione h3 {
-    color: var(--meno-nero);
-    opacity: .8;
-    margin: 3.5rem 0 0 1.5rem;
-    font-weight: 400;
-    font-size: 2.2rem;
-}
-
-.opinioni-grid .opinione span {
-    font-size: 5.5rem;
-    opacity: .1;
-    position: absolute;
-    right: 4rem;
-    bottom: 2.4rem;
-}
-
-.opinione p {
-    font-family: "Comfortaa", sans-serif;
-    font-size: 1.65rem;
-    line-height: 2.7rem;
-    margin: 2rem 0;
-    color: var(--quasi-nero);
-}
-
-.opinioni-bg__left{
-    width: 21rem;
-    height: 10rem;
-    left: 0;
-    bottom: -3.7rem;
-    z-index: 5;
-    background: var(--blu);
-}
-
-/* Call to action: prova il test o contattaci */
-
-.cta {
-    margin: 18rem auto;
-    max-width: 100rem; 
-    text-align: center;
-}
-
-.cta h2 {
-    margin-bottom: 3.5rem;
-    line-height: 5.8rem;
-    font-size: 3.3rem;
-    font-weight: 300;
-    color: var(--meno-nero);
-}
-
-.cta h3 {
-    margin-bottom: 3.5rem;
-    line-height: 5.8rem;
-    font-size: 3.3rem;
-    font-weight: 300;
-    color: var(--meno-nero);
-}
-
-.cta div{
-    width: 52rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-}
-
-.cta_alt div {
-    display: block;
-}
-
-/* footer */
-
-footer {
-    display: grid;
-    margin-top: 9rem;
-    grid-gap: 5rem;
-    grid-template-columns: 1fr 1fr;
-    padding: 5.5rem 7rem 6.5rem;
-    position: relative;
-    background: var(--blu);
-}
-
-footer h1, footer h2, footer h3, footer p {
-    color: var(--quasi-bianco);
-}
-
-footer .footer-bg {
-    width: 28rem;
-    height: 10rem;
-    right: 0;
-    top: -6rem;
-}
-
-footer > a {
-    display: block;
-    position: absolute;
-    color: var(--quasi-bianco);
-    font-size: 1.6rem;
-    font-weight: 300;
-    bottom: 5rem;
-    left: 7rem;
-}
-
-footer h2 {
-    margin: 0 0 3.5rem 0;
-    font-size: 3.3rem;
-    font-weight: 400;
-}
-
-footer h2 span {
-    opacity: .75;
-    font-weight: 300;
-}
-
-footer h3 {
-    margin: 1.8rem 0;
-    line-height: 4.2rem;
-    font-size: 2.4rem;
-    font-weight: 300;
-}
-
-footer h3 span {
-    font-weight: 500;
-    font-size: 2.8rem;
-}
-
-footer p {
-    margin-top: -1.2rem;
-    font-size: 2.1rem;
-}
-
-.footer-left div {
-    margin-top: 4rem;
-}
-
-.footer-right h2 {
-    margin-bottom: 1.5rem;
-    font-size: 3rem;
-}
-
-.footer-right .mappa a {
-    display: inline;
-    margin-right: 4rem;
-    color: var(--quasi-bianco);
-    font-size: 2rem;
-    font-weight: 300;
-}
-
-.footer-right .mappa {
-    margin-top: 6rem;
-    width: 85%;
-    display: grid;
-    grid-gap: 1.5rem;
-    row-gap: 2.2rem;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.socials a {
-    margin-right: 4.5rem;
-    font-size: 5rem;
-    color: var(--quasi-bianco);
-    transition: all 1s;
-}
-
-/* pagina chi siamo */
-
-.chisiamo-top {
-    position: relative;
-}
-
-.chisiamo-top .topbg-left {
-    left: 0;
-    top: 3rem;
-    width: 26rem;
-    height: 19rem;
-    background: var(--arancione);
-}
-
-.chisiamo-top .topbg-right {
-    right: 0;
-    top: 36rem;
-    width: 59rem;
-    height: 23rem;
-    background: var(--blu);
-}
-
-.chisiamo-cont {
-    width: 125rem;
-    margin: 0 auto;
-    margin-top: 13rem;
-    display: grid;
-    grid-template-columns: 45% 55%;
-    grid-auto-rows: min-content;
-}
-
-.chisiamo-cont img {
-    max-height: 67rem; /* min-content sul container non sembra funzionare su ipad */
-}
-
-.chisiamo-left {
-    padding: 2.5rem 5rem 2.5rem 0;
-}
-
-.chisiamo-left h1 {
-    margin-bottom: 4rem;
-}
-
-.chisiamo-left h1 span {
-    font-weight: 600;
-    color: var(--blu)
-}
-
-.chisiamo-box {
-    width: 125rem;
-    margin: 20rem auto 0;
-}
-
-.boxbg-left {
-    left: 0;
-    top: 133rem;
-    width: 50rem;
-    height: 21rem;
-    background: var(--piugiallo);
-}
-
-.chisiamo-social {
-    margin: 21rem auto;
-    width: 125rem;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 42% 58%;
-}
-
-.chisiamo-social_copy {
-    padding: 1rem 0;
-}
-
-.chisiamo-social_img {
-    height: 50rem;
-}
-
-.chisiamo-social h2 {
-    font-weight: 300;
-    font-size: 3.4rem;
-    line-height: 5rem;
-    padding-right: 12rem;
-    margin-bottom: 3.2rem;
-}
-
-.chisiamo-social .p-std {
-    padding-right: 4rem;
-    margin-bottom: 4rem;
-}
-
-.chisiamo-social .socials a {
-    color: var(--meno-nero);
-    font-size: 7rem;
-}
-
-.chisiamo-mission {
-    background: var(--piugiallo);
-    position: relative;
-    width: 114rem;
-    height: 22rem;
-    margin-top: 19rem;
-    margin-bottom: 25rem;
-    padding: 3.5rem 5% 3.5rem 17%;
-}
-
-.missionbg-left {
-    left: 0;
-    top: 17rem;
-    width: 22rem;
-    height: 12rem;
-    z-index: 2;
-    background: var(--blu);
-}
-
-.chisiamo-mission h2 {
-    position: absolute;
-    width: 120rem;
-    font-size: 5.8rem;
-    line-height: 8.2rem;
-    font-weight: 300;
-    color: var(--meno-nero);
-}
-
-.chisiamo-mission h2 span {
-    font-weight: 600;
-}
-
-/* i nostri corsi */
-
-.corsi, .peraziende {
-    overflow: hidden;
-}
-
-.corsi-cont {
-    width: 125rem;
-    margin: 13rem auto 0;
-    display: grid;
-    grid-template-columns: 55% 45%;
-    grid-auto-rows: min-content;
-}
-
-.corsi-top-bg_right {
-    right: 0;
-    top: 33rem;
-    width: 26rem;
-    height: 18rem;
-    background: var(--arancione);
-}
-
-.corsi-top-bg_left {
-    left: 0;
-    top: 40rem;
-    width: 49rem;
-    height: 17rem;
-    background: var(--blu);
-}
-
-.corsi-top img {
-    object-position: bottom;
-    max-height: 30rem;
-}
-
-.corsi-right {
-    padding: 2.5rem 0 2.5rem 5rem;
-}
-
-.corsi-cont h1 span {
-    font-weight: 600;
-}
-
-.corsi-desc {
-    width: 125rem;
-    margin: 18rem auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5rem;
-}
-
-.corsi-desc_left, .corsi-desc_right {
-    padding: 7rem 5rem 5rem 5rem;
-    background: var(--quasi-bianco);
-}
-
-.corsi-desc_left {
-    padding-left: 9rem;
-    margin-left: -9rem;
-}
-
-.corsi-desc_right {
-    padding-right: 9rem;
-    margin-right: -9rem;
-}
-
-
-.corsi-desc h2 {
-    font-size: 2.8rem;
-    line-height: 2.2rem;
-    font-weight: 500;
-    margin-bottom: 4rem;
-}
-
-.corsi-desc-bg {
-    right: 0;
-    top: 118rem;
-    width: 132rem;
-    height: 17rem;
-    background: var(--piugiallo);
-}
-
-.corsi .area {
-    margin-top: 24rem;
-    margin-bottom: 18rem;
-}
-
-.corsi-grid_out {
-    margin: 18rem auto 16rem;
-    width: 125rem;
-}
-
-.corsi-grid_out h2 {
-    font-size: 4.5rem;
-    line-height: 2.2rem;
-    font-weight: 300;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 2.6rem;
-}
-
-.corsi-grid_out .p-std {
-    text-align: center;
-}
-
-.corsi-grid_out h2 span {
-    color: var(--arancione);
-    font-weight: 500;
-}
-
-.corsi-grid {
-    width: 100%;
-    margin: 8rem auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 4.5rem;
-}
-
-.corsi-grid img {
-    width: 90%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: all .3s;
-}
-
-.corso-cont {
-    position: relative;
-    width: 100%;
-    height: 20rem;
-}
-
-.corso-cont h3 span {
-    font-size: 1.8rem;
-}
-
-.corso-cont:hover img {
-    transform: scale(1.05);
-    box-shadow: var(--ombra-str);
-}
-
-.corsi-nome-bg {
-    position: absolute;
-    right: 0;
-    width: 27rem;
-    bottom: 1.2rem;
-    padding: .5rem 2rem .5rem 0;
-    background: var(--piugiallo);
-    box-shadow: var(--ombra-light);
-}
-
-.corsi-nome-bg h3 {
-    font-size: 2.8rem;
-    font-weight: 400;
-    text-align: right;
-    color: var(--meno-nero);
-}
-
-/* pagina traduzioni */
-
-.traduzioni-top {
-    position: relative;
-    margin: 13rem auto 17rem;
-}
-
-.traduzioni-cont {
-    width: 125rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-auto-rows: min-content;
-}
-
-.traduzioni-topbg_left {
-    left: 0;
-    top: 3rem;
-    width: 26rem;
-    height: 17rem;
-    background: var(--arancione);
-}
-
-.traduzioni-bg_right {
-    right: 0;
-    top: 20rem;
-    width: 62rem;
-    height: 20rem;
-    background: var(--blu);
-}
-
-.traduzioni-top_left {
-    padding: 2.5rem 5rem 2.5rem 0;
-}
-
-.traduzioni-cont img {
-    object-position: bottom;
-    max-height: 48rem;
-}
-
-.traduzioni-top_left h1 {
-    margin-bottom: 4rem;
-}
-
-.traduzioni-top_left h1 span {
-    font-weight: 600;
-    color: var(--arancione);
-}
-
-.traduzioni-center {
-    width: 125rem;
-    margin: 12rem auto;
-}
-
-/* servizi per le aziende */
-
-.peraziende .certs {
-    margin-top: 17rem;
-}
-
-.aziende-top {
-    position: relative;
-    margin: 13rem auto 17rem;
-}
-
-.aziende-cont {
-    width: 125rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-auto-rows: min-content;
-}
-
-.aziende-cont img {
-    max-height: 48rem;
-}
-
-.aziende-topbg_left {
-    left: 0;
-    top: 3rem;
-    width: 26rem;
-    height: 17rem;
-    background: var(--blu);
-}
-
-.aziende-topbg_right {
-    right: 0;
-    top: 27rem;
-    width: 55rem;
-    height: 21rem;
-    background: var(--arancione);
-}
-
-.aziende-top_left {
-    padding: 2.5rem 5rem 2.5rem 0;
-}
-
-.aziende-top_left h1 {
-    margin-bottom: 4rem;
-}
-
-.aziende-top_left h1 span {
-    font-weight: 600;
-    color: var(--arancione);
-}
-
-.aziende-top h2 {
-    grid-column: 1 / 3;
-    font-size: 5rem;
-    line-height: 2.2rem;
-    font-weight: 400;
-    margin: 10rem 0 5rem;
-    color: var(--blu);
-}
-
-.aziende-center, .certs-center, .online-center {
-    width: 125rem;
-    margin: 12rem auto;
-}
-
-/* pagina contatti/dove siamo */
-
-.contatti-top {
-    position: relative;
-    margin: 13rem auto 8rem;
-}
-
-.contatti-cont {
-    width: 125rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 35% 65%;
-    grid-auto-rows: min-content;
-}
-
-.contatti-topbg_left {
-    left: 0;
-    top: 3rem;
-    width: 26rem;
-    height: 18rem;
-    background: var(--blu);
-}
-
-.contatti-topbg_right {
-    right: 0;
-    top: 15rem;
-    width: 60rem;
-    height: 18rem;
-    background: var(--arancione);
-}
-
-.contatti-top_left {
-    padding: 1.8rem 5rem 1.8rem 0;
-}
-
-.contatti-cont h1 {
-    font-size: 6.5rem;
-    line-height: 8.4rem;
-}
-
-.cont-img {
-    object-position: center;
-    max-height: 28rem;
-}
-
-.contatti-scrivici {
-    width: 125rem;
-    margin: 16rem auto;
-}
-
-.contatti-scrivici h3, .contatti-sedi h3 {
-    font-size: 3.2rem;
-    font-weight: 300;
-    color: var(--meno-nero);
-}
-
-.contatti-scrivici h2 {
-    font-size: 7.3rem;
-    font-weight: 500;
-    color: var(--blu);
-    margin: 2rem 0;
-}
-
-.contatti-sedi {
-    width: 125rem;
-    margin: 16rem auto 25rem;
-}
-
-.contatti-sedi-cont {
-    margin-top: 3.6rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10rem;
-}
-
-.contatti .sede h2 {
-    font-size: 5rem;
-    font-weight: 500;
-    color: var(--blu);
-    text-transform: uppercase;
-}
-
-.contatti .sede .p-std {
-    margin: 3rem 0;
-    font-size: 3.7rem;
-    line-height: 5.3rem;
-    color: var(--meno-nero);
-}
-
-.contatti .sede .p-std span {
-    font-weight: 400;
-    color: var(--arancione-scuro);
-}
-
-.contatti-sedibg {
-    left: 0;
-    top: 178rem;
-    width: 127rem;
-    height: 19rem;
-    background: var(--piugiallo);
-}
-
-.contatti-gmap {
-    height: 50rem;
-    width: 102%;
-    margin-top: 1rem;
-    margin-left: -.6rem;
-    background: var(--grigio-chiaro);
-}
-
-/* pagina certificazioni e corsi online */
-
-
-.certs-top, .online-top {
-    position: relative;
-    margin: 13rem auto 7rem;
-}
-
-.certs-cont, .online-cont {
-    width: 125rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 6fr 4fr;
-    grid-auto-rows: min-content;
-}
-
-.certs-cont h1, .online-cont h1 {
-    margin-bottom: 3rem;
-}
-
-.certs-img, .online-img {
-    max-width: 48rem;
-}
-
-.online-img {
-    transform: scaleX(-1);
-}
-
-.certs-topbg_left, .online-topbg_left {
-    left: 0;
-    top: 1rem;
-    width: 26rem;
-    height: 17rem;
-}
-
-.certificazioni h2, .corsi-online h2 {
-    font-size: 3.4rem;
-    line-height: 4.8rem;
-    font-weight: 300;
-}
-
-
-/* pagine dei corsi */
-
-.torna {
-    display: inline-block;
-    position: relative;
-    font-weight: 400;
-    font-size: 3.2rem;
-    margin: 5rem -95rem 0 0;
-    color: var(--arancione-scuro);
-}
-
-.corso-top {
-    margin: 13rem auto 8rem;
-    width: 125rem;
-    display: grid;
-    grid-template-columns: 45% 55%;
-    grid-auto-rows: min-content;
-}
-
-.corso-topbg_left {
-    left: 0;
-    top: 32rem;
-    width: 26rem;
-    height: 16rem;
-}
-
-.corso-topbg_right {
-    right: 0;
-    top: 47rem;
-    width: 63rem;
-    height: 22rem;
-}
-
-.corso-top_left {
-    padding: 1rem 6rem 2rem 0;
-}
-
-.corso-top_left h1 {
-    margin-bottom: 3rem;
-}
-
-.corso-top img {
-    object-position: center;
-}
-
-.corso-center {
-    width: 125rem;
-    margin: 14rem auto;
-}
-
-.corso-center h3 {
-    margin-bottom: 3.5rem;
-    line-height: 4.4rem;
-    font-size: 2.7rem;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-.corso-center p {
-    margin-bottom: 1.8rem;
-    margin-top: 3rem;
-}
-
-.corso-metodo {
-    display: grid; 
-    grid-gap: 8rem;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.corso-metodo img {
-    display: block;
-    margin: 0 auto 3rem;
-    width: 29rem;
-}
-
-.corso-metodo h2 {
-    margin-bottom: -2rem;
-    grid-column: 1 / 4;
-}
-
-.corso-metodo div p {
-    text-align: center;
-}
-
-.corso-metodo > p {
-    justify-self: start;
-    grid-column: 1 / 4;
-}
-
-.corso-center .highbox {
-    margin-top: 7rem;
-    margin-bottom: 7rem;
-}
-
-.corso-center h2 {
-    font-size: 4.4rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin-top: 10rem;
-}
-
-.corso-center > h2 {
-    margin-bottom: 4rem;
-}
-
-.corso .cta {
-    margin: 13rem auto 9rem;
-}
-
-/* Test in pagina */
-
-.test_sect{
-
-    display: none;
-    margin-bottom: 2%;
-
-}
-
-/* modificatori per corsi specifici */
-
-.corso_ebraico .corso-top, .corso_turco .corso-top, .corso_portoghese .corso-top {
-    grid-template-columns: 52% 48%;
-}
-
-.corso_turco .corso-top img {
-    object-position: left;
-}
-
-.corso_ungherese .corso-top img {
-    object-position: top;
-}
-
-.corso_giappo .corso-center h3 {
-    margin-top: -2rem;
-}
-
-.corso_francese .corso-center {
-    margin-top: 10rem;
-}
-
-.corso_ita .cta {
-    margin: 3rem auto;
-}
-
-.ebr-grid > div {
-    padding: 4rem;
-    margin-bottom: 5rem;
-}
-
-/* stili dei test */
-
-#quiz_container {
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    padding: 4rem;
-    margin: 16rem auto;
-    text-align: center;
-    max-width: 60%;
-    position: relative;
-    overflow: hidden;
-}
-
-#question {
-    margin-bottom: 4rem !important;
-    font-size: 2.7rem !important;
-    color: var(--blu) !important;
-}
-
-#quiz_container .optionBox {
-    margin-bottom: 1.5rem !important;
-    padding: 2rem 3rem;
-    border-radius: 10rem;
-    font-weight: 300;
-}
-
-#quiz_progress_outer {
-    height: .5rem;
-}
-
-#quiz_progress_inner {
-    height: .5rem;
-    background: var(--blu);
-}
-
-#quiz_container button {
-    font-size: 1.8rem;
-    background: none;
-    color: var(--blu);
-    border: .25rem solid;
-    border-color: var(--blu);
-    border-radius: 10rem;
-    box-shadow: var(--ombra-light);
-    padding: 1rem 3.5rem;
-}
-
-#quiz_container .btnOver button {
-    background: none;
-    color: var(--blu);
-    border: .25rem solid;
-    border-color: var(--blu);
-    box-shadow: var(--ombra-str);
-}
-
-#quiz_container .optionOver {
-    background: var(--piugiallo);
-}
-
-#quiz_container p {
-    font-size: 1.8rem;
-}
-
-#quiz_container input, #quiz_container select {
-    border: .2rem solid;
-    border-color: var(--arancione);
-    border-radius: 8rem;
-    height: 5.4rem !important;
-    padding: 0 1.8rem !important;
-}
-
-.form-contact {
-    margin-bottom: 2.4rem;
-}
-
-/* media queries */
-
-@media (max-width:1720px) {
-    html {font-size: 59%;}
-    
-    .hero-cta {
-        background: white; 
-    }
-    .main-bg__top-right {
-        width: 12rem;
-    }
-    .main-bg__right {
-        width: 14rem;
-    }
-
-}
-
-@media (max-width:1580px) {
-    html {font-size: 57%;}
-
-    .steps {
-        margin: 2rem 21%;
-        width: 71%;
-    }
-
-    .chisiamo-mission h2 {
-        width: 110rem;
-    }
-
-    .aziende-topbg_right {
-        width: 44rem;
-    }
-
-    .contatti-topbg_right {
-        width: 48rem;
-    }
-}
-
-@media (max-width:1368px) {
-    html {font-size: 57%;}
-
-    .hero-center {
-        width: 130rem;
-    }
-
-    .steps {
-        margin: 5rem 21% 1rem;
-    }
-
-    .hero-cta .btn-std {
-        width: 20rem;
-    }
-
-    .footer-right .mappa a {
-        margin-right: 0;
-    }
-    
-    .main-bg__top-right {width: 7rem;}
-    .main-bg__left {width: 11rem;}
-    .main-bg__right {width: 5rem;}
-
-    .chisiamo-mission {
-        width: 95rem;
-        padding: 3.5rem 5% 3.5rem 8.5%;
-    }
-
-    .missionbg-left {top: -10rem;}
-
-    .aziende-topbg_right {
-        top: 30rem;
-    }
-
-    .contatti-topbg_right {
-        width: 38rem;
-    }
-}
-
-@media (max-width:1230px) {
-    html {font-size: 52%;}
-
-    .hero-center {
-        width: 120rem;
-        grid-template-columns: 46% 54%;
-    }
-
-    header {
-        height: 14rem;
-    }
-
-    .hero-bg__right {
-        top: 26rem;
-    }
-  
-    .main-bg__right {
-        width: 8rem;
-    }
-
-    .main-bg__left {
-        width: 14rem;
-        top: 55rem;
-    }
-
-    .area div {
-        margin-left: -7rem;
-    }
-
-    .area div a {
-        bottom: 1.2rem;
-    }
-
-    .nav_desktop {
-        grid-template-columns: 2.5fr 9fr;
-        max-width: 117rem;
-    }
-    .nav_desktop .main-logo {
-        width: 21rem;
-    }
-
-    .steps {
-        margin-left: 18%;
-        margin-right: 18%;
-        width: 78%;
-    }
-
-    main .main-area {
-        margin: 2rem auto;
-    }
-
-    .area {
-        margin-bottom: 6rem;
-    }
-
-    .area img {
-        margin-top: 3rem;
-        width: 42rem;
-    }
-
-    .opinioni {
-        padding: 2rem 5% 5rem 15%;
-        margin-top: 11rem;
-    }
-
-    .opinioni-bg__left {
-        height: 8rem;
-        bottom: -4.5rem;
-        width: 30rem;
-    }
-
-    .chisiamo-cont, .chisiamo-box, .chisiamo-social, .corsi-cont, 
-    .corsi-desc, .corsi-grid_out, .traduzioni-cont, .traduzioni-center, 
-    .aziende-cont, .aziende-center, .contatti-cont, .contatti-scrivici, .contatti-sedi,
-    .corso-top, .corso-center, .certs-center, .certs-cont, .online-center, .online-cont,
-     .area, .highbox-home {
-        width: 110rem;
-    }
-
-    .chisiamo-cont, .corsi-cont, .traduzioni-top, .aziende-top, .contatti-top {
-        margin-top: 10rem;
-    }
-
-    .chisiamo-top .topbg-right {
-        top: 47rem;
-    }
-
-    .chisiamo-social {
-        margin: 18rem auto 22rem;
-    }
-
-    .chisiamo-box {
-        margin: 16rem auto;
-    }
-
-    .boxbg-left {
-        top: 141rem;
-    }
-
-    .corso-top {
-        margin-top: 16rem;
-    }
-
-    .corsi-desc_right {
-        padding-right: 5rem;
-        margin-right: -5rem;
-    }
-
-    .corsi-desc_left {
-        margin-left: -5rem;
-        padding-left: 5rem;
-    }
-
-    .corsi-desc-bg {
-        width: 100rem;
-    }
-
-    .corsi-top-bg_right {top: 29rem;}
-
-    .torna {margin: 5rem -75rem 0 0;}
-
-    .traduzioni-bg_right {
-        top: 31rem;
-    }
-
-    .contatti-sedibg {
-        top: 172rem;
-        width: 100rem;
-    }
-
-    .contatti-topbg_right {
-        width: 24rem;
-    }
-
-}
-
-/* tablet e inferiori */
-
-@media (max-width:1050px) {
-
-    html {font-size: 50%;}
-
-    .hero-cta h2 {margin: 3.5rem 0;}
-
-    .steps {
-        margin-top: 2.5rem;
-    }
-
-}
-
-@media (max-width:940px) {
-    html {font-size: 45%;}
-}  
-
-/* tablet verticale */
-
-@media (max-width:800px) {  
-
-    .p-std {
-        font-size: 2.3rem;
-    }
-
-    .btn-std {
-        height: 6.4rem;
-        font-size: 2.4rem;
-        width: 25rem;
-    }
-    
-    header {
-        height: 23rem;
-    }
-
-    .nav_desktop {
-        display: none;
-    }
-
-    .nav_mobile {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        background-color: rgba(0, 0, 0, 0);
-        width: 100%;
-        margin: 0 auto;
-        padding: 4.5rem 5rem;
-    }
-
-    .nav_mobile .p-std {
-        margin-top: 1rem;
-        margin-left: -.7rem;
-    }
-
-    .hambmenu {
-        justify-self: end;
-    }
-
-    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-        background-color: var(--arancione) !important;
-        width: 5.2rem !important;
-    }
-
-    .hamburger-inner::before {
-        background-color: var(--giallo1) !important;
-    }
-
-    .hamburger-inner::after {
-        background-color: var(--blu) !important;
-    }
-
-    #hamblist {
-        display: block; 
-        overflow-x: hidden;
-        transition: 0.3s;
-        transition-timing-function: ease-out;
-        position: absolute;
-        opacity: 0;
-        right: 0;
-        width: 0;
-        font-size: 2.4rem;
-        z-index: 10;
-        background: rgba(230, 230, 230, 0.96);
-    }
-
-    #hamblist a {
-        display: block;
-        padding: 4rem 0;
-        font-size: 3rem;
-        text-align: center;
-        color: var(--quasi-nero);
-    }
-
-    .hero-head {
-        height: initial;
-        margin-top: 0;
-    }
-
-    .bgbars {
-        opacity: .12;
-    }
-
-    .highbox {
-        margin: 5rem 0;
-        padding: 4rem;
-    }
-
-    .highbox-home {
-        margin: 10rem 0;
-    }
-
-    .chisiamo-left, .aziende-top_left, .contatti-top_left, .traduzioni-top_left,
-     .corsi-right, .corso-top_left {
-        padding: 8rem 4rem 4rem 4rem;
-    }
-
-    .corsi-desc, .chisiamo-box, .traduzioni-center, .aziende-center, .certs-center, .online-center {
-        padding: 0;
-    }
-
-    .chisiamo-cont, .chisiamo-box, .chisiamo-social, .corsi-cont, 
-    .corsi-desc, .corsi-grid_out, .traduzioni-cont, .traduzioni-center, 
-    .aziende-cont, .aziende-center, .contatti-cont, .contatti-scrivici, .contatti-sedi,
-    .corso-top, .corso-center, .certs-cont, .certs-center, .certs-cont, .online-center,
-     .online-cont, .area, .highbox-home {
-        width: 100%;
-    }
-
-    .hero-bg__left {
-        top: 49rem;
-    }
-
-    .hero-bg__right {
-        /* width: 29rem;
-        top: 75%; */
-        display: none;
-    }
-
-    .h1-main {
-        text-align: left;
-        padding: 0;
-        font-size: 6.5rem;
-        line-height: 8rem;
-    }
-
-    .area img {
-        width: 35rem;
-        opacity: 0.8;
-        z-index: -1;
-    }
-
-    .hero-cta {
-        grid-area: hero-cta;
-        background: initial;
-        justify-items: initial;
-        padding: 5rem;
-        margin-left: 0;
-    }
-
-    .hero-img {
-        grid-area: hero-img;
-        height: 60rem;
-    }
-
-    .hero-center {
-        height: 109rem;
-        width: 100%;
-        grid-template-rows: 5fr 4fr;
-        grid-template-areas: 
-        " hero-img hero-img "
-        " hero-cta hero-cta ";
-    }
-
-    .hero-cta h2 {
-        margin: 4rem 0;
-        text-align: left;
-        font-size: 3.2rem;
-    }
-
-    .hero-cta div {
-        justify-items: center;
-    }
-
-    .hero-cta .btn-std {
-        width: 44rem;
-    }
-
-    .steps {
-        width: 100%;
-        margin-left: 4%;
-        margin-top: -1rem;
-    }
-
-    main .main-area {
-        margin: 6rem auto;
-        padding: 0 4rem;
-    }
-
-    .opinioni {
-        width: 100%;
-        margin: 12rem auto;
-        padding: 3rem 7rem;
-    }
-
-    .opinioni-grid {
-        display: block;
-    }
-
-    .opinioni div > h2::before {
-        height: 25rem;
-    }
-
-    .opinioni-grid .opinione {
-        margin-bottom: 5rem;
-    }
-
-    .cta {
-        width: 100%;
-        margin: 15rem auto;
-        padding: 0 4rem;
-    }
-
-    .cta h2 {
-        font-size: 3rem;
-    }
-
-    .cta div {
-        width: 58rem;
-    }
-
-    .chisiamo-top .topbg-left {
-        top: 22rem;
-    }
-
-    .chisiamo-top .topbg-right {
-        top: 84rem;
-        width: 31rem;
-        height: 21rem;
-    }
-
-    .chisiamo-box {
-        margin: 0 auto;
-    }
-
-    .chisiamo-left {
-        grid-area: chisiamo-left;
-        margin: 0;
-    }
-
-    .chisiamo-cont img {
-        grid-area: chisiamo-img;
-        height: 36rem;
-    }
-
-    .chisiamo-cont {
-        margin-top: 0;
-        grid-template-areas: 
-        " chisiamo-img chisiamo-img "
-        " chisiamo-left chisiamo-left ";
-    }
-
-    .chisiamo-social_copy {
-        grid-area: social-copy;
-        padding: 4rem;
-    }
-
-    .chisiamo-social_img {
-        grid-area: social-img;
-        height: 33rem;
-    }
-
-    .chisiamo-social {
-        margin: 10rem auto;
-        grid-template-areas: 
-        " social-img social-img "
-        " social-copy social-copy ";
-    }
-
-    .chisiamo-mission {
-        margin: 10rem 0;
-        height: initial;
-        max-width: 90%;
-    }
-
-    .chisiamo-mission h2 {
-        position: initial;
-        width: initial;
-    }
-
-    .corsi-cont {
-        margin-top: 0;
-        display: block;
-    }
-
-    .corsi-top-bg_left {
-        top: 51rem;
-    }
-
-    .corsi-top-bg_right {
-        display: none;
-    }
-
-    .corsi-top img {
-        max-height: 40rem;
-    }
-
-    .corsi-desc {
-        display: block;
-        margin: 5rem 0;
-    }
-
-    .corsi-desc_left {
-        margin: 0;
-        margin-bottom: 6rem;
-        padding: 4rem;
-    }
-
-    .corsi-desc_right {
-        margin: 0;
-        padding: 4rem;
-    }
-
-    .corsi-desc-bg {
-        width: 36rem;
-        top: 123rem;
-    }
-
-    .corsi .area, .peraziende .area {
-        margin: 10rem auto;
-        padding: 0 4rem;
-    }
-
-    .corsi-grid_out {
-        margin: 12rem auto;
-    }
-
-    .corsi-grid {
-        width: 94%;
-        column-gap: 3.5rem;
-        row-gap: 6rem;
-    }
-
-    .corsi-nome-bg {
-        width: 26rem;
-    }
-
-    .traduzioni-top {
-        margin: 0 auto;
-    }
-
-    .traduzioni-topbg_left {
-        top: 23rem;
-    }
-
-    .traduzioni-bg_right {
-        top: 73rem;
-    }
-
-    .traduzioni-cont {
-        grid-template-areas: 
-        " trad-img trad-img "
-        " trad-top trad-top ";
-    }
-
-    .traduzioni-top_left {
-        grid-area: trad-top;
-    }
-
-    .traduzionitop-img {
-        grid-area: trad-img;
-        height: 36rem;
-    }
-
-    .traduzioni-center {
-        margin: 5rem auto;
-    }
-
-    .aziende-top {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .aziende-cont {
-        grid-template-areas: 
-        " az-img az-img "
-        " az-copy az-copy ";
-    }
-
-    .aziende-top_left {
-        grid-area: az-copy;
-    }
-
-    .aziende-img {
-        grid-area: az-img;
-        height: 36rem;
-    }
-
-    .aziende-topbg_left {
-        top: 23rem;
-    }
-
-    .aziende-topbg_right {
-        top: 78rem;
-    }
-
-    .aziende-center, .certs-center, .online-center {
-        margin: 5rem auto;
-    }
-
-    .contatti-cont {
-        grid-template-areas: 
-        " cont-img cont-img "
-        " cont-copy cont-copy ";
-    }
-
-    .contatti-top {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .contatti-topbg_left {
-        top: 23rem;
-    }
-
-    .contatti-topbg_right {
-        display: none;
-    }
-
-    .contatti-top_left {
-        grid-area: cont-copy;
-    }
-
-    .cont-img {
-        grid-area: cont-img;
-        max-height: 40rem;
-        height: 36rem;
-    }
-
-    .contatti-scrivici {
-        padding: 4rem;
-        margin: 2rem auto;
-    }
-
-    .contatti-scrivici h2 {
-        font-size: 6.2rem;
-    }
-
-    .contatti-sedi {
-        padding: 4rem;
-        margin: 2rem auto;
-    }
-
-    .contatti-sedi-cont {
-        grid-gap: 5rem;
-    }
-
-    .contatti-sedibg {
-        display: none;
-    }
-
-    .contatti .sede h2 {
-        font-size: 4rem;
-    }
-
-    .contatti .sede .p-std {
-        font-size: 3.2rem;
-    }
-
-    .certs-top, .online-top {
-        margin: 4rem auto;
-    }
-
-    .certs-top_left, .online-top_left {
-        padding: 0rem 4rem 4rem 4rem;
-    }
-
-    .certs-topbg_left, .online-topbg_left {
-        display: none;
-    }
-
-    .certs-cont, .online-cont {
-        align-items: center;
-        grid-template-columns: 11fr 4fr;
-    }
-
-    .certs-img, .online-img {
-        margin-left: -19rem;
-        z-index: -1;
-        opacity: .7;
-    }
-
-    .certs-center {
-        margin: 1rem auto;
-    }
-
-    .certs-center > .p-std, .online-center > .p-std {
-        padding: 0 4rem;
-    }
-
-    .corso-top {
-        margin: 2rem auto;
-        grid-template-areas: 
-        " corso-img corso-img "
-        " corso-copy corso-copy ";
-    }
-
-    .corso-img {
-        grid-area: corso-img;
-        height: 36rem;
-    }
-
-    .corso-top_left {
-        grid-area: corso-copy;
-    }
-
-    .corso-topbg_left {
-        top: 50rem;
-    }
-
-    .corso-topbg_right {
-        display: none;
-    }
-
-    .corso-center {
-        margin: 0 auto;
-        padding: 0 4rem;
-    }
-
-    .corso-metodo {
-        grid-gap: 4rem;
-    }
-
-    .corso-metodo img {
-        width: 23rem;
-    }
-
-    .torna {
-        margin: 7rem -62rem 0 0;
-    }
-
-    .corso_francese .corso-center {
-        margin-top: 0;
-    }
-
-    .corso-center h2 {
-        margin-top: 8rem;
-    }
-
-    #quiz_container {
-        max-width: 90%;
-        font-size: 2.3rem;
-    }
-
-    #quiz_contact {
-        width: 72%;
-    }
-
-    #quiz_container label {
-        text-align: left;
-    }
-
-}
-
-/* smartphone */
-
-@media (max-width:600px) {  
-
-    html {
-        font-size: 45%;
-    }
-
-    .btn-std {
-        height: 7.5rem;
-        font-size: 2.8rem;
-        width: 100%;
-        margin: 1.5rem auto;
-    }
-
-    header {
-        height: 22rem;
-    }
-
-    .hero-head {
-        margin-top: 0;
-    }
-
-    nav .main-logo {
-        width: 22rem;
-    }
-
-    .nav_mobile {
-        padding: 4.5rem 3rem;
-    }
-
-    .h1-main {
-        font-size: 5rem;
-        line-height: 6.6rem;
-    }
-
-    .hero-bg__left {
-        top: 12rem;
-    }
-
-    .hero-bg__right {
-        display: none;
-    }
-
-    .hero-cta div {
-        display: block;
-    }
-
-    .hero-center {
-        height: 84rem;
-        margin-bottom: 6rem;
-    }
-
-    .hero-img {
-        height: 25rem;
-    }
-    
-    .hero-cta .btn-std {
-        width: 100%;
-        margin: 1.5rem auto;
-    }
-
-    .hero-cta h2 {
-        font-size: 3rem;
-    }
-
-    .chisiamo-left, .aziende-top_left, .contatti-top_left, .traduzioni-top_left,
-     .corsi-right, .corso-top_left, .hero-cta {
-        padding: 4rem;
-    }
-
-    .steps {
-        display: block;
-        margin: 10rem 1rem 2rem;
-        padding: 0 5rem;
-    }
-
-    .steps div {
-        height: 18rem;
-    }
-
-    .steps h2 {
-        margin-top: 4rem;
-        font-size: 3rem;
-        line-height: 4rem;
-        padding: 2rem 2rem 1rem 2rem;
-        margin-left: 5.5rem
-    }
-
-    .steps h2 span {
-        padding: 0 0 3rem 2rem;
-    }
-
-    .steps .steps-cerchio {
-        top: 2.5rem;
-    }
-    
-    .main-area > h2::before {
-        width: 64rem;
-        height: 22rem;
-    }
-
-    .main-area > h2 {
-        margin: 10rem 0 15rem;
-        right: 0;
-    }
-
-    main .main-area {
-        margin: 4rem auto;
-    }
-
-    .area {
-        display: block;
-        margin-left: 0;
-    }
-
-    .area img {
-        position: absolute;
-        width: 53rem;
-        opacity: 0.1;
-        left: 19rem;
-        top: 11rem;
-    }
-
-    .area div {
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    .area div a {
-        margin-left: 32%;
-    }
-
-    .opinioni {
-        margin: 8rem auto;
-        overflow: hidden;
-    }
-
-    .opinioni div h2 {
-        text-align: left;
-        margin: 6rem 0 6rem 1rem;
-    }
-
-    .opinione p {
-        font-size: 2.1rem;
-        line-height: 3rem;
-    }
-
-    .cta div {
-        width: 100%;
-        display: block;
-    }
-
-    footer {
-        display: block;
-        padding: 4rem;
-    }
-    
-    footer > a {
-        left: 4rem;
-        bottom: 3rem;
-    }
-
-    footer h3 {
-        font-size: 2.9rem;
-    }
-
-    .footer-right {
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-    }
-
-    .footer-right .socials a {
-        margin-right: 0;
-        padding-right: 6rem;
-    }
-
-    .footer-right .mappa {
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-    }
-
-    .chisiamo-top .topbg-right {
-        top: 106rem;
-    }
-
-    .chisiamo-mission {
-        max-width: 100%;
-        padding: 4rem;
-    }
-
-    .chisiamo-mission h2 {
-        font-size: 5.2rem;
-        line-height: 7.3rem;
-    }
-
-    .corsi-top-bg_left {
-        top: 47rem;
-        width: 13rem;
-    }
-
-    .corsi-top-bg_right {
-        display: block;
-        top: 92rem;
-    }
-
-    .corsi .area a {
-        width: 100%;
-        margin-left: -2rem;
-    }
-
-    .corsi-grid_out {
-        padding: 0 4rem;
-    }
-
-    .corsi-grid {
-        width: 100%;
-        grid-template-columns: 1fr;
-        row-gap: 7rem;
-    }
-
-    .corsi-grid img {
-        width: 100%;
-    }
-
-    .corsi-nome-bg {
-        right: -1.4rem;
-    }
-
-    .corso-cont {
-        height: 24rem;
-    }
-
-    .traduzioni-bg_right {
-        top: 76rem;
-        width: 27rem;
-    }
-
-    .aziende-topbg_right {
-        top: 84rem;
-    }
-
-    .contatti-scrivici h2 {
-        font-size: 3.6rem;
-    }
-
-    .contatti-scrivici h3, .contatti-sedi h3 {
-        font-size: 2.7rem;
-        line-height: 3.5rem;
-    }
-
-    .contatti-sedi-cont {
-        grid-template-columns: 1fr;
-        margin-bottom: 5rem;
-    }
-
-    .certs-topbg_left {
-        display: none;
-    }
-
-    .certs-top {
-        overflow: hidden;
-    }
-
-    .certs-cont {
-        grid-template-columns: 1fr;
-    }
-
-    .certs-img, .online-img {
-        margin-left: initial;
-        position: absolute;
-        opacity: .1;
-        right: -31rem;
-        top: 0;
-        max-width: 74rem;
-    }
-
-    .corso-metodo {
-        display: block;
-    }
-
-    .corso-metodo h2 {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    .corso-metodo img {
-        margin-bottom: 2rem;
-    }
-
-    .corso-metodo div {
-        margin-bottom: 7rem;
-    }
-
-    .torna {
-        margin-right: -21rem;
-    }
-
-    .corso-center .highbox {
-        margin-left: -4rem;
-        margin-right: -4rem;
-    }
-
-    .ebr-grid div {
-        margin-left: -4rem;
-        margin-right: -4rem;
-        padding: 7rem 4rem;
-    }
-
-    #quiz_container {
-        width: 100%;
-        margin: 11rem auto;
-        padding: 0rem;
-    }
-
-    #quiz_container button {
-        padding: 1.3rem 4.5rem;
-        font-size: 2.1rem;
-    }
-
-    #quiz_container h1 {
-        font-size: 3.6rem;
-        line-height: 5rem;
-    }
-
-    #quiz_contact {
-        width: 100%;
-    }
-
-    .form-contact-col-8 {
-        max-width: initial;
-        width: 100%;
-        flex: auto;
-    }
-
-}
+html {    font-size: 62.5%; /* imposta la dimensione del font in base a quella del browser (di default 16, quindi 10). Tutti i rem si baseranno su questa misura */    scroll-behavior: smooth;    box-sizing: border-box;}*, *:before, *:after {    box-sizing: inherit;}/* importante, insieme col box-sizing dell'html */* {    margin: 0;}body {    font-family: "Poppins", Arial, Helvetica, sans-serif;}/* custom properties e altre fisse */:root {    --quasi-bianco: #EEEEEE;    --grigio-chiaro: #CCCCCC;    --quasi-nero: #303030;    --meno-nero: #424242;    --giallo1: #FCA51C;    --piugiallo: #FFC130;    --arancione: #F18033;    --arancione-scuro: #E26E1F;    --blu: #1C6EB8;    --radius: .3rem;    --ombra-light: .1rem .1rem .2rem rgba(0, 0, 0, .3);    --ombra-std: .2rem .1rem .7rem rgba(0, 0, 0, .3);    --ombra-str: .2rem .1rem .85rem rgba(0, 0, 0, .35);}a {    text-decoration: none;}h1, h2, h3, h4, h5, p {    font-family: "Poppins", sans-serif;    color: var(--quasi-nero);    margin: 0;}.btn {    border: none;    border-radius: 10rem;    overflow: hidden;    text-decoration: none;    text-align: center;    cursor: pointer;    white-space: nowrap;    transition: box-shadow .3s, color .3s, background-color .3s;    box-shadow: var(--ombra-light);}.btn-std {    width: 22rem;    height: 5.5rem;    font-family: "Poppins", sans-serif;    font-weight: 400;    font-size: 2.2rem;}.btn:hover {    box-shadow: var(--ombra-str);}.p-std {    font-family: "Poppins", sans-serif;    font-size: 2.2rem;    line-height: 3.5rem;    font-weight: 300;    color: var(--meno-nero);}.strong {    font-weight: 500;}.img-std {    width: 100%;    height: 100%;    object-fit: cover;    object-position: top;}.clr-quasinero {    color: var(--quasi-nero);}.clr-arancio {    color: var(--arancione)}.clr-blu {    color: var(--blu)}.clr-giallo {    color: var(--giallo1)}.clr-piugiallo {    color: var(--piugiallo)}.bgr-piugiallo {    background: var(--piugiallo)}.bgr-arancio {    background: var(--arancione)}.bgr-blu {    background: var(--blu)}.bgr-quasibianco {    background: var(--quasi-bianco);}.bgr-grigiochiaro {    background: var(--grigio-chiaro);}.alink {    position: relative;    font-weight: 600;}.bgbars {    position: absolute;    z-index: -1;}.highbox {    margin: 12rem auto;    margin-left: -6rem;    margin-right: -6rem;    padding: 6rem;}.highbox p {    font-size: 2.4rem;    line-height: 4.1rem;}:target { /* offset di ogni anchor su id di -10rem */    display: block;    position: relative;    top: -10rem;    visibility: hidden;}.lmargin-offset { /* sposta il margine effettivo, ma non quello apparente, per nascondere le barre sotto lo sfondo bianco */    padding-left: 4rem !important;    margin-left: -4rem !important;    background: white;}.rmargin-offset {    padding-right: 5rem !important;    margin-right: -5rem !important;    background: white;}/* effetto di transizione on mouse hover per quella classe, definire la durata della transizione fuori dall'hover permette di avere la transizione anche in uscita */.hover-opacity9:hover {    opacity: .85;}.hover-opacity9 {    transition: all .3s;}h1 {    font-weight: 300;    color: var(--meno-nero);    font-size: 4.5rem;    text-transform: uppercase;    line-height: 6rem;}ul {    margin: 4rem 0 0;}ul li {    margin: 3.8rem 0 0;    padding: 0 2rem;}.text-init {    text-transform: initial !important;}/* navigazione */#btnTop {    font-size: 2.6rem;    display: none; /* Hidden by default */    position: fixed; /* Fixed/sticky position */    bottom: 2rem; /* Place the button at the bottom of the page */    right: 3.4rem; /* Place the button 30px from the right */    z-index: 9; /* Make sure it does not overlap */    padding: 1.3rem 2.1rem;    transition: color .3s, background-color .3s, box-shadow .3s;    color: white;    background: var(--arancione);}#btnTop:hover {    background: var(--blu);}#hamblist {    display: none;}header {    height: 17rem;}.nav_mobile {    display: none;}.nav_desktop {    margin: 0 auto;    max-width: 132rem;    padding: 3rem 1rem 0;    display: grid;    grid-template-columns: 3fr 9fr;    font-family: "Poppins", sans-serif;    color: var(--quasi-nero);    font-size: 2.35rem;    font-weight: 300;    text-align: center;}nav .main-logo {    width: 24rem;    margin: 0 auto;}.nav_desktop div {    display: grid;    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}nav div a {    margin-top: 3rem;    position: relative;    color: var(--quasi-nero);    transition: all .4s;}.texthvr { /* decorazione del testo on hover */    position: absolute;    opacity: .8;    width: 0rem;    height: .5rem;    left: 1rem;    border-radius: 5rem;    transition: all .3s;}.texthvr-main {    left: initial;    right: 1rem;    top: 4.2rem;    width: 7rem;}.texthvr-main_l {    top: 4.2rem;    width: 7rem;}.texthvr-std {    bottom: -.3rem;    width: 5rem;    height: .4rem;}.texthvr-nav {    top: 3.2rem;    background: var(--piugiallo);}.nav_desktop a:hover .texthvr-nav { /* cambia la proprietà di un elemento sull'hover di un elemento genitore */    width: 13rem;}a:hover .texthvr-std {    width: 11rem;}a:hover .texthvr-main, a:hover .texthvr-main_l {    width: 15rem;}/* copertina */.hero-head {    margin-top: 10rem;    margin-bottom: 6rem;    overflow: hidden;    position: relative;}.hero-bg__left {    width: 23rem;    height: 16rem;    left: 0rem;    top: 2.8rem;    background: var(--piugiallo);}.hero-bg__right {    width: 50rem;    height: 19rem;    right: 0rem;    top: 24rem;    background: var(--arancione);}.hero-center {    width: 145rem;    height: 40rem;    margin: 0 auto;    display: grid;    grid-template-columns: 42% 58%;    grid-auto-rows: min-content;}.hero-img {    width: 100%;    height: 100%;    object-fit: cover;}.hero-cta {    display: grid;    justify-items: center;    padding: 2rem 6rem 2rem 0;    margin-left: 3rem;}.h1-main {    text-align: right;    padding: 0 .5rem 0 2rem;}.hero-cta h2 {    font-weight: 300;    text-align: right;    font-size: 2.8rem;    line-height: 4rem;    padding-right: .5rem;    margin: 5rem 0;    color: var(--quasi-nero);}.h1-main span {    font-weight: 600;    color: var(--arancione)}.hero-cta div {    width: 100%;    display: grid;    justify-items: end;    align-items: center;    grid-template-columns: 1fr 1fr;}.btn__arancio {    background-color: var(--arancione);    color: white;}.btn__blu2 {    background: none;    color: var(--blu);    border: .25rem solid;    border-color: var(--blu);}.steps {    display: grid;    grid-template-columns: 1fr 1fr 1fr;    padding: 3.2rem 2rem;    margin: 1.5rem 28%;    width: 55%;}.steps div {    position: relative;}.steps .steps-cerchio {    position: absolute;    width: 7rem;    height: 7rem;    left: 2rem;    top: 6.5rem;    z-index: -1;    border-radius: 5rem;    transition: all .3s;}.steps h2 span {    display: block;    padding: 0 0 4.3rem 3.4rem;    font-weight: 500;    font-size: 8.5rem;}.steps h2 {    font-weight: 400;    margin-top: 3.4rem;    font-size: 2.3rem;    line-height: 3.1rem;    padding: 3.5rem 4rem 0;    color: var(--meno-nero);}/* inizio main - sezione centrale */main .main-area {    position: relative;    margin: 4rem auto;    overflow: hidden;}.main-area .highbox {    margin-left: auto;    margin-right: auto;    width: 137rem;}.highbox-home {    margin: 14rem auto;    width: 125rem;}.highbox-home p span:first-of-type {    display: block;    text-transform: uppercase;    text-align: center;    font-size: 3.5rem;}.main-bg__top-right {    display: none;    width: 25rem;    height: 12rem;    right: 0;    top: 5rem;    background: var(--blu);}.main-bg__left {    display: none;    width: 25rem;    height: 13rem;    left: 0;    top: 59rem;    background: var(--piugiallo);}.main-bg__right {    display: none;    width: 20rem;    height: 11rem;    right: 0;    top: 98rem;    background: var(--arancione);}.main-area > h2 {    position: relative;    color: white;    text-align: center;    font-size: 4.4rem;    font-weight: 300;    margin: 8rem 0 21rem;}.main-area > h2::before {    content: "";    background: var(--blu);    width: 100%;    height: 18rem;    position: absolute;    top: -4.5rem;    margin-left: -6rem;    z-index: -1;}.area {    align-items: center;    margin: 0 auto;    width: 125rem;    display: grid;    grid-template-columns: 4fr 6fr;    margin-bottom: 12rem;    position: relative;}.area img {    max-width: 58rem;}.area div {    margin-left: -5rem;    padding: 3rem 0;}.area div h2 {    font-size: 4.4rem;    line-height: 5.6rem;    font-weight: 300;    text-transform: uppercase;    margin-bottom: 4rem;}.area div a {    font-size: 3.2rem;    font-weight: 500;    position: relative;    display: inline-block;    width: 30rem;    margin-top: 4rem;    text-align: right;    margin-left: 48%;}/* le opinioni dei nostri studenti */.opinioni {    background: var(--piugiallo);    position: relative;    width: 90%;    margin-top: 5rem;    padding: 2rem 12% 5rem 22%;    z-index: 0;}.opinioni-container {    margin: 0 auto;    max-width: 96rem;}.opinioni div > h2 {    font-size: 3.4rem;    font-weight: 400;    color: white;    text-align: center;    margin: 6rem 0;    position: relative;}.opinioni div > h2::before {    content: "";    background: var(--arancione);    width: 69rem;    height: 19rem;    position: absolute;    top: -4.5rem;    margin-left: -5rem;    z-index: -1;}.opinioni-grid {    display: grid;    grid-template-columns: 1fr 1fr 1fr;    grid-gap: 2rem;}.opinioni-grid .opinione {    position: relative;    background: white;    border-radius: var(--radius);    padding: 3rem 3.5rem 1.2rem;}.opinioni-grid .cliente {    margin-top: -5rem;    display: grid;    grid-template-columns: 1fr 10fr;}.opinioni-grid .opinione img {    border-radius: 10rem;    width: 7rem;    height: 7rem;    box-shadow: var(--ombra-light);}.opinioni-grid .opinione h3 {    color: var(--meno-nero);    opacity: .8;    margin: 3.5rem 0 0 1.5rem;    font-weight: 400;    font-size: 2.2rem;}.opinioni-grid .opinione span {    font-size: 5.5rem;    opacity: .1;    position: absolute;    right: 4rem;    bottom: 2.4rem;}.opinione p {    font-family: "Comfortaa", sans-serif;    font-size: 1.65rem;    line-height: 2.7rem;    margin: 2rem 0;    color: var(--quasi-nero);}.opinioni-bg__left {    width: 21rem;    height: 10rem;    left: 0;    bottom: -3.7rem;    z-index: 5;    background: var(--blu);}/* Call to action: prova il test o contattaci */.cta {    margin: 18rem auto;    max-width: 100rem;    text-align: center;}.cta h2 {    margin-bottom: 3.5rem;    line-height: 5.8rem;    font-size: 3.3rem;    font-weight: 300;    color: var(--meno-nero);}.cta h3 {    margin-bottom: 3.5rem;    line-height: 5.8rem;    font-size: 3.3rem;    font-weight: 300;    color: var(--meno-nero);}.cta div {    width: 52rem;    margin: 0 auto;    display: grid;    grid-template-columns: 1fr 1fr;    justify-items: center;}.cta_alt div {    display: block;}/* footer */footer {    display: grid;    margin-top: 9rem;    grid-gap: 5rem;    grid-template-columns: 1fr 1fr;    padding: 5.5rem 7rem 6.5rem;    position: relative;    background: var(--blu);}footer h1, footer h2, footer h3, footer p {    color: var(--quasi-bianco);}footer .footer-bg {    width: 28rem;    height: 10rem;    right: 0;    top: -6rem;}footer > a {    display: block;    position: absolute;    color: var(--quasi-bianco);    font-size: 1.6rem;    font-weight: 300;    bottom: 5rem;    left: 7rem;}footer h2 {    margin: 0 0 3.5rem 0;    font-size: 3.3rem;    font-weight: 400;}footer h2 span {    opacity: .75;    font-weight: 300;}footer h3 {    margin: 1.8rem 0;    line-height: 4.2rem;    font-size: 2.4rem;    font-weight: 300;}footer h3 span {    font-weight: 500;    font-size: 2.8rem;}footer p {    margin-top: -1.2rem;    font-size: 2.1rem;}.footer-left div {    margin-top: 4rem;}.footer-right h2 {    margin-bottom: 1.5rem;    font-size: 3rem;}.footer-right .mappa a {    display: inline;    margin-right: 4rem;    color: var(--quasi-bianco);    font-size: 2rem;    font-weight: 300;}.footer-right .mappa {    margin-top: 6rem;    width: 85%;    display: grid;    grid-gap: 1.5rem;    row-gap: 2.2rem;    grid-template-columns: repeat(3, 1fr);}.socials a {    margin-right: 4.5rem;    font-size: 5rem;    color: var(--quasi-bianco);    transition: all 1s;}/* pagina chi siamo */.chisiamo-top {    position: relative;}.chisiamo-top .topbg-left {    left: 0;    top: 3rem;    width: 26rem;    height: 19rem;    background: var(--arancione);}.chisiamo-top .topbg-right {    right: 0;    top: 36rem;    width: 59rem;    height: 23rem;    background: var(--blu);}.chisiamo-cont {    width: 125rem;    margin: 0 auto;    margin-top: 13rem;    display: grid;    grid-template-columns: 45% 55%;    grid-auto-rows: min-content;}.chisiamo-cont img {    max-height: 67rem; /* min-content sul container non sembra funzionare su ipad */}.chisiamo-left {    padding: 2.5rem 5rem 2.5rem 0;}.chisiamo-left h1 {    margin-bottom: 4rem;}.chisiamo-left h1 span {    font-weight: 600;    color: var(--blu)}.chisiamo-box {    width: 125rem;    margin: 20rem auto 0;}.boxbg-left {    left: 0;    top: 133rem;    width: 50rem;    height: 21rem;    background: var(--piugiallo);}.chisiamo-social {    margin: 21rem auto;    width: 125rem;    display: grid;    align-items: center;    grid-template-columns: 42% 58%;}.chisiamo-social_copy {    padding: 1rem 0;}.chisiamo-social_img {    height: 50rem;}.chisiamo-social h2 {    font-weight: 300;    font-size: 3.4rem;    line-height: 5rem;    padding-right: 12rem;    margin-bottom: 3.2rem;}.chisiamo-social .p-std {    padding-right: 4rem;    margin-bottom: 4rem;}.chisiamo-social .socials a {    color: var(--meno-nero);    font-size: 7rem;}.chisiamo-mission {    background: var(--piugiallo);    position: relative;    width: 114rem;    height: 22rem;    margin-top: 19rem;    margin-bottom: 25rem;    padding: 3.5rem 5% 3.5rem 17%;}.missionbg-left {    left: 0;    top: 17rem;    width: 22rem;    height: 12rem;    z-index: 2;    background: var(--blu);}.chisiamo-mission h2 {    position: absolute;    width: 120rem;    font-size: 5.8rem;    line-height: 8.2rem;    font-weight: 300;    color: var(--meno-nero);}.chisiamo-mission h2 span {    font-weight: 600;}/* i nostri corsi */.corsi, .peraziende {    overflow: hidden;}.corsi-cont {    width: 125rem;    margin: 13rem auto 0;    display: grid;    grid-template-columns: 55% 45%;    grid-auto-rows: min-content;}.corsi-top-bg_right {    right: 0;    top: 33rem;    width: 26rem;    height: 18rem;    background: var(--arancione);}.corsi-top-bg_left {    left: 0;    top: 40rem;    width: 49rem;    height: 17rem;    background: var(--blu);}.corsi-top img {    object-position: bottom;    max-height: 30rem;}.corsi-right {    padding: 2.5rem 0 2.5rem 5rem;}.corsi-cont h1 span {    font-weight: 600;}.corsi-desc {    width: 125rem;    margin: 18rem auto;    display: grid;    grid-template-columns: 1fr 1fr;    grid-gap: 5rem;}.corsi-desc_left, .corsi-desc_right {    padding: 7rem 5rem 5rem 5rem;    background: var(--quasi-bianco);}.corsi-desc_left {    padding-left: 9rem;    margin-left: -9rem;}.corsi-desc_right {    padding-right: 9rem;    margin-right: -9rem;}.corsi-desc h2 {    font-size: 2.8rem;    line-height: 2.2rem;    font-weight: 500;    margin-bottom: 4rem;}.corsi-desc-bg {    right: 0;    top: 118rem;    width: 132rem;    height: 17rem;    background: var(--piugiallo);}.corsi .area {    margin-top: 24rem;    margin-bottom: 18rem;}.corsi-grid_out {    margin: 18rem auto 16rem;    width: 125rem;}.corsi-grid_out h2 {    font-size: 4.5rem;    line-height: 2.2rem;    font-weight: 300;    text-align: center;    text-transform: uppercase;    margin-bottom: 2.6rem;}.corsi-grid_out .p-std {    text-align: center;}.corsi-grid_out h2 span {    color: var(--arancione);    font-weight: 500;}.corsi-grid {    width: 100%;    margin: 8rem auto;    display: grid;    grid-template-columns: 1fr 1fr 1fr;    grid-gap: 4.5rem;}.corsi-grid img {    width: 90%;    height: 100%;    object-fit: cover;    object-position: center;    transition: all .3s;}.corso-cont {    position: relative;    width: 100%;    height: 20rem;}.corso-cont h3 span {    font-size: 1.8rem;}.corso-cont:hover img {    transform: scale(1.05);    box-shadow: var(--ombra-str);}.corsi-nome-bg {    position: absolute;    right: 0;    width: 27rem;    bottom: 1.2rem;    padding: .5rem 2rem .5rem 0;    background: var(--piugiallo);    box-shadow: var(--ombra-light);}.corsi-nome-bg h3 {    font-size: 2.8rem;    font-weight: 400;    text-align: right;    color: var(--meno-nero);}/* pagina traduzioni */.traduzioni-top {    position: relative;    margin: 13rem auto 17rem;}.traduzioni-cont {    width: 125rem;    margin: 0 auto;    display: grid;    grid-template-columns: 40% 60%;    grid-auto-rows: min-content;}.traduzioni-topbg_left {    left: 0;    top: 3rem;    width: 26rem;    height: 17rem;    background: var(--arancione);}.traduzioni-bg_right {    right: 0;    top: 20rem;    width: 62rem;    height: 20rem;    background: var(--blu);}.traduzioni-top_left {    padding: 2.5rem 5rem 2.5rem 0;}.traduzioni-cont img {    object-position: bottom;    max-height: 48rem;}.traduzioni-top_left h1 {    margin-bottom: 4rem;}.traduzioni-top_left h1 span {    font-weight: 600;    color: var(--arancione);}.traduzioni-center {    width: 125rem;    margin: 12rem auto;}/* servizi per le aziende */.peraziende .certs {    margin-top: 17rem;}.aziende-top {    position: relative;    margin: 13rem auto 17rem;}.aziende-cont {    width: 125rem;    margin: 0 auto;    display: grid;    grid-template-columns: 40% 60%;    grid-auto-rows: min-content;}.aziende-cont img {    max-height: 48rem;}.aziende-topbg_left {    left: 0;    top: 3rem;    width: 26rem;    height: 17rem;    background: var(--blu);}.aziende-topbg_right {    right: 0;    top: 27rem;    width: 55rem;    height: 21rem;    background: var(--arancione);}.aziende-top_left {    padding: 2.5rem 5rem 2.5rem 0;}.aziende-top_left h1 {    margin-bottom: 4rem;}.aziende-top_left h1 span {    font-weight: 600;    color: var(--arancione);}.aziende-top h2 {    grid-column: 1 / 3;    font-size: 5rem;    line-height: 2.2rem;    font-weight: 400;    margin: 10rem 0 5rem;    color: var(--blu);}.aziende-center, .certs-center, .online-center {    width: 125rem;    margin: 12rem auto;}/* pagina contatti/dove siamo */.contatti-top {    position: relative;    margin: 13rem auto 8rem;}.contatti-cont {    width: 125rem;    margin: 0 auto;    display: grid;    grid-template-columns: 35% 65%;    grid-auto-rows: min-content;}.contatti-topbg_left {    left: 0;    top: 3rem;    width: 26rem;    height: 18rem;    background: var(--blu);}.contatti-topbg_right {    right: 0;    top: 15rem;    width: 60rem;    height: 18rem;    background: var(--arancione);}.contatti-top_left {    padding: 1.8rem 5rem 1.8rem 0;}.contatti-cont h1 {    font-size: 6.5rem;    line-height: 8.4rem;}.cont-img {    object-position: center;    max-height: 28rem;}.contatti-scrivici {    width: 125rem;    margin: 16rem auto;}.contatti-scrivici h3, .contatti-sedi h3 {    font-size: 3.2rem;    font-weight: 300;    color: var(--meno-nero);}.contatti-scrivici h2 {    font-size: 7.3rem;    font-weight: 500;    color: var(--blu);    margin: 2rem 0;}.contatti-sedi {    width: 125rem;    margin: 16rem auto 25rem;}.contatti-sedi-cont {    margin-top: 3.6rem;    display: grid;    grid-template-columns: 1fr 1fr;    grid-gap: 10rem;}.contatti .sede h2 {    font-size: 5rem;    font-weight: 500;    color: var(--blu);    text-transform: uppercase;}.contatti .sede .p-std {    margin: 3rem 0;    font-size: 3.7rem;    line-height: 5.3rem;    color: var(--meno-nero);}.contatti .sede .p-std span {    font-weight: 400;    color: var(--arancione-scuro);}.contatti-sedibg {    left: 0;    top: 178rem;    width: 127rem;    height: 19rem;    background: var(--piugiallo);}.contatti-gmap {    height: 50rem;    width: 102%;    margin-top: 1rem;    margin-left: -.6rem;    background: var(--grigio-chiaro);}/* pagina certificazioni e corsi online */.certs-top, .online-top {    position: relative;    margin: 13rem auto 7rem;}.certs-cont, .online-cont {    width: 125rem;    margin: 0 auto;    display: grid;    grid-template-columns: 6fr 4fr;    grid-auto-rows: min-content;}.certs-cont h1, .online-cont h1 {    margin-bottom: 3rem;}.certs-img, .online-img {    max-width: 48rem;}.online-img {    transform: scaleX(-1);}.certs-topbg_left, .online-topbg_left {    left: 0;    top: 1rem;    width: 26rem;    height: 17rem;}.certificazioni h2, .corsi-online h2 {    font-size: 3.4rem;    line-height: 4.8rem;    font-weight: 300;}/* pagine dei corsi */.torna {    display: inline-block;    position: relative;    font-weight: 400;    font-size: 3.2rem;    margin: 5rem -95rem 0 0;    color: var(--arancione-scuro);}.corso-top {    margin: 13rem auto 8rem;    width: 125rem;    display: grid;    grid-template-columns: 45% 55%;    grid-auto-rows: min-content;}.corso-topbg_left {    left: 0;    top: 32rem;    width: 26rem;    height: 16rem;}.corso-topbg_right {    right: 0;    top: 47rem;    width: 63rem;    height: 22rem;}.corso-top_left {    padding: 1rem 6rem 2rem 0;}.corso-top_left h1 {    margin-bottom: 3rem;}.corso-top img {    object-position: center;}.corso-center {    width: 125rem;    margin: 14rem auto;}.corso-center h3 {    margin-bottom: 3.5rem;    line-height: 4.4rem;    font-size: 2.7rem;    font-weight: 400;    text-transform: uppercase;}.corso-center p {    margin-bottom: 1.8rem;    margin-top: 3rem;}.corso-metodo {    display: grid;    grid-gap: 8rem;    justify-items: center;    grid-template-columns: 1fr 1fr 1fr;}.corso-metodo img {    display: block;    margin: 0 auto 3rem;    width: 29rem;}.corso-metodo h2 {    margin-bottom: -2rem;    grid-column: 1 / 4;}.corso-metodo div p {    text-align: center;}.corso-metodo > p {    justify-self: start;    grid-column: 1 / 4;}.corso-center .highbox {    margin-top: 7rem;    margin-bottom: 7rem;}.corso-center h2 {    font-size: 4.4rem;    font-weight: 300;    text-transform: uppercase;    margin-top: 10rem;}.corso-center > h2 {    margin-bottom: 4rem;}.corso .cta {    margin: 13rem auto 9rem;}/* Test in pagina */.test_sect {    display: none;    margin-bottom: 2%;}/* modificatori per corsi specifici */.corso_ebraico .corso-top, .corso_turco .corso-top, .corso_portoghese .corso-top {    grid-template-columns: 52% 48%;}.corso_turco .corso-top img {    object-position: left;}.corso_ungherese .corso-top img {    object-position: top;}.corso_giappo .corso-center h3 {    margin-top: -2rem;}.corso_francese .corso-center {    margin-top: 10rem;}.corso_ita .cta {    margin: 3rem auto;}.ebr-grid > div {    padding: 4rem;    margin-bottom: 5rem;}/* stili dei test */#quiz_container {    font-family: "Poppins", Arial, Helvetica, sans-serif;    font-size: 2rem;    padding: 4rem;    margin: 16rem auto;    text-align: center;    max-width: 60%;    position: relative;    overflow: hidden;}#question {    margin-bottom: 4rem !important;    font-size: 2.7rem !important;    color: var(--blu) !important;}#quiz_container .optionBox {    margin-bottom: 1.5rem !important;    padding: 2rem 3rem;    border-radius: 10rem;    font-weight: 300;}#quiz_progress_outer {    height: .5rem;}#quiz_progress_inner {    height: .5rem;    background: var(--blu);}#quiz_container button {    font-size: 1.8rem;    background: none;    color: var(--blu);    border: .25rem solid;    border-color: var(--blu);    border-radius: 10rem;    box-shadow: var(--ombra-light);    padding: 1rem 3.5rem;}#quiz_container .btnOver button {    background: none;    color: var(--blu);    border: .25rem solid;    border-color: var(--blu);    box-shadow: var(--ombra-str);}#quiz_container .optionOver {    background: var(--piugiallo);}#quiz_container p {    font-size: 1.8rem;}#quiz_container input, #quiz_container select {    border: .2rem solid;    border-color: var(--arancione);    border-radius: 8rem;    height: 5.4rem !important;    padding: 0 1.8rem !important;}.form-contact {    margin-bottom: 2.4rem;}/* media queries */@media (max-width: 1720px) {    html {        font-size: 59%;    }    .hero-cta {        background: white;    }    .main-bg__top-right {        width: 12rem;    }    .main-bg__right {        width: 14rem;    }}@media (max-width: 1580px) {    html {        font-size: 57%;    }    .steps {        margin: 2rem 21%;        width: 71%;    }    .chisiamo-mission h2 {        width: 110rem;    }    .aziende-topbg_right {        width: 44rem;    }    .contatti-topbg_right {        width: 48rem;    }}@media (max-width: 1368px) {    html {        font-size: 57%;    }    .hero-center {        width: 130rem;    }    .steps {        margin: 5rem 21% 1rem;    }    .hero-cta .btn-std {        width: 20rem;    }    .footer-right .mappa a {        margin-right: 0;    }    .main-bg__top-right {        width: 7rem;    }    .main-bg__left {        width: 11rem;    }    .main-bg__right {        width: 5rem;    }    .chisiamo-mission {        width: 95rem;        padding: 3.5rem 5% 3.5rem 8.5%;    }    .missionbg-left {        top: -10rem;    }    .aziende-topbg_right {        top: 30rem;    }    .contatti-topbg_right {        width: 38rem;    }}@media (max-width: 1230px) {    html {        font-size: 52%;    }    .hero-center {        width: 120rem;        grid-template-columns: 46% 54%;    }    header {        height: 14rem;    }    .hero-bg__right {        top: 26rem;    }    .main-bg__right {        width: 8rem;    }    .main-bg__left {        width: 14rem;        top: 55rem;    }    .area div {        margin-left: -7rem;    }    .area div a {        bottom: 1.2rem;    }    .nav_desktop {        grid-template-columns: 2.5fr 9fr;        max-width: 117rem;    }    .nav_desktop .main-logo {        width: 21rem;    }    .steps {        margin-left: 18%;        margin-right: 18%;        width: 78%;    }    main .main-area {        margin: 2rem auto;    }    .area {        margin-bottom: 6rem;    }    .area img {        margin-top: 3rem;        width: 42rem;    }    .opinioni {        padding: 2rem 5% 5rem 15%;        margin-top: 11rem;    }    .opinioni-bg__left {        height: 8rem;        bottom: -4.5rem;        width: 30rem;    }    .chisiamo-cont, .chisiamo-box, .chisiamo-social, .corsi-cont,    .corsi-desc, .corsi-grid_out, .traduzioni-cont, .traduzioni-center,    .aziende-cont, .aziende-center, .contatti-cont, .contatti-scrivici, .contatti-sedi,    .corso-top, .corso-center, .certs-center, .certs-cont, .online-center, .online-cont,    .area, .highbox-home {        width: 110rem;    }    .chisiamo-cont, .corsi-cont, .traduzioni-top, .aziende-top, .contatti-top {        margin-top: 10rem;    }    .chisiamo-top .topbg-right {        top: 47rem;    }    .chisiamo-social {        margin: 18rem auto 22rem;    }    .chisiamo-box {        margin: 16rem auto;    }    .boxbg-left {        top: 141rem;    }    .corso-top {        margin-top: 16rem;    }    .corsi-desc_right {        padding-right: 5rem;        margin-right: -5rem;    }    .corsi-desc_left {        margin-left: -5rem;        padding-left: 5rem;    }    .corsi-desc-bg {        width: 100rem;    }    .corsi-top-bg_right {        top: 29rem;    }    .torna {        margin: 5rem -75rem 0 0;    }    .traduzioni-bg_right {        top: 31rem;    }    .contatti-sedibg {        top: 172rem;        width: 100rem;    }    .contatti-topbg_right {        width: 24rem;    }}/* tablet e inferiori */@media (max-width: 1050px) {    html {        font-size: 50%;    }    .hero-cta h2 {        margin: 3.5rem 0;    }    .steps {        margin-top: 2.5rem;    }}@media (max-width: 940px) {    html {        font-size: 45%;    }}/* tablet verticale */@media (max-width: 800px) {    .p-std {        font-size: 2.3rem;    }    .btn-std {        height: 6.4rem;        font-size: 2.4rem;        width: 25rem;    }    header {        height: 23rem;    }    .nav_desktop {        display: none;    }    .nav_mobile {        display: grid;        grid-template-columns: 1fr 3fr;        background-color: rgba(0, 0, 0, 0);        width: 100%;        margin: 0 auto;        padding: 4.5rem 5rem;    }    .nav_mobile .p-std {        margin-top: 1rem;        margin-left: -.7rem;    }    .hambmenu {        justify-self: end;    }    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {        background-color: var(--arancione) !important;        width: 5.2rem !important;    }    .hamburger-inner::before {        background-color: var(--giallo1) !important;    }    .hamburger-inner::after {        background-color: var(--blu) !important;    }    #hamblist {        display: block;        overflow-x: hidden;        transition: 0.3s;        transition-timing-function: ease-out;        position: absolute;        opacity: 0;        right: 0;        width: 0;        font-size: 2.4rem;        z-index: 10;        background: rgba(230, 230, 230, 0.96);    }    #hamblist a {        display: block;        padding: 4rem 0;        font-size: 3rem;        text-align: center;        color: var(--quasi-nero);    }    .hero-head {        height: initial;        margin-top: 0;    }    .bgbars {        opacity: .12;    }    .highbox {        margin: 5rem 0;        padding: 4rem;    }    .highbox-home {        margin: 10rem 0;    }    .chisiamo-left, .aziende-top_left, .contatti-top_left, .traduzioni-top_left,    .corsi-right, .corso-top_left {        padding: 8rem 4rem 4rem 4rem;    }    .corsi-desc, .chisiamo-box, .traduzioni-center, .aziende-center, .certs-center, .online-center {        padding: 0;    }    .chisiamo-cont, .chisiamo-box, .chisiamo-social, .corsi-cont,    .corsi-desc, .corsi-grid_out, .traduzioni-cont, .traduzioni-center,    .aziende-cont, .aziende-center, .contatti-cont, .contatti-scrivici, .contatti-sedi,    .corso-top, .corso-center, .certs-cont, .certs-center, .certs-cont, .online-center,    .online-cont, .area, .highbox-home {        width: 100%;    }    .hero-bg__left {        top: 49rem;    }    .hero-bg__right {        /* width: 29rem;        top: 75%; */        display: none;    }    .h1-main {        text-align: left;        padding: 0;        font-size: 6.5rem;        line-height: 8rem;    }    .area img {        width: 35rem;        opacity: 0.8;        z-index: -1;    }    .hero-cta {        grid-area: hero-cta;        background: initial;        justify-items: initial;        padding: 5rem;        margin-left: 0;    }    .hero-img {        grid-area: hero-img;        height: 60rem;    }    .hero-center {        height: 109rem;        width: 100%;        grid-template-rows: 5fr 4fr;        grid-template-areas: " hero-img hero-img " " hero-cta hero-cta ";    }    .hero-cta h2 {        margin: 4rem 0;        text-align: left;        font-size: 3.2rem;    }    .hero-cta div {        justify-items: center;    }    .hero-cta .btn-std {        width: 44rem;    }    .steps {        width: 100%;        margin-left: 4%;        margin-top: -1rem;    }    main .main-area {        margin: 6rem auto;        padding: 0 4rem;    }    .opinioni {        width: 100%;        margin: 12rem auto;        padding: 3rem 7rem;    }    .opinioni-grid {        display: block;    }    .opinioni div > h2::before {        height: 25rem;    }    .opinioni-grid .opinione {        margin-bottom: 5rem;    }    .cta {        width: 100%;        margin: 15rem auto;        padding: 0 4rem;    }    .cta h2 {        font-size: 3rem;    }    .cta div {        width: 58rem;    }    .chisiamo-top .topbg-left {        top: 22rem;    }    .chisiamo-top .topbg-right {        top: 84rem;        width: 31rem;        height: 21rem;    }    .chisiamo-box {        margin: 0 auto;    }    .chisiamo-left {        grid-area: chisiamo-left;        margin: 0;    }    .chisiamo-cont img {        grid-area: chisiamo-img;        height: 36rem;    }    .chisiamo-cont {        margin-top: 0;        grid-template-areas: " chisiamo-img chisiamo-img " " chisiamo-left chisiamo-left ";    }    .chisiamo-social_copy {        grid-area: social-copy;        padding: 4rem;    }    .chisiamo-social_img {        grid-area: social-img;        height: 33rem;    }    .chisiamo-social {        margin: 10rem auto;        grid-template-areas: " social-img social-img " " social-copy social-copy ";    }    .chisiamo-mission {        margin: 10rem 0;        height: initial;        max-width: 90%;    }    .chisiamo-mission h2 {        position: initial;        width: initial;    }    .corsi-cont {        margin-top: 0;        display: block;    }    .corsi-top-bg_left {        top: 51rem;    }    .corsi-top-bg_right {        display: none;    }    .corsi-top img {        max-height: 40rem;    }    .corsi-desc {        display: block;        margin: 5rem 0;    }    .corsi-desc_left {        margin: 0;        margin-bottom: 6rem;        padding: 4rem;    }    .corsi-desc_right {        margin: 0;        padding: 4rem;    }    .corsi-desc-bg {        width: 36rem;        top: 123rem;    }    .corsi .area, .peraziende .area {        margin: 10rem auto;        padding: 0 4rem;    }    .corsi-grid_out {        margin: 12rem auto;    }    .corsi-grid {        width: 94%;        column-gap: 3.5rem;        row-gap: 6rem;    }    .corsi-nome-bg {        width: 26rem;    }    .traduzioni-top {        margin: 0 auto;    }    .traduzioni-topbg_left {        top: 23rem;    }    .traduzioni-bg_right {        top: 73rem;    }    .traduzioni-cont {        grid-template-areas: " trad-img trad-img " " trad-top trad-top ";    }    .traduzioni-top_left {        grid-area: trad-top;    }    .traduzionitop-img {        grid-area: trad-img;        height: 36rem;    }    .traduzioni-center {        margin: 5rem auto;    }    .aziende-top {        margin-top: 0;        margin-bottom: 0;    }    .aziende-cont {        grid-template-areas: " az-img az-img " " az-copy az-copy ";    }    .aziende-top_left {        grid-area: az-copy;    }    .aziende-img {        grid-area: az-img;        height: 36rem;    }    .aziende-topbg_left {        top: 23rem;    }    .aziende-topbg_right {        top: 78rem;    }    .aziende-center, .certs-center, .online-center {        margin: 5rem auto;    }    .contatti-cont {        grid-template-areas: " cont-img cont-img " " cont-copy cont-copy ";    }    .contatti-top {        margin-top: 0;        margin-bottom: 0;    }    .contatti-topbg_left {        top: 23rem;    }    .contatti-topbg_right {        display: none;    }    .contatti-top_left {        grid-area: cont-copy;    }    .cont-img {        grid-area: cont-img;        max-height: 40rem;        height: 36rem;    }    .contatti-scrivici {        padding: 4rem;        margin: 2rem auto;    }    .contatti-scrivici h2 {        font-size: 6.2rem;    }    .contatti-sedi {        padding: 4rem;        margin: 2rem auto;    }    .contatti-sedi-cont {        grid-gap: 5rem;    }    .contatti-sedibg {        display: none;    }    .contatti .sede h2 {        font-size: 4rem;    }    .contatti .sede .p-std {        font-size: 3.2rem;    }    .certs-top, .online-top {        margin: 4rem auto;    }    .certs-top_left, .online-top_left {        padding: 0rem 4rem 4rem 4rem;    }    .certs-topbg_left, .online-topbg_left {        display: none;    }    .certs-cont, .online-cont {        align-items: center;        grid-template-columns: 11fr 4fr;    }    .certs-img, .online-img {        margin-left: -19rem;        z-index: -1;        opacity: .7;    }    .certs-center {        margin: 1rem auto;    }    .certs-center > .p-std, .online-center > .p-std {        padding: 0 4rem;    }    .corso-top {        margin: 2rem auto;        grid-template-areas: " corso-img corso-img " " corso-copy corso-copy ";    }    .corso-img {        grid-area: corso-img;        height: 36rem;    }    .corso-top_left {        grid-area: corso-copy;    }    .corso-topbg_left {        top: 50rem;    }    .corso-topbg_right {        display: none;    }    .corso-center {        margin: 0 auto;        padding: 0 4rem;    }    .corso-metodo {        grid-gap: 4rem;    }    .corso-metodo img {        width: 23rem;    }    .torna {        margin: 7rem -62rem 0 0;    }    .corso_francese .corso-center {        margin-top: 0;    }    .corso-center h2 {        margin-top: 8rem;    }    #quiz_container {        max-width: 90%;        font-size: 2.3rem;    }    #quiz_contact {        width: 72%;    }    #quiz_container label {        text-align: left;    }}/* smartphone */@media (max-width: 600px) {    html {        font-size: 45%;    }    .btn-std {        height: 7.5rem;        font-size: 2.8rem;        width: 100%;        margin: 1.5rem auto;    }    header {        height: 22rem;    }    .hero-head {        margin-top: 0;    }    nav .main-logo {        width: 22rem;    }    .nav_mobile {        padding: 4.5rem 3rem;    }    .h1-main {        font-size: 5rem;        line-height: 6.6rem;    }    .hero-bg__left {        top: 12rem;    }    .hero-bg__right {        display: none;    }    .hero-cta div {        display: block;    }    .hero-center {        height: 84rem;        margin-bottom: 6rem;    }    .hero-img {        height: 25rem;    }    .hero-cta .btn-std {        width: 100%;        margin: 1.5rem auto;    }    .hero-cta h2 {        font-size: 3rem;    }    .chisiamo-left, .aziende-top_left, .contatti-top_left, .traduzioni-top_left,    .corsi-right, .corso-top_left, .hero-cta {        padding: 4rem;    }    .steps {        display: block;        margin: 10rem 1rem 2rem;        padding: 0 5rem;    }    .steps div {        height: 18rem;    }    .steps h2 {        margin-top: 4rem;        font-size: 3rem;        line-height: 4rem;        padding: 2rem 2rem 1rem 2rem;        margin-left: 5.5rem    }    .steps h2 span {        padding: 0 0 3rem 2rem;    }    .steps .steps-cerchio {        top: 2.5rem;    }    .main-area > h2::before {        width: 64rem;        height: 22rem;    }    .main-area > h2 {        margin: 10rem 0 15rem;        right: 0;    }    main .main-area {        margin: 4rem auto;    }    .area {        display: block;        margin-left: 0;    }    .area img {        position: absolute;        width: 53rem;        opacity: 0.1;        left: 19rem;        top: 11rem;    }    .area div {        margin: 0 auto;        width: 100%;    }    .area div a {        margin-left: 32%;    }    .opinioni {        margin: 8rem auto;        overflow: hidden;    }    .opinioni div h2 {        text-align: left;        margin: 6rem 0 6rem 1rem;    }    .opinione p {        font-size: 2.1rem;        line-height: 3rem;    }    .cta div {        width: 100%;        display: block;    }    footer {        display: block;        padding: 4rem;    }    footer > a {        left: 4rem;        bottom: 3rem;    }    footer h3 {        font-size: 2.9rem;    }    .footer-right {        margin-top: 5rem;        margin-bottom: 5rem;    }    .footer-right .socials a {        margin-right: 0;        padding-right: 6rem;    }    .footer-right .mappa {        grid-template-columns: 1fr 1fr;        width: 100%;    }    .chisiamo-top .topbg-right {        top: 106rem;    }    .chisiamo-mission {        max-width: 100%;        padding: 4rem;    }    .chisiamo-mission h2 {        font-size: 5.2rem;        line-height: 7.3rem;    }    .corsi-top-bg_left {        top: 47rem;        width: 13rem;    }    .corsi-top-bg_right {        display: block;        top: 92rem;    }    .corsi .area a {        width: 100%;        margin-left: -2rem;    }    .corsi-grid_out {        padding: 0 4rem;    }    .corsi-grid {        width: 100%;        grid-template-columns: 1fr;        row-gap: 7rem;    }    .corsi-grid img {        width: 100%;    }    .corsi-nome-bg {        right: -1.4rem;    }    .corso-cont {        height: 24rem;    }    .traduzioni-bg_right {        top: 76rem;        width: 27rem;    }    .aziende-topbg_right {        top: 84rem;    }    .contatti-scrivici h2 {        font-size: 3.6rem;    }    .contatti-scrivici h3, .contatti-sedi h3 {        font-size: 2.7rem;        line-height: 3.5rem;    }    .contatti-sedi-cont {        grid-template-columns: 1fr;        margin-bottom: 5rem;    }    .certs-topbg_left {        display: none;    }    .certs-top {        overflow: hidden;    }    .certs-cont {        grid-template-columns: 1fr;    }    .certs-img, .online-img {        margin-left: initial;        position: absolute;        opacity: .1;        right: -31rem;        top: 0;        max-width: 74rem;    }    .corso-metodo {        display: block;    }    .corso-metodo h2 {        text-align: center;        margin-bottom: 2rem;    }    .corso-metodo img {        margin-bottom: 2rem;    }    .corso-metodo div {        margin-bottom: 7rem;    }    .torna {        margin-right: -21rem;    }    .corso-center .highbox {        margin-left: -4rem;        margin-right: -4rem;    }    .ebr-grid div {        margin-left: -4rem;        margin-right: -4rem;        padding: 7rem 4rem;    }    #quiz_container {        width: 100%;        margin: 11rem auto;        padding: 0rem;    }    #quiz_container button {        padding: 1.3rem 4.5rem;        font-size: 2.1rem;    }    #quiz_container h1 {        font-size: 3.6rem;        line-height: 5rem;    }    #quiz_contact {        width: 100%;    }    .form-contact-col-8 {        max-width: initial;        width: 100%;        flex: auto;    }}
