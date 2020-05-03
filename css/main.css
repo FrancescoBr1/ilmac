@@ -706,7 +706,6 @@ main .main-area {
 
 footer {
     display: grid;
-    margin-top: 9rem;
     grid-gap: 5rem;
     grid-template-columns: 1fr 1fr;
     padding: 5.5rem 7rem 6.5rem;
