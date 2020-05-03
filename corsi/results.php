@@ -121,9 +121,9 @@ $mpdf->Output($email . ".pdf", 'F');
 //$data[0]->options[0]->value
 
 
-//$to = 'ilmac@corsi.toscana.it';
+$to = 'ilmac@corsi.toscana.it';
 
-$to = 'alexanderinaldi@gmail.com';
+//$to = 'alexanderinaldi@gmail.com';
 
 //sender
 $from = $email;
