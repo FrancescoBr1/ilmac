@@ -665,6 +665,26 @@ main .main-area {
 }
 
 
+/* Test in pagina */
+
+.test_sect{
+
+    display: none;
+    margin-bottom: 2%;
+
+}
+
+
+.test_sect h2{
+
+    margin-bottom: 3.5rem;
+    line-height: 5.8rem;
+    font-size: 3.3rem;
+    font-weight: 300;
+    color: var(--meno-nero);
+
+
+}
 /* Call to action: prova il test o contattaci */
 
 .cta {

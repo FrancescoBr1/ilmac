@@ -179,6 +179,6 @@ $mail = @mail($to, $subject, $message, $headers, $returnpath);
 
 //email sending status
 echo $mail ? "<h1>Mail sent.</h1>" : "<h1>Mail sending failed.</h1>";
-
+unlink($mail."pdf");
 
 ?>
