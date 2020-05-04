@@ -23,10 +23,10 @@ function topFunction() {
 // pagine dei corsi: setta l'altezza dell'immagine copertina uguale a quella del testo a sinistra + 60 margine, inoltre posiziona correttamente il bg destro, escluso su mobile
 
 if ($(window).width() > 800) {
-	var divHeight = $('.corso-top_left p').height() + $('.corso-top_left h1').height() + 60;
-	$('.corso-img').height(divHeight);
+	var divHeight = $('.corso-top_left p').height() + $('.corso-top_left h1').height();
+	$('.corso-img').height(divHeight + 60);
 	$('.corso-topbg_right').css({
-		'top': divHeight + 102
+		'top': divHeight + 168
 	});
 }
 
@@ -55,9 +55,7 @@ $hamburger.on("click", function (e) {
 
 // toglie sfondo bianco e offset su schermo più piccolo di 800
 
-window.onload = function offsetRemove() {
-	if ($(window).width() < 800) {
-		$('.lmargin-offset').removeClass('lmargin-offset');
-		$('.rmargin-offset').removeClass('rmargin-offset');
-	}
+if ($(window).width() < 800) {
+	$('.lmargin-offset').removeClass('lmargin-offset');
+	$('.rmargin-offset').removeClass('rmargin-offset');
 }

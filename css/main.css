@@ -190,7 +190,7 @@ p {
 }
 
 .hover-opacity9 {
-    transition: all .3s;
+    transition: opacity .3s;
 }
 
 h1 {
@@ -2051,7 +2051,7 @@ footer p {
         width: 58rem;
     }
     .chisiamo-top .topbg-left {
-        top: 22rem;
+        top: 20rem;
     }
     .chisiamo-top .topbg-right {
         top: 84rem;
@@ -2195,7 +2195,7 @@ footer p {
         margin-bottom: 0;
     }
     .contatti-topbg_left {
-        top: 23rem;
+        top: 22rem;
     }
     .contatti-topbg_right {
         display: none;
@@ -2476,7 +2476,7 @@ footer p {
     }
     .corsi-top-bg_right {
         display: block;
-        top: 92rem;
+        top: 69rem;
     }
     .corsi .area a {
         width: 100%;
@@ -2504,7 +2504,7 @@ footer p {
         width: 27rem;
     }
     .aziende-topbg_right {
-        top: 84rem;
+        top: 86rem;
     }
     .contatti-scrivici h2 {
         font-size: 3.6rem;
