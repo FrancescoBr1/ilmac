@@ -278,7 +278,6 @@ nav div a {
     margin-top: 3rem;
     position: relative;
     color: var(--quasi-nero);
-    transition: all .4s;
 }
 
 .texthvr {
@@ -2522,10 +2521,10 @@ footer p {
     .certs-topbg_left {
         display: none;
     }
-    .certs-top {
+    .certs-top, .online-top {
         overflow: hidden;
     }
-    .certs-cont {
+    .certs-cont, .online-cont {
         grid-template-columns: 1fr;
     }
     .certs-img,
