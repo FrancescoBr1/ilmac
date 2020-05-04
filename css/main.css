@@ -955,6 +955,10 @@ footer p {
     overflow: hidden;
 }
 
+.corsi-top {
+    position: relative;
+}
+
 .corsi-cont {
     width: 125rem;
     margin: 13rem auto 0;
@@ -965,7 +969,7 @@ footer p {
 
 .corsi-top-bg_right {
     right: 0;
-    top: 33rem;
+    top: 3rem;
     width: 26rem;
     height: 18rem;
     background: var(--arancione);
@@ -973,7 +977,7 @@ footer p {
 
 .corsi-top-bg_left {
     left: 0;
-    top: 40rem;
+    top: 15rem;
     width: 49rem;
     height: 17rem;
     background: var(--blu);
@@ -1810,9 +1814,6 @@ footer p {
     .corsi-desc-bg {
         width: 100rem;
     }
-    .corsi-top-bg_right {
-        top: 29rem;
-    }
     .torna {
         margin: 5rem -75rem 0 0;
     }
@@ -2099,7 +2100,7 @@ footer p {
         display: block;
     }
     .corsi-top-bg_left {
-        top: 51rem;
+        top: 28rem;
     }
     .corsi-top-bg_right {
         display: none;
@@ -2471,8 +2472,8 @@ footer p {
         line-height: 7.3rem;
     }
     .corsi-top-bg_left {
-        top: 47rem;
-        width: 13rem;
+        top: 23rem;
+        width: 19rem;
     }
     .corsi-top-bg_right {
         display: block;
