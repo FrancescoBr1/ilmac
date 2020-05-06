@@ -67,7 +67,7 @@
         <div id="bg-img" class="bgbars hero-bg__right"></div>
 
         <section class="hero-center">
-            <div class="hero-cta">
+            <div id="top-copy" class="hero-cta">
                 <h1 class="h1-main">Un <span>mondo di lingue</span> a portata di mano</h1>
                 <h2>La scuola con insegnanti madrelingua a Pisa e Livorno</h2>
                 <div>
@@ -231,7 +231,7 @@
 
     <script>
 
-        if ($(window).width() < 100) {  /* modi creativi per commentare porzioni grandi */
+        if ($(window).width() < 100) {}  /* modi creativi per commentare porzioni grandi */
 
         /* animazioni iniziali con gsap */ 
 
@@ -245,11 +245,11 @@
 
         var tl = new gsap.timeline();
 
-        tl.from (".hero-cta", {duration: 1, ease: "back.out(1.1)", opacity: 0, x: -40, delay: 0.7})
-        .from (".hero-img", {duration: 1, ease: "back.out(1.2)", opacity: 0, x: 40, delay: -0.8})
-        .from (".hero-bg__left", {duration: 1, ease: "back.out(1.2)", width: 0, delay: -0.9})
-        .from (".hero-bg__right", {duration: 1, ease: "back.out(1.2)", width: 0, delay: -0.8})
-        .from (".steps div", {duration: 1, ease: "back.out(1.2)", opacity: 0, y: -30, delay: -0.8, stagger: 0.25 });
+        tl.from (".hero-cta", {duration: 1, ease: "back.out(1.1)", opacity: 0, x: -40}, "+=0.4" )
+        .from (".hero-img", {duration: 1, ease: "back.out(1.2)", opacity: 0, x: 40}, "-=0.7" )
+        .from (".hero-bg__left", {duration: 1, ease: "back.out(1.2)", scaleX: 0, transformOrigin: "left" }, "-=0.7" )
+        .from (".hero-bg__right", {duration: 1, ease: "back.out(1.2)", scaleX: 0, transformOrigin: "right" }, "-=0.7" )
+        .from (".steps div", {duration: 1, ease: "back.out(1.2)", opacity: 0, y: -30, stagger: 0.25}, "-=0.7");
 
 
         /* animazioni onscroll con scrollmagic + gsap */
@@ -266,8 +266,8 @@
 
         var scene = new ScrollMagic.Scene ({
             triggerElement: ".main-area > h2",
-            reverse: false,
-            offset: -250
+            triggerHook: .75,
+            reverse: false
         })
         .setTween(tlmain)
         .addTo(controller);
@@ -279,8 +279,8 @@
 
         var scene = new ScrollMagic.Scene ({
             triggerElement: ".opinioni",
-            reverse: false,
-            offset: -200
+            triggerHook: .75,
+            reverse: false
         })
         .setTween(tlopinioni)
         .addTo(controller);
@@ -289,8 +289,8 @@
 
         var scene = new ScrollMagic.Scene ({
             triggerElement: ".cta",
-            reverse: false,
-            offset: -200
+            triggerHook: .75,
+            reverse: false
         })
         .setTween(tweencta)
         .addTo(controller);
@@ -299,13 +299,11 @@
 
         var scene = new ScrollMagic.Scene ({
             triggerElement: ".highbox-home",
-            reverse: false,
-            offset: -200
+            triggerHook: .75,
+            reverse: false
         })
         .setTween(tweenHibox)
         .addTo(controller);
-
-        }
 
     </script>
     

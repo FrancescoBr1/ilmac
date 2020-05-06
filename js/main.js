@@ -23,20 +23,24 @@ function topFunction() {
 // pagine dei corsi: setta l'altezza dell'immagine copertina uguale a quella del testo a sinistra + 60 margine, inoltre posiziona correttamente il bg destro, escluso su mobile
 
 if ($(window).width() > 800) {
+
 	var divHeight = $('.corso-top_left p').height() + $('.corso-top_left h1').height();
 	$('.corso-img').height(divHeight + 60);
-	$('.corso-topbg_right').css({
-		'top': divHeight + 168
-	});
+		
 }
 
-// tutte le pagine: setta il margine top del bg di destra rispetto all'altezza dell'immagine accanto
-// per ora non funziona bene, l'altezza dei diversi contenuti è troppo diversa e risulta in bg distanziati in modo incoerente
+// tutte le pagine (o quasi): prende l'altezza del testo in copertina e lo usa per dare l'altezza e la posizione delle barre
 
-/* var topHeight = $('#top-copy').height();
 
-	$('#bg-img').height( topHeight / 1.7 );
-	$('#bg-img').css({ 'top': topHeight / 1.5 }); */
+if ($(window).width() > 800) {
+
+var topHeight = $('#top-copy').height();
+
+	$('#bg-img').height( topHeight * .75 + ($(window).height() / 24 ) ); //posiziona il bg in base all'altezza dell'immagine e della viewport
+	$('#bg-img').css({ 'top': topHeight * .25 + ($(window).height() / 20 )}); 
+	$('#alt-top-bg').height( topHeight * .25 + 90 );
+
+}
 
 // tasty hamburger css e funzione che fa apparire il menu mobile
 

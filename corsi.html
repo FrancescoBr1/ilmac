@@ -65,7 +65,7 @@
     <section class="corsi-top">
         <div class="corsi-cont">
             <img id="top-img" class="img-std" src="immagini/corsi.jpg" alt="corsi dell'ILMAC">
-            <div class="corsi-right rmargin-offset">
+            <div id="top-copy" class="corsi-right rmargin-offset">
                  <h1>Scegli tra i nostri <span class="clr-arancio">CORSI INDIVIDUALI</span> e <span class="clr-blu">CORSI DI GRUPPO</span> in tutte le lingue</h1>
             </div>
         </div>
@@ -265,8 +265,78 @@
 
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+
+<script>
+
+    if ($(window).width() < 100) {}  /* modi creativi per commentare porzioni grandi */
+
+    /* animazioni iniziali con gsap */ 
+
+    var tl = new gsap.timeline();
+
+        tl.from ("#top-copy", {duration: 1, ease: "back.out(1.1)", opacity: 0, x: 40})
+        .from ("#top-img", {duration: 1, ease: "back.out(1.2)", opacity: 0, x: -40, delay: -0.8})
+        .from ("#bg-img", {duration: 1, ease: "back.out(1.2)", scaleX: 0, transformOrigin: "left", delay: -0.9})
+        .from ("#alt-top-bg", {duration: 1, ease: "back.out(1.2)", scaleX: 0, transformOrigin: "right", delay: -0.8})
+
+    /* onscroll con scrollmagic + gsap */
+
+    var controller = new ScrollMagic.Controller(); /* il controller di scrollmagic che collega lo scrolling alle scene */
+
+    var tlCorsi = new gsap.timeline();
+
+        tlCorsi.from (".corsi-desc_left", {duration: 1, ease: "back.out(1)", opacity: 0, x: -40})
+        .from (".corsi-desc_right", {duration: 1, ease: "back.out(1)", opacity: 0, x: 40}, "-=0.7" )
+        .from (".corsi-desc-bg", {duration: 1.1, ease: "back.out(1)", scaleX: 0, transformOrigin: "right"}, "-=0.7");
+
+        var scene = new ScrollMagic.Scene ({
+                triggerElement: ".corsi-desc",
+                triggerHook: 0.75,
+                reverse: false
+            })
+        .setTween(tlCorsi)
+        .addTo(controller);
+
+    var tweenArea = gsap.from (".area > *", {duration: 1, ease:"back.out(1)", y: -40, opacity: 0, stagger: .25});
+
+        var scene = new ScrollMagic.Scene ({
+                    triggerElement: ".area",
+                    triggerHook: 0.75,
+                    reverse: false
+                })
+            .setTween(tweenArea)
+            .addTo(controller);
+
+    var tlCorsi2 = new gsap.timeline();
+
+        tlCorsi2.from (".corsi-grid_out > h2", {duration: .9, ease: "back.out(1)", opacity: 0, y: -40})
+        .from (".corsi-grid_out > p", {duration: .9, ease: "back.out(1)", opacity: 0, y: -40}, "-=0.75")
+        .from (".corsi-grid > *", {duration: .8, ease: "back.out(1)", opacity: 0, y: -40, stagger: .11}, "-=0.75");
+
+            var scene = new ScrollMagic.Scene ({
+                    triggerElement: ".corsi-grid_out",
+                    triggerHook: 0.85,
+                    reverse: false
+                })
+            .setTween(tlCorsi2)
+            .addTo(controller);
+
+    var tweencta = gsap.from (".cta", {duration: 1.1, ease:"back.out(1)", y: -40, opacity: 0});
+
+        var scene = new ScrollMagic.Scene ({
+            triggerElement: ".cta",
+            triggerHook: 0.75,
+            reverse: false
+        })
+        .setTween(tweencta)
+        .addTo(controller);  
+
+</script>
 
 
 </body>

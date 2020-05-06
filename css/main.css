@@ -340,7 +340,7 @@ a:hover .texthvr-main_l {
 
 .hero-bg__left {
     width: 23rem;
-    height: 16rem;
+    height: 17rem;
     left: 0rem;
     top: 2.8rem;
     background: var(--piugiallo);
@@ -977,7 +977,7 @@ footer p {
 .corsi-top-bg_left {
     left: 0;
     top: 15rem;
-    width: 49rem;
+    width: 66rem;
     height: 17rem;
     background: var(--blu);
 }
@@ -1028,9 +1028,9 @@ footer p {
 
 .corsi-desc-bg {
     right: 0;
-    top: 115rem;
+    top: 111rem;
     width: 132rem;
-    height: 17rem;
+    height: 22rem;
     background: var(--piugiallo);
 }
 
@@ -1396,6 +1396,10 @@ footer p {
 
 /* pagine dei corsi */
 
+.corso {
+    position: relative;
+}
+
 .torna {
     display: inline-block;
     position: relative;
@@ -1415,14 +1419,14 @@ footer p {
 
 .corso-topbg_left {
     left: 0;
-    top: 32rem;
+    top: 2rem;
     width: 26rem;
     height: 16rem;
 }
 
 .corso-topbg_right {
     right: 0;
-    top: 47rem;
+    top: 15rem;
     width: 63rem;
     height: 22rem;
 }
@@ -1966,15 +1970,15 @@ footer p {
     .online-cont,
     .area,
     .highbox-home {
+        overflow: hidden;
         width: 100%;
     }
     .hero-bg__left {
-        top: 49rem;
+        top: 47rem;
     }
     .hero-bg__right {
         /* width: 29rem;
-
-        top: 75%; */
+           top: 75%; */
         display: none;
     }
     .h1-main {
@@ -2130,6 +2134,7 @@ footer p {
         padding: 0 4rem;
     }
     .corsi-grid_out {
+        padding-top: 1rem;
         margin: 12rem auto;
     }
     .corsi-grid {
@@ -2273,7 +2278,7 @@ footer p {
         grid-area: corso-copy;
     }
     .corso-topbg_left {
-        top: 50rem;
+        top: 23.5rem;
     }
     .corso-topbg_right {
         display: none;
@@ -2289,7 +2294,7 @@ footer p {
         width: 23rem;
     }
     .torna {
-        margin: 7rem -62rem 0 0;
+        margin: 7rem -62rem 3rem 0;
     }
     .corso_francese .corso-center {
         margin-top: 0;
@@ -2339,7 +2344,7 @@ footer p {
         line-height: 6.6rem;
     }
     .hero-bg__left {
-        top: 12rem;
+        top: 11rem;
     }
     .hero-bg__right {
         display: none;
@@ -2483,7 +2488,7 @@ footer p {
         margin-left: -2rem;
     }
     .corsi-grid_out {
-        padding: 0 4rem;
+        padding: 1rem 4rem;
     }
     .corsi-grid {
         width: 100%;
