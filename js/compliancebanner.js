@@ -23,5 +23,5 @@ function getCookie(cname) {
   if (isCookieSet === "") {
 	document.getElementById("cookie-button").addEventListener("click", createAcceptCookie);
   } else {
-	document.getElementById("cookie-banner").classList.add("accepted");
+	document.getElementById("cookie-banner").classList.add("accepted-cookie-policy");
   }
