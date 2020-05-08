@@ -20,7 +20,8 @@ function topFunction() {
 	});
 }
 
-// pagine dei corsi: setta l'altezza dell'immagine copertina uguale a quella del testo a sinistra + 60 margine, inoltre posiziona correttamente il bg destro, escluso su mobile
+// pagine dei corsi: setta l'altezza dell'immagine copertina uguale a quella del testo a sinistra + 60 margine,
+// inoltre posiziona correttamente il bg destro, escluso su mobile
 
 if ($(window).width() > 800) {
 
