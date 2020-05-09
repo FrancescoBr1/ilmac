@@ -1,7 +1,7 @@
-// il bottone scroll to top appare
 
-window.onscroll = function () {
-	scrollFunction()
+window.onscroll = function () { //tutte le funzioni onscroll devono stare qui
+	scrollFunction() //funzione che fa apparire il bottone scroll to top
+	stickyNav() //funzione che sticka il nav
 };
 
 function scrollFunction() {
@@ -64,4 +64,24 @@ if ($(window).width() < 800) {
 	$('.lmargin-offset').removeClass('lmargin-offset');
 	$('.rmargin-offset').removeClass('rmargin-offset');
 }
+
+// sticky navigation
+
+// prende la roba da modificare
+
+var navbar = document.getElementsByClassName("nav_desktop")[0];
+var mainlogo = document.getElementsByClassName("main-logo")[1]; // seleziona solo il navbar desktop
+
+// Aggiunge le classi dopo aver scrollato. Le toglie quando ritorna sopra.
+
+function stickyNav() {
+ if (document.documentElement.scrollTop > 80) {
+		navbar.classList.add ("sticky");
+		mainlogo.classList.add ("main-logo_sticky");
+	} else {
+		navbar.classList.remove ("sticky");
+		mainlogo.classList.remove ("main-logo_sticky");
+	}
+}
+
 
