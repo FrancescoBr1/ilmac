@@ -64,3 +64,4 @@ if ($(window).width() < 800) {
 	$('.lmargin-offset').removeClass('lmargin-offset');
 	$('.rmargin-offset').removeClass('rmargin-offset');
 }
+

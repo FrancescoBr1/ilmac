@@ -179,8 +179,8 @@
 
         tl.from ("#top-copy", {duration: 1, ease: "back.out(1.1)", opacity: 0, x: -40})
         .from ("#top-img", {duration: 1, ease: "back.out(1.2)", opacity: 0, x: 40, delay: -0.8})
-        .from ("#alt-top-bg", {duration: 1, ease: "back.out(1.2)", scaleX: 0, transformOrigin: "left", delay: -0.9})
-        .from ("#bg-img", {duration: 1, ease: "back.out(1.2)", scaleX: 0, transformOrigin: "right", delay: -0.8})
+        .from ("#alt-top-bg", {duration: 1, ease: "back.out(1.2)", scaleX: 0, transformOrigin: "left"}, "-=0.8")
+        .from ("#bg-img", {duration: 1, ease: "back.out(1.2)", scaleX: 0, transformOrigin: "right"}, "-=0.8");
 
     /* onscroll con scrollmagic + gsap */
 
@@ -189,7 +189,7 @@
     var tlBox = new gsap.timeline();
 
         tlBox.from (".highbox", {duration: 1, ease: "back.out(1.1)", opacity: 0, x: -40})
-        .from (".boxbg-left", {duration: 1, ease: "back.out(1.1)", scaleX: 0, transformOrigin: "left", delay: -.6});
+        .from (".boxbg-left", {duration: 1, ease: "back.out(1.1)", scaleX: 0, transformOrigin: "left"}, "-=0.7");
 
         var scene = new ScrollMagic.Scene ({
                 triggerElement: ".highbox",
@@ -215,8 +215,8 @@
     var tlMission = new gsap.timeline();
 
         tlMission.from (".chisiamo-mission", {duration: 1.1, ease: "back.out(1.1)", scaleX: 0, transformOrigin: "left"})
-        .from (".chisiamo-mission .missionbg-left ", {duration: .8, ease: "back.out(1.1)", scaleX: 0, transformOrigin: "left", delay: -.5})
-        .from (".chisiamo-mission h2", {duration: .8, ease: "back.out(1.1)", opacity:0 , y: -40, delay: -.5});
+        .from (".chisiamo-mission .missionbg-left ", {duration: .8, ease: "back.out(1.1)", scaleX: 0, transformOrigin: "left"}, "-=0.5")
+        .from (".chisiamo-mission h2", {duration: .8, ease: "back.out(1.1)", opacity:0 , y: -40}, "-=0.5");
 
         var scene = new ScrollMagic.Scene ({
             triggerElement: ".chisiamo-mission",

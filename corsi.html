@@ -289,9 +289,9 @@
     var tl = new gsap.timeline();
 
         tl.from ("#top-copy", {duration: 1, ease: "back.out(1.1)", opacity: 0, x: 40})
-        .from ("#top-img", {duration: 1, ease: "back.out(1.2)", opacity: 0, x: -40, delay: -0.8})
-        .from ("#bg-img", {duration: 1, ease: "back.out(1.2)", scaleX: 0, transformOrigin: "left", delay: -0.9})
-        .from ("#alt-top-bg", {duration: 1, ease: "back.out(1.2)", scaleX: 0, transformOrigin: "right", delay: -0.8})
+        .from ("#top-img", {duration: 1, ease: "back.out(1.2)", opacity: 0, x: -40}, "-=0.8")
+        .from ("#bg-img", {duration: 1, ease: "back.out(1.2)", scaleX: 0, transformOrigin: "left"}, "-=0.8")
+        .from ("#alt-top-bg", {duration: 1, ease: "back.out(1.2)", scaleX: 0, transformOrigin: "right"}, "-=0.7");
 
     /* onscroll con scrollmagic + gsap */
 
@@ -325,7 +325,7 @@
 
         tlCorsi2.from (".corsi-grid_out > h2", {duration: .9, ease: "back.out(1)", opacity: 0, y: -40})
         .from (".corsi-grid_out > p", {duration: .9, ease: "back.out(1)", opacity: 0, y: -40}, "-=0.75")
-        .from (".corsi-grid > *", {duration: .8, ease: "back.out(1)", opacity: 0, y: -40, stagger: .11}, "-=0.75");
+        .from (".corsi-grid > *", {duration: .8, ease: "back.out(1)", opacity: 0, y: -40, stagger: .12}, "-=0.75");
 
             var scene = new ScrollMagic.Scene ({
                     triggerElement: ".corsi-grid_out",
