@@ -340,20 +340,16 @@ a:hover .texthvr-main_l {
     position: fixed;
     z-index: 10;
 
-    /* animation: stickyNav .7s ease-out 0;
-    animation-fill-mode: forwards;
-    animation-play-state: paused; */
-
     width: 100% !important;
     background-color: white;
     padding: 0 14%!important;
-    height: 8rem;
+    height: 6rem;
     font-size: 2rem !important;
     box-shadow: var(--ombra-light);
 }
 
 .main-logo_sticky {
-    width: 12rem !important;
+    width: 7rem !important;
     margin-top: .6rem !important;
 }
 

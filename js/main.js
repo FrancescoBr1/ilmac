@@ -69,18 +69,45 @@ if ($(window).width() < 800) {
 
 // prende la roba da modificare
 
-var navbar = document.getElementsByClassName("nav_desktop")[0];
-var mainlogo = document.getElementsByClassName("main-logo")[1]; // seleziona solo il navbar desktop
+var navLinks = document.querySelectorAll("nav div a");
+var textHvrNav = document.querySelectorAll(".texthvr-nav");
 
-// Aggiunge le classi dopo aver scrollato. Le toglie quando ritorna sopra.
+if ($(window).width() > 800) {
+	var navbar = document.getElementsByClassName("nav_desktop")[0];
+	var mainlogo = document.getElementsByClassName("main-logo")[1]; // seleziona solo il logo desktop
+}
+
+/* if ($(window).width() < 800) {
+	var navbar = document.getElementsByClassName("nav_mobile")[0];
+	var mainlogo = document.getElementsByClassName("main-logo")[0]; // seleziona solo il logo mobile
+} */
+
+// modifica le proprietà per ottenere il menu di navigazione pinnato
 
 function stickyNav() {
- if (document.documentElement.scrollTop > 80) {
+ if (document.documentElement.scrollTop > 120) {
 		navbar.classList.add ("sticky");
 		mainlogo.classList.add ("main-logo_sticky");
+		mainlogo.src = "/asset/logomin.svg";
+			var i;
+			for (i = 0; i < navLinks.length; i++) {
+			navLinks[i].style.marginTop = "2rem";
+			}
+			for (i = 0; i < textHvrNav.length; i++) {
+				textHvrNav[i].style.top = "2.6rem";
+			}
+
 	} else {
 		navbar.classList.remove ("sticky");
 		mainlogo.classList.remove ("main-logo_sticky");
+		mainlogo.src = "/asset/logo.svg";
+			var i;
+			for (i = 0; i < navLinks.length; i++) {
+			navLinks[i].style.marginTop = "3rem";
+			}	
+			for (i = 0; i < textHvrNav.length; i++) {
+				textHvrNav[i].style.top = "3.2rem";
+			}	
 	}
 }
 
