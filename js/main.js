@@ -77,10 +77,10 @@ if ($(window).width() > 800) {
 	var mainlogo = document.getElementsByClassName("main-logo")[1]; // seleziona solo il logo desktop
 }
 
-/* if ($(window).width() < 800) {
+if ($(window).width() < 800) {
 	var navbar = document.getElementsByClassName("nav_mobile")[0];
 	var mainlogo = document.getElementsByClassName("main-logo")[0]; // seleziona solo il logo mobile
-} */
+}
 
 // modifica le proprietà per ottenere il menu di navigazione pinnato
 
@@ -89,13 +89,14 @@ function stickyNav() {
 		navbar.classList.add ("sticky");
 		mainlogo.classList.add ("main-logo_sticky");
 		mainlogo.src = "/asset/logomin.svg";
-			var i;
+			var i;	// modifica stile per tutti gli elementi, navlinks e il relativo hvr in questo caso
 			for (i = 0; i < navLinks.length; i++) {
 			navLinks[i].style.marginTop = "2rem";
 			}
 			for (i = 0; i < textHvrNav.length; i++) {
 				textHvrNav[i].style.top = "2.6rem";
 			}
+		document.getElementById("hamblist").style.top ="8.5rem";
 
 	} else {
 		navbar.classList.remove ("sticky");
@@ -103,11 +104,12 @@ function stickyNav() {
 		mainlogo.src = "/asset/logo.svg";
 			var i;
 			for (i = 0; i < navLinks.length; i++) {
-			navLinks[i].style.marginTop = "3rem";
+			navLinks[i].style.marginTop = "";
 			}	
 			for (i = 0; i < textHvrNav.length; i++) {
-				textHvrNav[i].style.top = "3.2rem";
-			}	
+				textHvrNav[i].style.top = "";
+			}
+		document.getElementById("hamblist").style.top ="";	
 	}
 }
 

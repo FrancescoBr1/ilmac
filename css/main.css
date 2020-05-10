@@ -297,6 +297,10 @@ nav div a {
     transition: all .3s;
 }
 
+nav .texthvr {
+    left: 1.8rem;
+}
+
 .texthvr-main {
     left: initial;
     right: 1rem;
@@ -334,14 +338,14 @@ a:hover .texthvr-main_l {
     width: 15rem;
 }
 
-/* proprietà della navigazione quando diventa sticky */
+/* proprietà della navigazione quando diventa sticky da applicare con JS */
 
 .sticky {
     position: fixed;
     z-index: 10;
 
     width: 100% !important;
-    background-color: white;
+    background-color: white !important;
     padding: 0 14%!important;
     height: 6rem;
     font-size: 2rem !important;
@@ -1974,6 +1978,14 @@ footer p {
         font-size: 1.9rem;
     }
 
+    .sticky {
+        height: 9rem;
+    }
+
+    .main-logo_sticky {
+        margin-top: 2rem !important;
+    }
+
     header {
         height: 23rem;
     }
@@ -2012,13 +2024,15 @@ footer p {
         overflow-x: hidden;
         transition: 0.3s;
         transition-timing-function: ease-out;
-        position: absolute;
+        position: fixed;
         opacity: 0;
+        top: 21rem;
         right: 0;
         width: 0;
         font-size: 2.4rem;
         z-index: 10;
-        background: rgba(230, 230, 230, 0.96);
+        background: rgba(250, 250, 250, 0.97);
+        box-shadow: var(--ombra-light);
     }
     #hamblist a {
         display: block;
