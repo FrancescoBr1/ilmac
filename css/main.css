@@ -263,7 +263,7 @@ header {
     font-weight: 300;
     text-align: center;
 
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
     transition-property: height, background-color, font-size;
 }
 
@@ -271,7 +271,7 @@ nav .main-logo {
     width: 24rem;
     margin: 0 auto;
 
-    transition: all 0.4s ease;
+    transition: all 0.1s ease;
     transition-property: width;
 }
 
