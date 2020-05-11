@@ -271,7 +271,7 @@ nav .main-logo {
     width: 24rem;
     margin: 0 auto;
 
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     transition-property: width;
 }
 

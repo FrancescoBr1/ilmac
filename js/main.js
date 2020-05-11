@@ -38,7 +38,7 @@ if ($(window).width() > 800) {
 var topHeight = $('#top-copy').height();
 
 	$('#bg-img').height( topHeight * .75 + ($(window).height() / 24 ) ); //posiziona il bg in base all'altezza dell'immagine e della viewport
-	$('#bg-img').css({ 'top': topHeight * .25 + ($(window).height() / 20 )}); 
+	$('#bg-img').css({ 'top': topHeight * .28 + ($(window).height() / 20 )}); 
 	$('#alt-top-bg').height( topHeight * .25 + 90 );
 
 }
