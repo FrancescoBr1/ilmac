@@ -263,7 +263,7 @@ header {
     font-weight: 300;
     text-align: center;
 
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     transition-property: height, background-color, font-size;
 }
 
@@ -271,7 +271,7 @@ nav .main-logo {
     width: 24rem;
     margin: 0 auto;
 
-    transition: all 0.1s ease;
+    transition: all 0.15s ease;
     transition-property: width;
 }
 
@@ -1373,7 +1373,7 @@ footer p {
 
 .cont-img {
     object-position: center;
-    max-height: 28rem;
+    max-height: 29rem;
 }
 
 .contatti-scrivici {
@@ -1528,7 +1528,7 @@ footer p {
 }
 
 .corso-top_left {
-    padding: 1rem 6rem 2rem 0;
+    padding: 2rem 6rem 2rem 0;
 }
 
 .corso-top_left h1 {
@@ -1925,7 +1925,7 @@ footer p {
         width: 100rem;
     }
     .contatti-topbg_right {
-        width: 24rem;
+        width: 42rem;
     }
 }
 

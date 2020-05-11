@@ -20,14 +20,12 @@ function topFunction() {
 	});
 }
 
-// pagine dei corsi: setta l'altezza dell'immagine copertina uguale a quella del testo a sinistra + 60 margine,
-// inoltre posiziona correttamente il bg destro, escluso su mobile
+// pagine dei corsi: setta l'altezza dell'immagine copertina uguale a quella del testo a sinistra + 60 margine
 
 if ($(window).width() > 800) {
 
 	var divHeight = $('.corso-top_left p').height() + $('.corso-top_left h1').height();
-	$('.corso-img').height(divHeight + 60);
-		
+	$('.corso-img').height(divHeight + 64);	
 }
 
 // tutte le pagine (o quasi): prende l'altezza del testo in copertina e lo usa per dare l'altezza e la posizione delle barre
@@ -37,8 +35,8 @@ if ($(window).width() > 800) {
 
 var topHeight = $('#top-copy').height();
 
-	$('#bg-img').height( topHeight * .75 + ($(window).height() / 24 ) ); //posiziona il bg in base all'altezza dell'immagine e della viewport
-	$('#bg-img').css({ 'top': topHeight * .28 + ($(window).height() / 20 )}); 
+	$('#bg-img').height( topHeight * .75 + ($(window).height() / 30 ) ); //posiziona il bg in base all'altezza dell'immagine e della viewport
+	$('#bg-img').css({ 'top': topHeight * .35 + ($(window).height() / 40 )}); 
 	$('#alt-top-bg').height( topHeight * .25 + 90 );
 
 }
