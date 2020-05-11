@@ -135,7 +135,7 @@
             <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
             <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">¿Dónde está el ILMac de Pisa?</text></option>
             <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">¿Cómo está el ILMac de Pisa? </text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">¿Cómo está el ILMac de Pisa? </text></option>
+            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">¿Cuándo está el ILMac de Pisa? </text></option>
             <fb id="pass" event="">  </fb>
             <fb id="fail" event="">  </fb>
             
