@@ -253,10 +253,10 @@ header {
 
 .nav_desktop {
     margin: 0 auto;
-    width: 132rem;
+    width: 145rem;
     padding: 3rem 1rem 0;
     display: grid;
-    grid-template-columns: 2.5fr 9fr;
+    grid-template-columns: 2.8fr 9fr;
     font-family: "Poppins", sans-serif;
     color: var(--quasi-nero);
     font-size: 2.35rem;
@@ -1829,7 +1829,7 @@ footer p {
     }
     .nav_desktop {
         grid-template-columns: 2.5fr 9fr;
-        width: 117rem;
+        width: 118rem;
     }
     .nav_desktop .main-logo {
         width: 21rem;
