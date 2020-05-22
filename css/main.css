@@ -214,6 +214,42 @@ ul li {
     text-transform: initial !important;
 }
 
+.minibanner {
+    width: 88%;
+    padding: 2rem;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    z-index: 10;
+    transition: opacity .3s, transform .3s;
+
+    animation: appearOnLoad .3s ease-out 1.4s;
+    animation-fill-mode: both;
+}
+
+.minibanner h2 {
+    font-size: 2rem;
+    line-height: normal;
+    margin: 0 auto;
+    width: 80%;
+    font-weight: 400;
+}
+
+.minibanner h2 a {
+    font-weight: 600;
+}
+
+.minibanner h2 > span {
+    font-size: 2.6rem;
+    padding: 1.5rem;
+    position: absolute;
+    right: 2rem;
+    top: 52%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
 
 /* navigazione */
 
@@ -487,7 +523,7 @@ a:hover .texthvr-main_l {
     color: var(--meno-nero);
 }
 
-/* pagina policy */
+/* banner e pagina policy */
 
 @keyframes appearOnLoad {
     0%   { opacity: 0; }
@@ -621,7 +657,7 @@ main .main-area {
     height: 18rem;
     position: absolute;
     top: -4.5rem;
-    margin-left: -6rem;
+    margin-left: -12rem;
     z-index: -1;
 }
 
@@ -2457,6 +2493,20 @@ footer p {
         width: 100%;
     }
 
+    .minibanner {
+        width: 100%;
+    }
+
+    .minibanner h2 {
+        margin: 0 0 0 2rem;
+        text-align: left;
+    }
+
+    .minibanner h2 > span {
+        right: 1rem;
+        top: 26%;
+    };
+
     .cookie div {
         width: 100%;
     }
@@ -2533,6 +2583,7 @@ footer p {
     .main-area>h2::before {
         width: 64rem;
         height: 22rem;
+        margin-left: -6rem;
     }
     .main-area>h2 {
         margin: 10rem 0 15rem;
