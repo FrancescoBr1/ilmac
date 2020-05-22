@@ -382,8 +382,8 @@ a:hover .texthvr-main_l {
 .sticky {
     position: fixed;
     z-index: 10;
-
     width: 100% !important;
+    max-width: 100% !important;
     background-color: white !important;
     padding: 0 14%!important;
     height: 6rem;
