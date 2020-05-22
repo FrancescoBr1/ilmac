@@ -115,7 +115,7 @@ document.getElementById("minibanner_btn").addEventListener("click", bannerClose)
 
 function bannerClose() {
 	var x =	document.getElementById("minibanner");
-	x.style.transform = "translateY(+100%)";
+	x.style.transform = "translate(-50%, 100%)";
 }
 
 
