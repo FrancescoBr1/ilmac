@@ -292,7 +292,7 @@ header {
 
 .nav_desktop {
     margin: 0 auto;
-    width: 145rem;
+    max-width: 145rem;
     padding: 3rem 1rem 0;
     display: grid;
     grid-template-columns: 2.8fr 9fr;
@@ -1868,7 +1868,6 @@ footer p {
     }
     .nav_desktop {
         grid-template-columns: 2.5fr 9fr;
-        width: 118rem;
     }
     .nav_desktop .main-logo {
         width: 21rem;
