@@ -442,6 +442,7 @@ a:hover .texthvr-main_l {
 
 .hero-cta {
     display: grid;
+    background: white;
     justify-items: center;
     padding: 2rem 6rem 2rem 0;
     margin-left: 3rem;
@@ -1768,9 +1769,6 @@ footer p {
     html {
         font-size: 59%;
     }
-    .hero-cta {
-        background: white;
-    }
     .main-bg__top-right {
         width: 12rem;
     }
@@ -2774,4 +2772,80 @@ footer p {
         width: 100%;
         flex: auto;
     }
+}
+
+/* schermi più grandi */
+
+@media (min-width: 2200px) {
+    html {
+        font-size: 70%;
+    }
+    .hero-bg__left {
+        width: 40rem;
+    }
+}
+
+@media (min-width: 2500px) {
+
+    #alt-top-bg {
+        width: 45rem;
+    }
+
+    #bg-img {
+        width: 82rem;
+    }
+
+    .boxbg-left {
+        width: 86rem;
+    }
+
+    .chisiamo-mission {
+        padding: 3.5rem 4% 3.5rem 20%;
+        width: 142rem;
+    }
+
+    .corsi-desc-bg {
+        width: 158rem;
+    }
+
+    .contatti-sedibg {
+        width: 152rem;
+    }
+
+    .certs-topbg_left, .online-topbg_left {
+        width: 50rem;
+    }
+
+}
+
+@media (min-width: 3100px) {
+    #alt-top-bg {
+        width: 85rem;
+    }
+
+    #bg-img {
+        width: 110rem;
+    }
+
+    .steps {
+        margin: 1.5rem 31%;
+        width: 47%;
+    }
+
+    .boxbg-left {
+        width: 120rem;
+    }
+
+    .corsi-desc-bg {
+        width: 190rem;
+    }
+
+    .contatti-sedibg {
+        width: 172rem;
+    }
+
+    .certs-topbg_left, .online-topbg_left {
+        width: 75rem;
+    }
+
 }
