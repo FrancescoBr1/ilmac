@@ -12,8 +12,11 @@ require('class.json.php');
 $value = $_POST['tutto'];
 
 
+
 //$value_utf8 = utf8_encode($value);
 $data = Json::decode($value);
+
+
 
 
 //var_dump($data);
@@ -30,27 +33,33 @@ $city = $_POST['citt'];
 $tel = $_POST['tel'];
 $tipo = $_POST['tipo'];
 $lang = $_POST['lingua'];
-
+$tot_domande=0;
 $lang_slug="";
 
 switch ($lang) {
     case 1:
         $lang_slug=" Inglese ";
+        $tot_domande=75;
         break;
     case 2:
         $lang_slug=" Tedesco ";
+        $tot_domande=30;
         break;
     case 3:
         $lang_slug=" Francese ";
+        $tot_domande=44;
         break;
     case 4:
         $lang_slug=" Portoghese ";
+        $tot_domande= 31;
         break;
     case 5:
         $lang_slug=" Russo ";
+        $tot_domande= 58;
         break;
     case 6:
         $lang_slug=" Spagnolo ";
+        $tot_domande= 108;
         break;
 }
 
@@ -67,6 +76,7 @@ $corrette = 0;
 $sbagliate = 0;
 $lista_sbagliate = "";
 $i = 1;
+$non_risposte=$tot_domande-count($data);
 $alphabet = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
 
 foreach ($data as $q) {
@@ -107,6 +117,9 @@ foreach ($data as $q) {
 
 $test .= "<h3>Sbagliate: " . $sbagliate . "</h3>";
 $test .= "<h3>Corrette: " . $corrette . "</h3>";
+$test .= "<h3>Risposte non date: " . $non_risposte . "</h3>";
+
+
 $test .= "<h3 style='text-align:left;'>Lista Sbagliate: " . $lista_sbagliate . "</h3>";
 $test .= "<h2>Correzione Completa</h2>";
 $test .= $corpo_domande;
@@ -119,9 +132,9 @@ $mpdf->Output($email . ".pdf", 'F');
 //$data[0]->options[0]->value
 
 
-$to = 'ilmac@corsi.toscana.it';
+//$to = 'ilmac@corsi.toscana.it';
 
-//$to = 'alexanderinaldi@gmail.com';
+$to = 'alexanderinaldi@gmail.com';
 
 //sender
 $from = $email;

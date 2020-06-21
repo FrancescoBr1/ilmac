@@ -104,6 +104,17 @@
                 <function name="loadPreviousQuestion">this</function>
             </click>
         </event>
+        <event id="jumpToEnd">
+            <click>
+                <function name="jumpToEnd">this</function>
+            </click>
+        </event>
+
+        <event id="jumpToEndPopUp">
+            <click>
+                <function name="jumpToEndPopUp">this</function>
+            </click>
+        </event>
 
         <event id="restart">
             <click>
@@ -132,276 +143,306 @@
         <settings cheatmode="false" timer="false" radiobutton="false" radiobuttonx="10" radiobuttony="10"
                   correctx="calc(100% - 30px)" correcty="5" attempts="1"/>
 
-        <question id="q0" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wie hei&#xDF;en Sie?</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wie hei&#xDF;en sie?</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wie hei&#xDF;t Sie?</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q1" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wie ist es dir?</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wie geht-es-dir-es?</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wie geht es dir?</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q2" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er m&#xFC;ss fr&#xFC;h aufstehen.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Er musst fr&#xFC;h aufstehen.</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">]Er muss fr&#xFC;h aufstehen.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q3" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Schlaf mal gut!</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Schl&#xE4;f mal gut!</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Schlafst mal gut!</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q4" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir gehen zu Hause.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir gehen bei uns.</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir gehen nach Hause.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q5" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Hans hat einen Hund.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Hans hat ein Hund.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Hans hat eine Hund.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q6" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wo kommst du?</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wohin kommst du?</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Woher kommst du?</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q7" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ich fahre in der Schweiz.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ich fahre nach Schweiz.</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ich fahre in die Schweiz.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q8" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie bekommt einen Salat.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie bekommt eine Salat.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie bekommt ein Salat.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q9" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er f&#xE4;hrt nach Hause abends.</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Er f&#xE4;hrt abends nach Hause.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er fahrt abends nach Hause</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q10" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Sie lest viel</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Sie liest viel.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Sie lies viel</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q11" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Die T&#xFC;r werde ge&#xF6;ffnet.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Die T&#xFC;r wirst ge&#xF6;ffnet.</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Die T&#xFC;r wird ge&#xF6;ffnet.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q12" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unsere Kinder tragen heute ein rotes Pulli und ein blaues Hose.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unsere Kinder tragen heute eine rote  Pulli und eine Hose.</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unsere Kinder tragen heute einen roten Pulli und eine rote Hose.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q13" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Selma trifft ihren Nachbarn.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Selma trefft ihren Nachbarn.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Selma trifft ihren Nachbar.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q14" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Silke hat gestern ein kaltes Buffet zubereitet.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Silke hat  gestern ein kaltes Buffet zugebereitet. </text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Silke hat bereitet gestern ein kaltes Buffet zu.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q15" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ihr Portemonnaie ist gefunden geworden.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Ihr Portemonnaie ist funden worden.</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Ihr Portemonnaie ist gefunden worden.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q16" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir gehen in eines Caf&#xE9;.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir gehen in eins Caf&#xE9;.</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Wir gehen in ein Caf&#xE9;.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q17" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er zieht nach London an</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er zieht nach London.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er zieht in London</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q18" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">In 2015 fahren wir wieder nach Deutschland</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">2015 fahren wir wieder nach Deutschland</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">2015 fahren wir in Deutschland</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q19" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Das sind die Sch&#xFC;ler, denen ich Deutsch gelehrt habe</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Das sind die Sch&#xFC;ler, die ich Deutsch gelehrt habe</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Das sind die Sch&#xFC;ler, den ich Deutsch gelehrt habe.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q20" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er hilft seinen Sohn mit den Hausaufgaben</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er hilft seinem Sohn mit dem Hausaufgabe.</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Er hilft seinem Sohn mit den Hausaufgaben</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q21" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie verzichtet an Luxus</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie verzichtet mit dem Luxus</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie verzichtet auf Luxus.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q22" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Worauf passt du auf</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Woran passt du auf?</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Woraus passt du auf?</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q23" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Dieses Geschenk kommt aus dem Herz.</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Dieses Geschenk kommt vom Herzen.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Dieses Geschenk kommt von dem Herz.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q24" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Die Zeit vergeht im Zug</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Die Zeit vergeht wie im Flug</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Die Zeit vergeht in Fluge.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q25" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Letztes Jahr  verbrochen wir Urlaub am Meer.</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Letztes Jahr verbrachten wir Urlaub am Meer</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Letztes Jahr verbrechten wir  Urlaub am Meer</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q26" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir leben nicht nur auf Brot</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir leben nicht nur vom Brot.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Wir leben nicht nur aus Brot.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q27" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Peter ruft sie immer an</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Peter ruft ihr immer an</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Peter anruft sie immer.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q28" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir unterhalten &#xFC;ber das Wetter mit unsere Freunde.</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir unterhalten  &#xFC;ber das Wetter mit unseren Freunden.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Wir unterhalten &#xFC;ber dem Wetter mit unseren Freunden</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q29" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie hat ihn blind vertraut</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie hat ihm blind vertraut.</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie hat ihm blind vertraute.</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
+      <question id="q0" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wie heißen Sie?</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wie heißen sie?</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wie heißt Sie?</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+
+</question>
+<question id="q1" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wie ist es dir?</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wie geht-es-dir-es?</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wie geht es dir?</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q2" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er müss früh aufstehen.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Er musst früh aufstehen.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">]Er muss früh aufstehen.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q3" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Schlaf mal gut!</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Schläf mal gut!</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Schlafst mal gut!</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q4" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir gehen zu Hause.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir gehen bei uns.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir gehen nach Hause.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q5" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Hans hat einen Hund.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Hans hat ein Hund.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Hans hat eine Hund.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q6" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wo kommst du?</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wohin kommst du?</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Woher kommst du?</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q7" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ich fahre in der Schweiz.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ich fahre nach Schweiz.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ich fahre in die Schweiz.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q8" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie bekommt einen Salat.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie bekommt eine Salat.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie bekommt ein Salat.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q9" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er fährt nach Hause abends.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Er fährt abends nach Hause.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er fahrt abends nach Hause</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q10" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Sie lest viel</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Sie liest viel.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Sie lies viel</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q11" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Die Tür werde geöffnet.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Die Tür wirst geöffnet.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Die Tür wird geöffnet.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q12" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unsere Kinder tragen heute ein rotes Pulli und ein blaues Hose.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unsere Kinder tragen heute eine rote  Pulli und eine Hose.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unsere Kinder tragen heute einen roten Pulli und eine rote Hose.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q13" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Selma trifft ihren Nachbarn.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Selma trefft ihren Nachbarn.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Selma trifft ihren Nachbar.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q14" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Silke hat gestern ein kaltes Buffet zubereitet.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Silke hat  gestern ein kaltes Buffet zugebereitet. </text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Silke hat bereitet gestern ein kaltes Buffet zu.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q15" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ihr Portemonnaie ist gefunden geworden.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Ihr Portemonnaie ist funden worden.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Ihr Portemonnaie ist gefunden worden.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q16" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir gehen in eines Café.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir gehen in eins Café.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Wir gehen in ein Café.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q17" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er zieht nach London an</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er zieht nach London.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er zieht in London</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q18" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">In 2015 fahren wir wieder nach Deutschland</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">2015 fahren wir wieder nach Deutschland</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">2015 fahren wir in Deutschland</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q19" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Das sind die Schüler, denen ich Deutsch gelehrt habe</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Das sind die Schüler, die ich Deutsch gelehrt habe</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Das sind die Schüler, den ich Deutsch gelehrt habe.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q20" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er hilft seinen Sohn mit den Hausaufgaben</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Er hilft seinem Sohn mit dem Hausaufgabe.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Er hilft seinem Sohn mit den Hausaufgaben</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q21" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie verzichtet an Luxus</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie verzichtet mit dem Luxus</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie verzichtet auf Luxus.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q22" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Worauf passt du auf</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Woran passt du auf?</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Woraus passt du auf?</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q23" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Dieses Geschenk kommt aus dem Herz.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Dieses Geschenk kommt vom Herzen.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Dieses Geschenk kommt von dem Herz.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q24" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Die Zeit vergeht im Zug</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Die Zeit vergeht wie im Flug</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Die Zeit vergeht in Fluge.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q25" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Letztes Jahr  verbrochen wir Urlaub am Meer.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Letztes Jahr verbrachten wir Urlaub am Meer</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Letztes Jahr verbrechten wir  Urlaub am Meer</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q26" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir leben nicht nur auf Brot</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir leben nicht nur vom Brot.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Wir leben nicht nur aus Brot.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q27" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Peter ruft sie immer an</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Peter ruft ihr immer an</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Peter anruft sie immer.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q28" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir unterhalten über das Wetter mit unsere Freunde.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Wir unterhalten  über das Wetter mit unseren Freunden.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Wir unterhalten über dem Wetter mit unseren Freunden</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q29" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie hat ihn blind vertraut</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie hat ihm blind vertraut.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sie hat ihm blind vertraute.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+
 
 
 

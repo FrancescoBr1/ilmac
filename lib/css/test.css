@@ -71,6 +71,7 @@ body {
     border-radius: 0px;
     font-family: 'Roboto Condensed', sans-serif;
     outline: none;
+    margin: 10px;
 }
 
 #quiz_container .btnOver button {

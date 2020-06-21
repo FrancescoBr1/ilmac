@@ -104,7 +104,17 @@
                 <function name="loadPreviousQuestion">this</function>
             </click>
         </event>
+          <event id="jumpToEnd">
+            <click>
+                <function name="jumpToEnd">this</function>
+            </click>
+        </event>
 
+        <event id="jumpToEndPopUp">
+            <click>
+                <function name="jumpToEndPopUp">this</function>
+            </click>
+        </event>
         <event id="restart">
             <click>
                 <function name="restart">this</function>
@@ -132,591 +142,620 @@
         <settings cheatmode="false" timer="false" radiobutton="false" radiobuttonx="10" radiobuttony="10"
                   correctx="calc(100% - 30px)" correcty="5" attempts="1"/>
 
-          <question id="q0" event="">
-            <text id="question" margin-bottom="30" anim="none">.....хороший студент.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">он</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">его</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">у него</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q1" event="">
-            <text id="question" margin-bottom="30" anim="none">.....есть новый автомобиль.&#13;
-                &#13;
-            </text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">он</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">его</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">у него</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q2" event="">
-            <text id="question" margin-bottom="30" anim="none">Какие красивые сувениры! Сколько ..... ?</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">стоит</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">стоят</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q3" event="">
-            <text id="question" margin-bottom="30" anim="none">......город очень красивый.&#13;
-                &#13;
-            </text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">это</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">эта</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">этот</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q4" event="">
-            <text id="question" margin-bottom="30" anim="none">Туристы не знали, что .... известная улица.&#13;
-                &#13;
-            </text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">это</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">эта</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">этот</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q5" event="">
-            <text id="question" margin-bottom="30" anim="none">Я повторяю грамматику, ......скоро у меня экзамен.&#13;
-                &#13;
-            </text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">поэтому</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">потому что</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">почему</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q6" event="">
-            <text id="question" margin-bottom="30" anim="none">Сегодня я ещё не обедал, .....я хочу есть</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">поэтому</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">потому что</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">почему</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q7" event="">
-            <text id="question" margin-bottom="30" anim="none">Вот молодой человек. Я его не ..... .</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">говорю</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаю</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">понимаю</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">думаю</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q8" event="">
-            <text id="question" margin-bottom="30" anim="none">Когда Олег говорит по-испански, я плохо его ..... .&#13;
-            </text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">говорю</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаю</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">понимаю</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">думаю</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q9" event="">
-            <text id="question" margin-bottom="30" anim="none">Вы не знаете, ..... это вещи?</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чей</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чья</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чьё</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чьи</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q10" event="">
-            <text id="question" margin-bottom="30" anim="none">Скажите, пожалуйста, ...... это телефон?</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чей</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чья</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чьё</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чьи</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q11" event="">
-            <text id="question" margin-bottom="30" anim="none">Елене не нравится современная ..... .&#13;
-                &#13;
-            </text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыка</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыку</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыки</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыке</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q12" event="">
-            <text id="question" margin-bottom="30" anim="none">Мы всегда с удовольствием слушаем ..... .</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыка</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыку</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыки</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыке</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q13" event="">
-            <text id="question" margin-bottom="30" anim="none">Мария и Анна сегодня ...... в театр.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">идут</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ходят</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">идти</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ходить</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q14" event="">
-            <text id="question" margin-bottom="30" anim="none">Они часто туда ...... .</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">идут</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ходят</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">идти</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ходить</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q15" event="">
-            <text id="question" margin-bottom="30" anim="none">Я люблю ..... пешком.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">идут</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ходят</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">идти</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ходить</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q16" event="">
-            <text id="question" margin-bottom="30" anim="none">Профессор ...... из класса и закрыл дверь.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">пришел</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">пошел</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">вышел</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">шел</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q17" event="">
-            <text id="question" margin-bottom="30" anim="none">Когда папа ..... домой с работы, дети его уже ждали.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> пришел</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">пошел</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">вышел</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">шел</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q18" event="">
-            <text id="question" margin-bottom="30" anim="none">Вы говорите....?</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">русский</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">по-русски</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">русский язык</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q19" event="">
-            <text id="question" margin-bottom="30" anim="none">.......Ты был?</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Где</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Откуда</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Куда</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q20" event="">
-            <text id="question" margin-bottom="30" anim="none">Я всегда смотрю новости .....телевизору.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">на</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">по</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">в</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q21" event="">
-            <text id="question" margin-bottom="30" anim="none">Это очень большой...... .</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">окно</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">парк</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">гора</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q22" event="">
-            <text id="question" margin-bottom="30" anim="none">Познакомьтесь, это мой .....</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">папа</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">родители</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">бабушка</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q23" event="">
-            <text id="question" margin-bottom="30" anim="none">Вы поедете в театр ......?</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">с автобусом</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">на автобусе</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">на автобус</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q24" event="">
-            <text id="question" margin-bottom="30" anim="none">Маша и Лена часто....... стихи?</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читаем</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читаете</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читают</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q25" event="">
-            <text id="question" margin-bottom="30" anim="none">Дима будет врачом, .......Иван – юристом.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">но</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">и</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">а</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q26" event="">
-            <text id="question" margin-bottom="30" anim="none">Марина не покупает компьютер, потому что он ..... .</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">дорогой</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">дорого</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">дорог</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q27" event="">
-            <text id="question" margin-bottom="30" anim="none">Мой друг – студент. Он ...... в университете.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">изучает</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">учится</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">учит</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">занимается</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q28" event="">
-            <text id="question" margin-bottom="30" anim="none">Там он ...... математику и другие предметы.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">изучает</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">учится</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">учит</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">учит</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q29" event="">
-            <text id="question" margin-bottom="30" anim="none">........ зовут Андрей</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">он</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">его</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">его</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q30" event="">
-            <text id="question" margin-bottom="30" anim="none">Джон читает .... без словаря.&#13;
-            </text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">русский</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">по-русски</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">русский язык&#13;
-            </text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q31" event="">
-            <text id="question" margin-bottom="30" anim="none">Библиотека находится не здесь, а ......&#13;
-            </text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">сюда</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">туда</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">там</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q32" event="">
-            <text id="question" margin-bottom="30" anim="none">Вы не знаете, почему этот музей ...... Эрмитаж?</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">называется</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">зовут</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q33" event="">
-            <text id="question" margin-bottom="30" anim="none">Нового студента ..... Антон.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">называется</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">зовут</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q34" event="">
-            <text id="question" margin-bottom="30" anim="none">В этом городе есть ...... .</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаменитый театр</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаменитого театра</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаменитому театру</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> I think right</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q35" event="">
-            <text id="question" margin-bottom="30" anim="none">Нашему ....... скоро 100 лет.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаменитый театр</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаменитого театра</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаменитому театру</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q36" event="">
-            <text id="question" margin-bottom="30" anim="none">Маша и Лена часто....... стихи?</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читаем</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читаете</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читают</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q37" event="">
-            <text id="question" margin-bottom="30" anim="none">Эту книгу написали два......</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналисты</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналистов</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналистом</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналиста</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q38" event="">
-            <text id="question" margin-bottom="30" anim="none">Борис хочет стать .....</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналисты</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналистов</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналистом</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналиста</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q39" event="">
-            <text id="question" margin-bottom="30" anim="none">Сколько ...... работает в этой редакции?</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналисты</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналистов</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналистом</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналиста</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q40" event="">
-            <text id="question" margin-bottom="30" anim="none">Все мои друзья ...... говорят по-английски..</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хороший</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хорошие</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хорошая</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хорошо</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q41" event="">
-            <text id="question" margin-bottom="30" anim="none">Мария Шарапова известная в России .... .</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спорт</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спортивный</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спортсмен</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спортсменка</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q42" event="">
-            <text id="question" margin-bottom="30" anim="none">Теннис – очень популярный ..... в России.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спорт</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спортивный</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спортсмен</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спортсменка</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q43" event="">
-            <text id="question" margin-bottom="30" anim="none">Что ты ....., чай или кофе?</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хочу</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хочешь</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хотите</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хот</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q44" event="">
-            <text id="question" margin-bottom="30" anim="none">Пётр закончил университет и ..... диплом.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">взял</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">получил</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">сделал</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q45" event="">
-            <text id="question" margin-bottom="30" anim="none">Вы любите ...... детективы или комедии?</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">смотрю</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">смотришь</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">смотреть</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">смотрел</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q46" event="">
-            <text id="question" margin-bottom="30" anim="none">Говорите, я вас ......, что у вас болит?</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">слушаю</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">слышу</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q47" event="">
-            <text id="question" margin-bottom="30" anim="none">Извините, я плохо ......</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">слушаю</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">слышу</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q48" event="">
-            <text id="question" margin-bottom="30" anim="none">Антон хочет .... новые стихи и выступить на концерте.</text>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">выучить</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">изучить</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">заниматься</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q49" event="">
-            <text id="question" margin-bottom="30" anim="none">Мой брат мечтает ..... в университет.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">поступит</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">поступить</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">будет поступать</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q50" event="">
-            <text id="question" margin-bottom="30" anim="none">Мой отец каждый день ...... газеты.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читать</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">прочитал</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читает</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q51" event="">
-            <text id="question" margin-bottom="30" anim="none">Вчера он ..... интересную статью о космосе.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читать</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">прочитал</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читает</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q52" event="">
-            <text id="question" margin-bottom="30" anim="none">Я всегда долго ..... по телефону с подругой.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">буду говорить</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">говорю</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">сказала</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">скажет</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q53" event="">
-            <text id="question" margin-bottom="30" anim="none">Пять минут назад она мне ...... новость.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">буду говорить</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">говорю</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">сказала</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">скажет</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q54" event="">
-            <text id="question" margin-bottom="30" anim="none">Эта башня ...... высокая.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">много</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">очень</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q55" event="">
-            <text id="question" margin-bottom="30" anim="none">Моя сестра учит русский язык и много занимается, ..... ещё плохо понимает.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">а</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">но</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">и</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">или</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q56" event="">
-            <text id="question" margin-bottom="30" anim="none">Ты уже видел фотографии, ...... сделал Антон в Москве?.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">который</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">которая</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">которое</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">которые</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q57" event="">
-            <text id="question" margin-bottom="30" anim="none">Игорь дома?- Нет, он .... в университет.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">шел</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">пошел</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">пришел</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">подоше</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q58" event="">
-            <text id="question" margin-bottom="30" anim="none">Игорь дома?- Нет, он .... в университет.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">шел</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">пошел</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">пришел</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">подоше</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q59" event="">
-            <text id="question" margin-bottom="30" anim="none">По дороге домой мы ..... в магазин за хлебом.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">вошли</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">вышли</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">зашли</text></option>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ушли</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q60" event="">
-            <text id="question" margin-bottom="30" anim="none">Я хочу, ..... моя подруга Элиза изучала русский язык.</text>
-            <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">что</text></option>
-            <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чтобы</text></option>
-            <fb id="pass" event="">  </fb>
-            <fb id="fail" event="">  </fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
+         <question id="q0" event="">
+  <text id="question" margin-bottom="30" anim="none">.....хороший студент.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">он</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">его</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">у него</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+
+</question>
+<question id="q1" event="">
+  <text id="question" margin-bottom="30" anim="none">.....есть новый автомобиль.&#13;
+&#13;
+</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">он</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">его</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">у него</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q2" event="">
+  <text id="question" margin-bottom="30" anim="none">Какие красивые сувениры! Сколько ..... ?</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">стоит</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">стоят</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q3" event="">
+  <text id="question" margin-bottom="30" anim="none">......город очень красивый.&#13;
+&#13;
+</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">это</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">эта</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">этот</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q4" event="">
+  <text id="question" margin-bottom="30" anim="none">Туристы не знали, что .... известная улица.&#13;
+&#13;
+</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">это</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">эта</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">этот</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q5" event="">
+  <text id="question" margin-bottom="30" anim="none">Я повторяю грамматику, ......скоро у меня экзамен.&#13;
+&#13;
+</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">поэтому</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">потому что</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">почему</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q6" event="">
+  <text id="question" margin-bottom="30" anim="none">Сегодня я ещё не обедал, .....я хочу есть</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">поэтому</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">потому что</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">почему</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q7" event="">
+  <text id="question" margin-bottom="30" anim="none">Вот молодой человек. Я его не ..... .</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">говорю</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаю</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">понимаю</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">думаю</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q8" event="">
+  <text id="question" margin-bottom="30" anim="none">Когда Олег говорит по-испански, я плохо его ..... .&#13;
+</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">говорю</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаю</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">понимаю</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">думаю</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q9" event="">
+  <text id="question" margin-bottom="30" anim="none">Вы не знаете, ..... это вещи?</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чей</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чья</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чьё</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чьи</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q10" event="">
+  <text id="question" margin-bottom="30" anim="none">Скажите, пожалуйста, ...... это телефон?</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чей</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чья</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чьё</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">чьи</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q11" event="">
+  <text id="question" margin-bottom="30" anim="none">Елене не нравится современная ..... .&#13;
+&#13;
+</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыка</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыку</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыки</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыке</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q12" event="">
+  <text id="question" margin-bottom="30" anim="none">Мы всегда с удовольствием слушаем ..... .</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыка</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыку</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыки</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">музыке</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q13" event="">
+  <text id="question" margin-bottom="30" anim="none">Мария и Анна сегодня ...... в театр.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">идут</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ходят</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">идти</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ходить</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q14" event="">
+  <text id="question" margin-bottom="30" anim="none">Они часто туда ...... .</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">идут</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ходят</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">идти</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ходить</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q15" event="">
+  <text id="question" margin-bottom="30" anim="none">Я люблю ..... пешком.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">идут</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ходят</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">идти</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">ходить</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q16" event="">
+  <text id="question" margin-bottom="30" anim="none">Профессор ...... из класса и закрыл дверь.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">пришел</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">пошел</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">вышел</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">шел</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q17" event="">
+  <text id="question" margin-bottom="30" anim="none">Когда папа ..... домой с работы, дети его уже ждали.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> пришел</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">пошел</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">вышел</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">шел</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q18" event="">
+  <text id="question" margin-bottom="30" anim="none">Вы говорите....?</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">русский</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">по-русски</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">русский язык</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q19" event="">
+  <text id="question" margin-bottom="30" anim="none">.......Ты был?</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Где</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Откуда</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Куда</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q20" event="">
+  <text id="question" margin-bottom="30" anim="none">Я всегда смотрю новости .....телевизору.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">на</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">по</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">в</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q21" event="">
+  <text id="question" margin-bottom="30" anim="none">Это очень большой...... .</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">окно</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">парк</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">гора</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q22" event="">
+  <text id="question" margin-bottom="30" anim="none">Познакомьтесь, это мой .....</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">папа</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">родители</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">бабушка</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q23" event="">
+  <text id="question" margin-bottom="30" anim="none">Вы поедете в театр ......?</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">с автобусом</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">на автобусе</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">на автобус</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q24" event="">
+  <text id="question" margin-bottom="30" anim="none">Маша и Лена часто....... стихи?</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читаем</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читаете</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читают</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q25" event="">
+  <text id="question" margin-bottom="30" anim="none">Дима будет врачом, .......Иван – юристом.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">но</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">и</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">а</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q26" event="">
+  <text id="question" margin-bottom="30" anim="none">Марина не покупает компьютер, потому что он ..... .</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">дорогой</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">дорого</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">дорог</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q27" event="">
+  <text id="question" margin-bottom="30" anim="none">Мой друг – студент. Он ...... в университете.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">изучает</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">учится</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">учит</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">занимается</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q28" event="">
+  <text id="question" margin-bottom="30" anim="none">Там он ...... математику и другие предметы.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">изучает</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">учится</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">учит</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">учит</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q29" event="">
+  <text id="question" margin-bottom="30" anim="none">........ зовут Андрей</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">он</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">его</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">его</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q30" event="">
+  <text id="question" margin-bottom="30" anim="none">Джон читает .... без словаря.&#13;
+</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">русский</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">по-русски</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">русский язык&#13;
+</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q31" event="">
+  <text id="question" margin-bottom="30" anim="none">Библиотека находится не здесь, а ......&#13;
+</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">сюда</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">туда</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">там</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q32" event="">
+  <text id="question" margin-bottom="30" anim="none">Вы не знаете, почему этот музей ...... Эрмитаж?</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">называется</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">зовут</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q33" event="">
+  <text id="question" margin-bottom="30" anim="none">Нового студента ..... Антон.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">называется</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">зовут</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q34" event="">
+  <text id="question" margin-bottom="30" anim="none">В этом городе есть ...... .</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаменитый театр</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаменитого театра</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаменитому театру</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> I think right</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q35" event="">
+  <text id="question" margin-bottom="30" anim="none">Нашему ....... скоро 100 лет.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаменитый театр</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаменитого театра</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">знаменитому театру</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q36" event="">
+  <text id="question" margin-bottom="30" anim="none">Маша и Лена часто....... стихи?</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читаем</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читаете</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читают</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q37" event="">
+  <text id="question" margin-bottom="30" anim="none">Эту книгу написали два......</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналисты</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналистов</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналистом</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналиста</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q38" event="">
+  <text id="question" margin-bottom="30" anim="none">Борис хочет стать .....</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналисты</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналистов</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналистом</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналиста</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q39" event="">
+  <text id="question" margin-bottom="30" anim="none">Сколько ...... работает в этой редакции?</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналисты</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналистов</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналистом</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">журналиста</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q40" event="">
+  <text id="question" margin-bottom="30" anim="none">Все мои друзья ...... говорят по-английски..</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хороший</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хорошие</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хорошая</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хорошо</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q41" event="">
+  <text id="question" margin-bottom="30" anim="none">Мария Шарапова известная в России .... .</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спорт</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спортивный</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спортсмен</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спортсменка</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q42" event="">
+  <text id="question" margin-bottom="30" anim="none">Теннис – очень популярный ..... в России.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спорт</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спортивный</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спортсмен</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">спортсменка</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q43" event="">
+  <text id="question" margin-bottom="30" anim="none">Что ты ....., чай или кофе?</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хочу</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хочешь</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хотите</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">хот</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q44" event="">
+  <text id="question" margin-bottom="30" anim="none">Пётр закончил университет и ..... диплом.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">взял</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">получил</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">сделал</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q45" event="">
+  <text id="question" margin-bottom="30" anim="none">Вы любите ...... детективы или комедии?</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">смотрю</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">смотришь</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">смотреть</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">смотрел</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q46" event="">
+  <text id="question" margin-bottom="30" anim="none">Говорите, я вас ......, что у вас болит?</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">слушаю</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">слышу</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q47" event="">
+  <text id="question" margin-bottom="30" anim="none">Извините, я плохо ......</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">слушаю</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">слышу</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q48" event="">
+  <text id="question" margin-bottom="30" anim="none">Антон хочет .... новые стихи и выступить на концерте.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">выучить</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">изучить</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">заниматься</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q49" event="">
+  <text id="question" margin-bottom="30" anim="none">Мой брат мечтает ..... в университет.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">поступит</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">поступить</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">будет поступать</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q50" event="">
+  <text id="question" margin-bottom="30" anim="none">Мой отец каждый день ...... газеты.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читать</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">прочитал</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читает</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q51" event="">
+  <text id="question" margin-bottom="30" anim="none">Вчера он ..... интересную статью о космосе.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читать</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">прочитал</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">читает</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q52" event="">
+  <text id="question" margin-bottom="30" anim="none">Я всегда долго ..... по телефону с подругой.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">буду говорить</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">говорю</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">сказала</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">скажет</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q53" event="">
+  <text id="question" margin-bottom="30" anim="none">Пять минут назад она мне ...... новость.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">буду говорить</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">говорю</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">сказала</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">скажет</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q54" event="">
+  <text id="question" margin-bottom="30" anim="none">Эта башня ...... высокая.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">много</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">очень</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q55" event="">
+  <text id="question" margin-bottom="30" anim="none">Моя сестра учит русский язык и много занимается, ..... ещё плохо понимает.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">а</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">но</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">и</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">или</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q56" event="">
+  <text id="question" margin-bottom="30" anim="none">Ты уже видел фотографии, ...... сделал Антон в Москве?.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">который</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">которая</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">которое</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">которые</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q57" event="">
+  <text id="question" margin-bottom="30" anim="none">Игорь дома?- Нет, он .... в университет.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">шел</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">пошел</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">пришел</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">подоше</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
 
 
 

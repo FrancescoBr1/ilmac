@@ -104,6 +104,17 @@
                 <function name="loadPreviousQuestion">this</function>
             </click>
         </event>
+          <event id="jumpToEnd">
+            <click>
+                <function name="jumpToEnd">this</function>
+            </click>
+        </event>
+
+        <event id="jumpToEndPopUp">
+            <click>
+                <function name="jumpToEndPopUp">this</function>
+            </click>
+        </event>
 
         <event id="restart">
             <click>
@@ -132,679 +143,315 @@
         <settings cheatmode="false" timer="false" radiobutton="false" radiobuttonx="10" radiobuttony="10"
                   correctx="calc(100% - 30px)" correcty="5" attempts="1"/>
 
-              <question id="q0" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Eu Gosta de
-                    comidas brasileiras.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Eu Gosto de
-                    comidas brasileiras
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Eu Gostava de
-                    comidas brasileiras
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-    
-        </question>
-        <question id="q1" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Todos os dias
-                    eu Acordei às seis e meia.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Todos os dias
-                    eu Acordo às seis e meia.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Todos os dias
-                    eu Acordava às seis e meia
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q2" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Minha mãe  É
-                    americana. Ela é cinquenta e quatro anos
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Minha mãe Está
-                    americana. Ela está cinquenta e quatro anos
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Minha mãe  É
-                    americana. Ela tem cinquenta e quatro anos
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q3" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Estou  Com sede
-                    . Você pode me dar um copo de água?
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Estou Com fome.
-                    Você pode me dar um copo de água?
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Estou  Com
-                    calor. Você pode me dar um copo de água?
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q4" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A gente Fez
-                    aulas de Português as segundas e quartas, porque ontem não teve aula.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A gente Faz
-                    aulas de Português as segundas e quartas, mas ontem não teve aula.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A gente Fazemos
-                    aulas de Português as segundas e quartas, mas ontem não tivemos aula.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q5" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Camila, você
-                    Posso me ajudar com a minha tarefa? B: pode sim. Sobre o que é?
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Camila, você
-                    Pode me ajudar com a minha tarefa? B: podemos sim. Sobre o que é
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Camila, você
-                    Pode me ajudar com a minha tarefa? B: posso sim. Sobre o que é?
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q6" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Amanhã eu Vai
-                    acordar muito cedo. Eu e meu marido vai trabalhar o dia todo e à noite a minha sogra vem nos
-                    visitar.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Amanhã eu Vai
-                    acordar muito cedo. Eu e meu marido vamos trabalhar o dia todo e à noite a minha sogra vem nos
-                    visitar.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Amanhã eu Vou
-                    acordar muito cedo. Eu e meu marido vamos trabalhar o dia todo e à noite a minha sogra vem nos
-                    visitar.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q7" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Carlos, que
-                    horas É? B: Quinze para as onze. Por quê?
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Carlos, que
-                    horas Tem? B: Quinze e as onze. Por quê?
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Carlos, que
-                    horas São? B: Quinze para as onze. Por quê?
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q8" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ontem eu Comi
-                    feijoada. estava uma delícia!
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ontem eu Como
-                    feijoada. estava uma delícia!
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ontem eu Comi
-                    feijoada. está uma delícia!
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q9" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A:O que você
-                    Disse da Lucinha? B: Ela está muitas coisas, mas está sempre bem humorada.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A:O que você
-                    Acha da Lucinha? B: Ela faz muitas coisas, mas está sempre bem humorada.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A:O que você
-                    Tem da Lucinha? B: Ela diz muitas coisas, mas estava sempre bem humorada.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q10" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A empresa onde
-                    trabalho é  A melhor desse ramo.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A empresa onde
-                    trabalho é Melhor que desse ramo.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A empresa onde
-                    trabalho é Maior desse ramo.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q11" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Minha prima é
-                    Mais bonita minha irmã, mas a minha irmã é muito menos bonita minha prima.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Minha prima é
-                    Mais bonita que minha irmã, mas a minha irmã é muito mais inteligente que minha prima.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Minha prima é
-                    Mais bonita minha irmã, mas a minha irmã é muito menos bonita que minha prima.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q12" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quinta é
-                    quarta. Amanhã é terça. Depois de amanhã é quinta. Então me ligue depois de amanhã, tá?
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Hoje é quarta.
-                    Amanhã é quinta. Depois de amanhã é sexta. Então me ligue depois de amanhã, tá?
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Terça é quarta.
-                    Amanhã é sexta. Depois de amanhã é quinta. Então me ligue depois de amanhã, tá?
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q13" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu amigo Tom é
-                    Do Canadá . Ele é canadense. Hoje em dia ele mora em Salvador, na Bahia.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu amigo Tom é
-                    Canadá. Ele é canadense. Hoje em dia ele moro no Salvador, em Bahia.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu amigo Tom é
-                     Do Canadá. Ele é canadiano. Hoje em dia ele moro em Salvador, em Bahia
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q14" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Filha! Eu Digo
-                    para você que a prova seria difícil. B: Mas mãe, ninguém foi bem na prova. C: Você não estuda
-                    direito. Isso sim!
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Filha! Eu Disse
-                    para você que a prova seria difícil. B: Mas mãe, ninguém foram bem na prova. C: Você não estuda
-                    direito. Isso sim!
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Filha! Eu Disse
-                    para você que a prova seria difícil. B: Mas mãe, ninguém foi bem na prova. C: Você não estudou
-                    direito. Isso sim!
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q15" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu irmão Dorme
-                    tarde todos os dias. porque demora tanto para acordar!
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu irmão Durmo
-                    tarde todos os dias. porque demora tanto para acordar!
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu irmão Dorme
-                    tarde todos os dias. por isso demora tanto para acordar!
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q16" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A Cláudia não é
-                    nem Gorda nem magra, ou seja, é normal. Além disso, se veste muito bem.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A Cláudia não é
-                    nem Gorda nem magra, ou seja, é feia. Além disso, se veste muito mal.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A Cláudia não é
-                    nem Magra nem magra, ou seja, é bonita. Além disso, se veste muito mau.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q17" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Eu Gosto de
-                    viajar nesse fim de semana! B: Eu não! Mas tenho que trabalhar.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Eu Gosto de
-                    viajar nesse fim de semana! B: Eu também! Mas tenho que trabalhar.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Eu Gostaria
-                    de viajar nesse fim de semana! B: Eu também! Mas tenho que trabalhar.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q18" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Nos três
-                    últimos meses do ano, Outubro, Novembro e Dezembro, não conte comigo. Sou estar fora do país.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Nos três
-                    últimos meses do ano, Outubro, Novembro e Dezembro, não conte comigo. vou estar fora do país.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Nos três
-                    últimos meses do ano, Outubro, Novembro e Dezembro, não conte comigo. sou estar fora do país.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q19" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A escola fica
-                    Rua entre as ruas Santos e Almeida. Quando chegar na avenida, vire à direita. Depois segue reto.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A escola fica
-                    Rua entre as ruas Santos e Almeida. Quando chegar na avenida, gire à direita. Depois segue reto.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A escola fica
-                    Na esquina entre as ruas Santos e Almeida. Quando chegar na avenida, vire à direita. Depois siga
-                    reto.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q20" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu pai Acorda
-                    às sete horas, toma café da manhã, toma banho e vai para o trabalho. Todos os dias ele segue a mesma
-                    rotina.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu pai Acordou
-                    às sete horas, faz café da manhã, tem banho e vou para o trabalho. Todos os dias ele segue a mesma
-                    rotina.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu pai Acordou
-                    às sete horas, tem café da manhã, tem banho e ir para o trabalho. Todos os dias ele segue a mesma
-                    rotina.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q21" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quando eu era
-                    criança, eu Dormia na casa da minha avó nos finais de semana. Às vezes, ela me levou para a chácara
-                    dela ou então nós viajava para a praia. estava muito bom!
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quando eu era
-                    criança, eu Dormia na casa da minha avó nos finais de semana. Às vezes, ela me levava para a chácara
-                    dela ou então nós viajávamos para a praia. era muito bom!
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quando eu era
-                    criança, eu Dormi na casa da minha avó nos finais de semana. Às vezes, ela me levou para a chácara
-                    dela ou então nós viajávamos para a praia. era muito bom!
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q22" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Uns meus amigos
-                    são bom legais. A gente se vê sempre que possível para assistir o filme e beber um coisinha.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Umas meus
-                    amigos são bom legais. A gente se vê sempre que possível para assistir o filme e beber algum
-                    coisinha.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Os meus amigos
-                    são bem legais. A gente se vê sempre que possível para assistir um filme e beber alguma coisinha.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q23" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Carla! Onde
-                    você está? B: Estou chegando. Espera um pouquinho!
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Carla! Onde
-                    você está? B: Estou chego. Espera um pouquinho!
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Carla! Aonde
-                    você está? B: Estou chegando. Espera um pouquinho!
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q24" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Ana, eu
-                    Estou com muita enxaqueca hoje ! B: Eu sempre estou enxaqueca também! Mas hoje estou tudo bem.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Ana, eu
-                    Tenho com muita enxaqueca hoje ! B: Eu sempre tenho enxaqueca também! Mas hoje está tudo bem.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Ana, eu
-                    Estou com muita enxaqueca hoje ! B: Eu sempre tenho enxaqueca também! Mas hoje está tudo bem.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q25" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meus amigos
-                    gostam para ir ao cinema aos domingos.\n
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meus amigos
-                    gostam de ir ao cinema aos domingos.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meus amigos
-                    gostam a ir ao cinema aos domingos.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q26" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">O João é bom
-                    com Matemática e Ciências. È o melhor aluno da sala.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">O João é bom em
-                    Matemática e Ciências. È o melhor aluno da sala.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">O João é bom no
-                    Matemática e Ciências. È o melhor aluno da sala.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q27" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Estamos
-                    precisando di leite e pão. Você pode comprar? B: Sem problemas. Só preciso de encontra um tempo para
-                    isso!
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Estamos
-                    precisando de leite e pão. Você pode comprar? B: Sem problemas. Só preciso de encontrar um tempo
-                    para isso!
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Estamos
-                    precisando de leite e pão. Você pode comprar? B: Sem problemas. Só preciso encontrar um tempo para
-                    isso!
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q28" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quando eu
-                    cheguei, ele começou  a rir e eu não entendi por que.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quando eu
-                    cheguei, ele começou rindo e eu não entendi por que.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quando eu
-                    cheguei, ele começou riu e eu não entendi por que.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q29" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: O Carlos
-                    anda muito estranho ultimamente! B: É mesmo! Mas ele não foi assim. Antes foi sempre de bom humor!
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: O Carlos
-                    anda muito estranho ultimamente! B: É mesmo! Mas ele não era assim. Antes estava sempre de bom
-                    humor!\n
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: O Carlos
-                    anda muito estranho ultimamente! B: É mesmo! Mas ele não estava assim. Antes está sempre de bom
-                    humor!
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
-        <question id="q30" event="">
-            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Vamos sair hoje
-                    à noite? B: Vamos sim. Posso ligar para a Fernanda? Ela ligou mim essa semana. A: Tudo bem. Acho que
-                    ela já falava-me que queria sair mesmo. C: É. Ela já tinha falado com você antes.
-                </text>
-            </option>
-            <option correct="true">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Vamos sair
-                    hoje à noite? B: Vamos sim. Posso ligar para a Fernanda? Ela  me ligou essa semana. A: Tudo bem.
-                    Acho que ela já tinha me falado que queria sair mesmo. C: É. Ela já tinha falado com você antes.
-                </text>
-            </option>
-            <option correct="false">
-                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Vamos sair
-                    hoje à noite? B: Vamos sim. Posso ligar para a Fernanda? Ela mim ligou essa semana. A: Tudo bem.
-                    Acho que ela já tem me falado que queria sair mesmo. C: É. Ela já tem falado com você antes.
-                </text>
-            </option>
-            <fb id="pass" event=""></fb>
-            <fb id="fail" event=""></fb>
-            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
-        </question>
+            <question id="q0" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Eu Gosta de comidas brasileiras.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Eu Gosto de comidas brasileiras</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Eu Gostava de comidas brasileiras</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+
+</question>
+<question id="q1" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Todos os dias eu Acordei às seis e meia.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Todos os dias eu Acordo às seis e meia.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Todos os dias eu Acordava às seis e meia</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q2" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Minha mãe  É  americana. Ela é cinquenta e quatro anos</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Minha mãe Está americana. Ela está cinquenta e quatro anos</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Minha mãe  É americana. Ela tem cinquenta e quatro anos</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q3" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Estou  Com sede . Você pode me dar um copo de água?</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Estou Com fome. Você pode me dar um copo de água?</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Estou  Com calor. Você pode me dar um copo de água?</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q4" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A gente Fez aulas de Português as segundas e quartas, porque ontem não teve aula.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A gente Faz aulas de Português as segundas e quartas, mas ontem não teve aula.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A gente Fazemos aulas de Português as segundas e quartas, mas ontem não tivemos aula.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q5" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Camila, você Posso me ajudar com a minha tarefa? B: pode sim. Sobre o que é?</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> A: Camila, você Pode me ajudar com a minha tarefa? B: podemos sim. Sobre o que é</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Camila, você Pode me ajudar com a minha tarefa? B: posso sim. Sobre o que é?</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q6" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Amanhã eu Vai acordar muito cedo. Eu e meu marido vai trabalhar o dia todo e à noite a minha sogra vem nos visitar.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Amanhã eu Vai acordar muito cedo. Eu e meu marido vamos trabalhar o dia todo e à noite a minha sogra vem nos visitar. </text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Amanhã eu Vou acordar muito cedo. Eu e meu marido vamos trabalhar o dia todo e à noite a minha sogra vem nos visitar.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q7" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Carlos, que horas É? B: Quinze para as onze. Por quê?</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Carlos, que horas Tem? B: Quinze e as onze. Por quê?</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Carlos, que horas São? B: Quinze para as onze. Por quê? </text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q8" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Ontem eu Comi feijoada. estava uma delícia!</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ontem eu Como feijoada. estava uma delícia! </text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> Ontem eu Comi feijoada. está uma delícia!</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q9" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A:O que você Disse da Lucinha? B: Ela está muitas coisas, mas está sempre bem humorada.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A:O que você Acha da Lucinha? B: Ela faz muitas coisas, mas está sempre bem humorada.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A:O que você Tem da Lucinha? B: Ela diz muitas coisas, mas estava sempre bem humorada.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q10" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A empresa onde trabalho é  A melhor  desse ramo.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A empresa onde trabalho é Melhor que desse ramo.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A empresa onde trabalho é Maior desse ramo.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q11" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Minha prima é Mais bonita minha irmã, mas a minha irmã é muito menos bonita minha prima.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Minha prima é Mais bonita que minha irmã, mas a minha irmã é muito mais inteligente que  minha prima.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Minha prima é Mais bonita minha irmã, mas a minha irmã é muito menos bonita que minha prima.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q12" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quinta é quarta. Amanhã é terça. Depois de amanhã é quinta. Então me ligue depois de amanhã, tá?</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Hoje é quarta. Amanhã é quinta. Depois de amanhã é sexta. Então me ligue depois de amanhã, tá?</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Terça é quarta. Amanhã é sexta. Depois de amanhã é quinta. Então me ligue depois de amanhã, tá?</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q13" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu amigo Tom é Do Canadá . Ele é canadense. Hoje em dia ele mora em Salvador, na Bahia.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu amigo Tom é Canadá. Ele é canadense. Hoje em dia ele moro no Salvador, em Bahia.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu amigo Tom é  Do Canadá. Ele é canadiano. Hoje em dia ele moro em Salvador, em Bahia</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q14" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Filha! Eu Digo para você que a prova seria difícil. B: Mas mãe, ninguém foi bem na prova. C: Você não estuda direito. Isso sim!</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Filha! Eu Disse para você que a prova seria difícil. B: Mas mãe, ninguém foram bem na prova. C: Você não estuda direito. Isso sim!</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Filha! Eu Disse para você que a prova seria difícil. B: Mas mãe, ninguém foi bem na prova. C: Você não estudou direito. Isso sim!</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q15" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu irmão Dorme tarde todos os dias. porque demora tanto para acordar!</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu irmão Durmo tarde todos os dias. porque demora tanto para acordar!</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu irmão Dorme tarde todos os dias. por isso demora tanto para acordar!</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q16" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A Cláudia não é nem Gorda nem magra, ou seja, é normal. Além disso, se veste muito bem.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A Cláudia não é nem Gorda nem magra, ou seja, é feia. Além disso, se veste muito mal.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A Cláudia não é nem Magra nem magra, ou seja, é bonita. Além disso, se veste muito mau.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q17" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox"> A: Eu Gosto de viajar nesse fim de semana! B: Eu não! Mas tenho que trabalhar. </text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Eu Gosto de viajar nesse fim de semana! B: Eu também! Mas tenho que trabalhar.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Eu Gostaria de viajar nesse fim de semana! B: Eu também! Mas tenho que trabalhar.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q18" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Nos três últimos meses do ano, Outubro, Novembro e Dezembro, não conte comigo. Sou estar fora do país.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Nos três últimos meses do ano, Outubro, Novembro e Dezembro, não conte comigo. vou estar fora do país.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Nos três últimos meses do ano, Outubro, Novembro e Dezembro, não conte comigo. sou estar fora do país. </text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q19" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A escola fica Rua entre as ruas Santos e Almeida. Quando chegar na avenida, vire à direita. Depois segue reto.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A escola fica Rua entre as ruas Santos e Almeida. Quando chegar na avenida, gire à direita. Depois segue reto.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A escola fica Na esquina  entre as ruas Santos e Almeida. Quando chegar na avenida, vire à direita. Depois siga reto.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q20" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu pai Acorda às sete horas, toma café da manhã, toma banho e vai para o trabalho. Todos os dias ele segue a mesma rotina.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu pai Acordou às sete horas, faz café da manhã, tem banho e vou para o trabalho. Todos os dias ele segue a mesma rotina.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meu pai Acordou às sete horas, tem café da manhã, tem banho e ir para o trabalho. Todos os dias ele segue a mesma rotina.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q21" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quando eu era criança, eu Dormia na casa da minha avó nos finais de semana. Às vezes, ela me levou para a chácara dela ou então nós viajava para a praia. estava muito bom!</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quando eu era criança, eu Dormia na casa da minha avó nos finais de semana. Às vezes, ela me levava para a chácara dela ou então nós viajávamos para a praia. era muito bom!</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quando eu era criança, eu Dormi na casa da minha avó nos finais de semana. Às vezes, ela me levou para a chácara dela ou então nós viajávamos para a praia. era muito bom!</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q22" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Uns meus amigos são bom legais. A gente se vê sempre que possível para assistir o filme e beber um coisinha.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Umas meus amigos são bom legais. A gente se vê sempre que possível para assistir o filme e beber algum coisinha.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Os meus amigos são bem legais. A gente se vê sempre que possível para assistir um filme e beber alguma coisinha.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q23" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Carla! Onde você está? B: Estou chegando. Espera um pouquinho!</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Carla! Onde você está? B: Estou chego. Espera um pouquinho!</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Carla! Aonde você está? B: Estou chegando. Espera um pouquinho!</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q24" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Ana, eu Estou com muita enxaqueca hoje ! B: Eu sempre estou enxaqueca também! Mas hoje estou tudo bem.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Ana, eu Tenho com muita enxaqueca hoje ! B: Eu sempre tenho enxaqueca também! Mas hoje está tudo bem.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Ana, eu Estou com muita enxaqueca hoje ! B: Eu sempre tenho enxaqueca também! Mas hoje está tudo bem. </text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q25" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meus amigos gostam para ir ao cinema aos domingos</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meus amigos gostam de ir ao cinema aos domingos.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Meus amigos gostam a ir ao cinema aos domingos.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q26" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">O João é bom com Matemática e Ciências. È o melhor aluno da sala.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">O João é bom em Matemática e Ciências. È o melhor aluno da sala.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">O João é bom no Matemática e Ciências. È o melhor aluno da sala.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q27" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Estamos precisando di leite e pão. Você pode comprar? B: Sem problemas. Só preciso de encontra um tempo para isso!</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Estamos precisando de leite e pão. Você pode comprar? B: Sem problemas. Só preciso de encontrar um tempo para isso!</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Estamos precisando de leite e pão. Você pode comprar? B: Sem problemas. Só preciso encontrar um tempo para isso!</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q28" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quando eu cheguei, ele começou  a rir e eu não entendi por que.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quando eu cheguei, ele começou rindo e eu não entendi por que.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Quando eu cheguei, ele começou riu e eu não entendi por que.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q29" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: O Carlos anda muito estranho ultimamente! B: É mesmo! Mas ele não foi assim. Antes foi sempre de bom humor!</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: O Carlos anda muito estranho ultimamente! B: É mesmo! Mas ele não era assim. Antes estava sempre de bom humor!</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: O Carlos anda muito estranho ultimamente! B: É mesmo! Mas ele não estava assim. Antes está sempre de bom humor!</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
+<question id="q30" event="">
+  <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Vamos sair hoje à noite? B: Vamos sim. Posso ligar para a Fernanda? Ela ligou mim essa semana. A: Tudo bem. Acho que ela já falava-me  que queria sair mesmo. C: É. Ela já tinha falado com você antes.</text></option>
+  <option correct="true">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Vamos sair hoje à noite? B: Vamos sim. Posso ligar para a Fernanda? Ela  me ligou essa semana. A: Tudo bem. Acho que ela já tinha me falado  que queria sair mesmo. C: É. Ela já tinha falado com você antes.</text></option>
+  <option correct="false">  <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A: Vamos sair hoje à noite? B: Vamos sim. Posso ligar para a Fernanda? Ela mim ligou essa semana. A: Tudo bem. Acho que ela já tem me falado que queria sair mesmo. C: É. Ela já tem falado com você antes.</text></option>
+  <fb id="pass" event="">  </fb>
+  <fb id="fail" event="">  </fb>
+  <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+  <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+</question>
 
 
 
