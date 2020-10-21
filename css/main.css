@@ -726,7 +726,10 @@ main .main-area {
     color: white;
     text-align: center;
     margin: 6rem 0;
-    position: relative;
+}
+
+.opinioni div>h2 span {
+    font-size: 2.4rem;
 }
 
 .opinioni div>h2::before {
