@@ -310,7 +310,7 @@ nav .main-logo {
     width: 24rem;
     margin: 0 auto;
 
-    transition: all 0.35s cubic-bezier(0.11, 0.46, 0.62, 0.76);
+    transition: all 0.2s cubic-bezier(0.11, 0.46, 0.62, 0.76);
     transition-property: width;
 }
 
@@ -2131,8 +2131,11 @@ footer p {
     .certs-cont,
     .online-center,
     .online-cont,
-    .area,
     .highbox-home {
+        overflow: hidden;
+        width: 100%;
+    }
+    .area {
         width: 100%;
     }
     .hero-bg__left {
