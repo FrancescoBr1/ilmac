@@ -177,39 +177,6 @@
                     </div>
                     <div class="opinione">
                         <div class="cliente">
-                            <img src="asset/123.jpg" alt="immagine profilo utente qui">
-                            <h3>Sara</h3>
-                        </div>
-                        <p>Ho frequentato il corso di francese con Martine, una persona meravigliosa! <br>
-                            Sono riuscita ad ottenere il DELF B2 In pochi mesi, un vero successo!
-                            Lo consiglio vivamente!
-                            </p>
-                        <span class="fas fa-quote-right"></span>
-                    </div>
-                    <div class="opinione">
-                        <div class="cliente">
-                            <img src="asset/123.jpg" alt="immagine profilo utente qui">
-                            <h3>Sara</h3>
-                        </div>
-                        <p>Ho frequentato il corso di francese con Martine, una persona meravigliosa! <br>
-                            Sono riuscita ad ottenere il DELF B2 In pochi mesi, un vero successo!
-                            Lo consiglio vivamente!
-                            </p>
-                        <span class="fas fa-quote-right"></span>
-                    </div>
-                    <div class="opinione">
-                        <div class="cliente">
-                            <img src="asset/123.jpg" alt="immagine profilo utente qui">
-                            <h3>Sara</h3>
-                        </div>
-                        <p>Ho frequentato il corso di francese con Martine, una persona meravigliosa! <br>
-                            Sono riuscita ad ottenere il DELF B2 In pochi mesi, un vero successo!
-                            Lo consiglio vivamente!
-                            </p>
-                        <span class="fas fa-quote-right"></span>
-                    </div>
-                    <div class="opinione">
-                        <div class="cliente">
                             <img src="asset/124.jpg" alt="immagine profilo utente qui">
                             <h3>Giada</h3>
                         </div>
@@ -224,9 +191,41 @@
                             <h3>Leonardo</h3>
                         </div>
                         <p>Ho seguito un corso intensivo di Spagnolo con Laura partendo quasi da zero.
-                        In poche settimane ho raggiunto il livello B1 richiesto dalla facoltà di medicina per un periodo di studio in Spagna!</p>
+                            Ho apprezzato molto la sua disponibilità a trattare diversi argomenti a seconda delle mie richieste. <br>
+                          In poche settimane ho raggiunto il livello B1 richiesto dalla facoltà di medicina per un periodo di studio in Spagna!</p>
                         <span class="fas fa-quote-right"></span>
-                    </div>                   
+                    </div>     
+                    <div class="opinione">
+                        <div class="cliente">
+                            <img src="asset/128.jpg" alt="immagine profilo utente qui">
+                            <h3>Raffaele</h3>
+                        </div>
+                        <p>Anch’io ho frequentato un corso d'inglese, dove ho avuto la fortuna di avere Giacomo come insegnante. 
+                            Lui ha un approccio molto flessibile e mi ha seguito perfettamente. 
+                            Giacomo ha vissuto metá della sua vita in Inghilterra, è perfettamente bilingue ed è perfetto per me che partivo quasi da zero.
+                         </p>
+                        <span class="fas fa-quote-right"></span>
+                    </div>  
+                    <div class="opinione">
+                        <div class="cliente">
+                            <img src="asset/128.jpg" alt="immagine profilo utente qui">
+                            <h3>Rossella</h3>
+                        </div>
+                        <p>Ho seguito un corso con Arthur per rinfrescare il mio inglese.
+                            Durante il corso mi ha fornito i materiali utili a supportare lo studio e l'approfondimento, e mi ha dato numerosi 
+                            consigli per migliorare la lingua anche una volta finito il corso. Ora mi sento molto più a mio agio nella conversazione!</p>
+                        <span class="fas fa-quote-right"></span>
+                    </div>  
+                    <div class="opinione">
+                        <div class="cliente">
+                            <img src="asset/128.jpg" alt="immagine profilo utente qui">
+                            <h3>Filippo</h3>
+                        </div>
+                        <p>Ho frequentato il corso di Inglese con Giacomo, una persona molto disponibile sia con gli orari sia come metodo di lavoro. 
+                            Abbiamo affrontato diversi argomenti sia a livello grammaticale sia a livello culturale e attualità in maniera molto interessante.
+                        </p>
+                        <span class="fas fa-quote-right"></span>
+                    </div>                
                 </div>
             </div>
 
@@ -325,7 +324,7 @@
         tlopinioni.from (".opinioni", {duration: 1, ease:"back.out(1)", x: -450, opacity: 0 })
         .from (".opinioni-bg__left", {duration: 1, ease:"back.out(1)", width: 0, delay: -.8 })
         .from (".opinioni div > h2", {duration: 1, ease:"back.out(1)", y: -40, opacity: 0, delay: -0.6 })
-        .from (".opinione", {duration: 1, ease:"back.out(1)", y: -40, opacity: 0, delay: -0.7, stagger: 0.25 });    
+        .from (".opinione", {duration: 1, ease:"back.out(1)", y: -40, opacity: 0, delay: -0.7, stagger: -0.25 });    
 
         var scene = new ScrollMagic.Scene ({
             triggerElement: ".opinioni",

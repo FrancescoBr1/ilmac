@@ -717,7 +717,7 @@ main .main-area {
 
 .opinioni-container {
     margin: 0 auto;
-    max-width: 108rem;
+    max-width: 118rem;
 }
 
 .opinioni div>h2 {
@@ -748,7 +748,7 @@ main .main-area {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 2rem;
-    margin-left: -110rem;
+    margin-left: -115rem;
 }
 
 .opinioni-grid .opinione {
@@ -1814,6 +1814,10 @@ footer p {
     .hero-cta .btn-std {
         width: 20rem;
     }
+
+    .opinioni {
+        padding: 2rem 6% 5rem 21%;
+    }
     .footer-right .mappa a {
         margin-right: 0;
     }
@@ -2202,6 +2206,7 @@ footer p {
     }
     .opinioni-grid {
         display: block;
+        margin-left: initial;
     }
     .opinioni div>h2::before {
         height: 25rem;
