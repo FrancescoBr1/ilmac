@@ -729,17 +729,18 @@ main .main-area {
 }
 
 .opinioni div>h2 span {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+    margin-left: 24rem;
 }
 
 .opinioni div>h2::before {
     content: "";
     background: var(--arancione);
-    width: 69rem;
-    height: 19rem;
+    width: 68rem;
+    height: 24rem;
     position: absolute;
-    top: -4.5rem;
-    margin-left: -5rem;
+    top: -3.5rem;
+    margin-left: -10rem;
     z-index: -1;
 }
 
@@ -2589,7 +2590,7 @@ footer p {
         margin-left: -6rem;
     }
     .main-area>h2 {
-        margin: 10rem 0 15rem;
+        margin: 4rem 0 15rem;
         right: 0;
     }
     main .main-area {
@@ -2621,6 +2622,11 @@ footer p {
         text-align: left;
         margin: 6rem 0 6rem 1rem;
     }
+
+    .opinioni div>h2 span {
+        margin-left: 0;
+    }
+
     .opinione p {
         font-size: 2.1rem;
         line-height: 3rem;
