@@ -2003,6 +2003,8 @@ footer p {
 /* tablet verticale */
 
 @media (max-width: 800px) {
+
+    .no-mobile{display: none;}
     .p-std {
         font-size: 2.3rem;
     }
