@@ -649,7 +649,7 @@ main .main-area {
     text-align: center;
     font-size: 4.4rem;
     font-weight: 300;
-    margin: 15rem 0 24rem;
+    margin: 10rem 0 24rem;
 }
 
 .main-area>h2::before {
@@ -2546,7 +2546,7 @@ footer p {
         display: block;
     }
     .hero-center {
-        height: 84rem;
+        height: 90rem;
         margin-bottom: 6rem;
     }
     .hero-img {
