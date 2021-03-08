@@ -429,9 +429,7 @@ a:hover .texthvr-main_l {
     width: 145rem;
     height: 40rem;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 42% 58%;
-    grid-auto-rows: min-content;
+    display: flex;
 }
 
 .hero-img {
@@ -1852,7 +1850,6 @@ footer p {
     }
     .hero-center {
         width: 120rem;
-        grid-template-columns: 46% 54%;
     }
     header {
         height: 14rem;
@@ -2176,10 +2173,9 @@ footer p {
         height: 60rem;
     }
     .hero-center {
+        display: block;
         height: 109rem;
         width: 100%;
-        grid-template-rows: 5fr 4fr;
-        grid-template-areas: " hero-img hero-img " " hero-cta hero-cta ";
     }
     .hero-cta h2 {
         margin: 4rem 0;
