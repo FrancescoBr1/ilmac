@@ -974,7 +974,7 @@ footer p {
 .chisiamo-top .topbg-right {
     right: 0;
     top: 36rem;
-    width: 59rem;
+    width: 29vw;
     height: 23rem;
     background: var(--blu);
 }
@@ -983,17 +983,16 @@ footer p {
     width: 125rem;
     margin: 0 auto;
     margin-top: 13rem;
-    display: grid;
-    grid-template-columns: 45% 55%;
-    grid-auto-rows: min-content;
+    display: flex;
 }
 
 .chisiamo-cont img {
-    max-height: 67rem;
+    max-height: 55rem;
     /* min-content sul container non sembra funzionare su ipad */
 }
 
 .chisiamo-left {
+    width: fit-content;
     padding: 2.5rem 5rem 2.5rem 0;
 }
 
@@ -1100,9 +1099,7 @@ footer p {
 .corsi-cont {
     width: 125rem;
     margin: 13rem auto 0;
-    display: grid;
-    grid-template-columns: 55% 45%;
-    grid-auto-rows: min-content;
+    display: flex;
 }
 
 .corsi-top-bg_right {
@@ -1116,17 +1113,18 @@ footer p {
 .corsi-top-bg_left {
     left: 0;
     top: 15rem;
-    width: 66rem;
+    width: 32vw;
     height: 17rem;
     background: var(--blu);
 }
 
 .corsi-top img {
     object-position: bottom;
-    max-height: 30rem;
+    max-height: 29rem;
 }
 
 .corsi-right {
+    width: inherit;
     padding: 2.5rem 0 2.5rem 5rem;
 }
 
@@ -1260,9 +1258,7 @@ footer p {
 .traduzioni-cont {
     width: 125rem;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-auto-rows: min-content;
+    display: flex;
 }
 
 .traduzioni-topbg_left {
@@ -1276,18 +1272,19 @@ footer p {
 .traduzioni-bg_right {
     right: 0;
     top: 20rem;
-    width: 62rem;
+    width: 37vw;
     height: 20rem;
     background: var(--blu);
 }
 
 .traduzioni-top_left {
+    width: inherit;
     padding: 2.5rem 5rem 2.5rem 0;
 }
 
 .traduzioni-cont img {
     object-position: bottom;
-    max-height: 48rem;
+    max-height: 34rem;
 }
 
 .traduzioni-top_left h1 {
@@ -1319,13 +1316,12 @@ footer p {
 .aziende-cont {
     width: 125rem;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-auto-rows: min-content;
+    display: flex;
 }
 
 .aziende-cont img {
-    max-height: 48rem;
+    flex-basis: 58%;
+    max-height: 47rem;
 }
 
 .aziende-topbg_left {
@@ -1345,6 +1341,8 @@ footer p {
 }
 
 .aziende-top_left {
+    flex-basis: 42%;
+    flex-shrink: 0;
     padding: 2.5rem 5rem 2.5rem 0;
 }
 
@@ -1384,9 +1382,7 @@ footer p {
 .contatti-cont {
     width: 125rem;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 35% 65%;
-    grid-auto-rows: min-content;
+    display: flex;
 }
 
 .contatti-topbg_left {
@@ -1406,6 +1402,7 @@ footer p {
 }
 
 .contatti-top_left {
+    flex-basis: 35%;
     padding: 1.8rem 5rem 1.8rem 0;
 }
 
@@ -1415,6 +1412,7 @@ footer p {
 }
 
 .cont-img {
+    flex-basis: 65%;
     object-position: center;
     max-height: 29rem;
 }
@@ -1807,7 +1805,7 @@ footer p {
         width: 130rem;
     }
     .steps {
-        margin: 5rem 21% 1rem;
+        margin: 5rem 21% -2rem;
     }
     .hero-cta .btn-std {
         width: 20rem;
@@ -1850,6 +1848,7 @@ footer p {
     }
     .hero-center {
         width: 120rem;
+        height: 45rem;
     }
     header {
         height: 14rem;
@@ -2173,7 +2172,7 @@ footer p {
         height: 60rem;
     }
     .hero-center {
-        display: block;
+        flex-direction: column-reverse;
         height: 109rem;
         width: 100%;
     }
@@ -2244,7 +2243,7 @@ footer p {
     }
     .chisiamo-cont {
         margin-top: 0;
-        grid-template-areas: " chisiamo-img chisiamo-img " " chisiamo-left chisiamo-left ";
+        flex-direction: column-reverse;
     }
     .chisiamo-social_copy {
         grid-area: social-copy;
@@ -2324,7 +2323,7 @@ footer p {
         top: 73rem;
     }
     .traduzioni-cont {
-        grid-template-areas: " trad-img trad-img " " trad-top trad-top ";
+        flex-direction: column-reverse;    
     }
     .traduzioni-top_left {
         grid-area: trad-top;
@@ -2341,7 +2340,7 @@ footer p {
         margin-bottom: 0;
     }
     .aziende-cont {
-        grid-template-areas: " az-img az-img " " az-copy az-copy ";
+        flex-direction: column-reverse;
     }
     .aziende-top_left {
         grid-area: az-copy;
@@ -2362,7 +2361,7 @@ footer p {
         margin: 5rem auto;
     }
     .contatti-cont {
-        grid-template-areas: " cont-img cont-img " " cont-copy cont-copy ";
+        flex-direction: column-reverse;
     }
     .contatti-top {
         margin-top: 0;
