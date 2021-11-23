@@ -284,7 +284,7 @@
 
         /* animazioni iniziali con gsap */ 
 
-        if ($(window).width() < 800) {
+        if ($(window).width() <= 800) {
             var tweenNav = gsap.from (".nav_mobile", {duration: 1, ease:"back.out(1.1)", opacity: 0, y: -40});
         }
 
