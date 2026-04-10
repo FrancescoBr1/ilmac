@@ -1,6 +1,9 @@
 <?php
 
-require("../mpdf/mpdf.php");
+// Import mPDF 8.x con namespacing
+require_once __DIR__ . '/../mpdf/vendor/autoload.php';
+use \Mpdf\Mpdf;
+
 require('class.json.php');
 
 
@@ -9,18 +12,31 @@ require('class.json.php');
 
 
 
-$value = $_POST['tutto'];
+$value = isset($_POST['tutto']) ? $_POST['tutto'] : '';
 
+// Se valore vuoto, esce senza errori
+if (empty($value)) {
+    exit;
+}
 
+// Pulisci il JSON: rimuovi caratteri di controllo
+$value = preg_replace('/[\x00-\x1F\x7F]/', '', $value);
 
-//$value_utf8 = utf8_encode($value);
-$data = Json::decode($value);
-
-
-
-
-//var_dump($data);
-//$data =json_decode($value_utf8);
+// Prova con json_decode
+$data = json_decode($value, true);
+if (json_last_error() !== JSON_ERROR_NONE) {
+    // Prova con la classe custom
+    $data = Json::decode($value);
+    if ($data === null) {
+        // Ultimo tentativo con pulizia
+        $value = preg_replace('/[\x00-\x1F\x7F]/', '', $value);
+        $data = json_decode($value, true);
+        if ($data === null) {
+            echo "Errore: JSON non valido - " . json_last_error_msg();
+            exit;
+        }
+    }
+}
 
 
 //var_dump($value);
@@ -63,7 +79,7 @@ switch ($lang) {
         break;
 }
 
-$mpdf = new Mpdf();
+$mpdf = new \Mpdf\Mpdf();
 
 
 $test = "<head> <style>div.indent{ padding-left: 1.5em }</style><style>div.indent2{ padding-left: 1.5em;    background:red; color:white; padding: -15px 0 -15px 10px; margin-bottom:10px; } h2 {
@@ -132,9 +148,9 @@ $mpdf->Output($email . ".pdf", 'F');
 //$data[0]->options[0]->value
 
 
-//$to = 'ilmac@corsi.toscana.it';
+$to = 'ilmac@corsi.toscana.it';
 
-$to = 'alexanderinaldi@gmail.com';
+//$to = 'alexanderinaldi@gmail.com';
 
 //sender
 $from = $email;

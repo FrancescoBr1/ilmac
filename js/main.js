@@ -86,7 +86,7 @@ function stickyNav() {
  if (document.documentElement.scrollTop > 120) {
 		navbar.classList.add ("sticky");
 		mainlogo.classList.add ("main-logo_sticky");
-		mainlogo.src = "/asset/logomin.svg";
+		mainlogo.src = "../asset/logomin.svg";
 			var i;	// modifica stile per tutti gli elementi, navlinks e il relativo hvr in questo caso
 			for (i = 0; i < navLinks.length; i++) {
 			navLinks[i].style.marginTop = "2rem";
@@ -99,7 +99,7 @@ function stickyNav() {
 	} else {
 		navbar.classList.remove ("sticky");
 		mainlogo.classList.remove ("main-logo_sticky");
-		mainlogo.src = "/asset/logo.svg";
+		mainlogo.src = "../asset/logo.svg";
 			var i;
 			for (i = 0; i < navLinks.length; i++) {
 			navLinks[i].style.marginTop = "";

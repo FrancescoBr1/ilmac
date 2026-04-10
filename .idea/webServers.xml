@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5680258d-c3ae-4a2d-9bdb-93970d7ddfb9" name="Ilmac" url="http://ftp.corsi.toscana.it">
+        <fileTransfer host="ftp.corsi.toscana.it" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
