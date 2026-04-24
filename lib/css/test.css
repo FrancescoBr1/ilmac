@@ -81,6 +81,27 @@ body {
 }
 
 
+/* bottone Invia del form finale */
+#quiz_container #btn {
+    width: 22rem !important;
+    height: 5.5rem !important;
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    padding: 0;
+    border-radius: 10rem;
+    background-color: var(--arancione);
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: var(--ombra-light);
+    transition: box-shadow .3s, background-color .3s;
+}
+
+#quiz_container #btn:hover {
+    box-shadow: var(--ombra-str);
+}
+
 /* usata per disabilitare il bottone alla fine del test*/
 .disable {
 
@@ -129,7 +150,7 @@ label {
 #quiz_contact {
     display: inline-block;
     width: 50%;
-
+    text-align: left;
 }
 
 #quiz_container img {
