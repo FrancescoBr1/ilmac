@@ -1,0 +1,9 @@
+# Credenziali
+.env
+.env.local
+
+# Log
+*.log
+
+# Node (se usi npm)
+node_modules/
