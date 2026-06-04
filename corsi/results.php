@@ -77,6 +77,14 @@ switch ($lang) {
         $lang_slug=" Spagnolo ";
         $tot_domande= 108;
         break;
+    case 7:
+        $lang_slug=" Italiano ";
+        $tot_domande= 39;
+        break;
+    case 8:
+        $lang_slug=" Albanese ";
+        $tot_domande= 30;
+        break;
 }
 
 $mpdf = new \Mpdf\Mpdf();

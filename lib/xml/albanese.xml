@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+
+    <events>
+        <event id="screenloaded">
+            <click>
+                <function name="begin">this</function>
+            </click>
+        </event>
+
+        <event id="sendResult">
+            <click>
+                <function name="sendResultJSON"/>
+            </click>
+        </event>
+
+        <event id="closepage">
+            <click>
+                <function name="closePage"/>
+            </click>
+        </event>
+
+        <event id="btnover">
+            <rollover>0
+                <css add="btnOver">this</css>
+            </rollover>
+            <rollout>
+                <css remove="btnOver">this</css>
+            </rollout>
+        </event>
+
+        <event id="optionover">
+            <rollover>
+                <css add="optionOver">this</css>
+            </rollover>
+            <rollout>
+                <css remove="optionOver">this</css>
+            </rollout>
+            <click>
+                <css add="optionOver">this</css>
+            </click>
+        </event>
+
+        <event id="imgover">
+            <rollover>
+                <css name="imgOver">this</css>
+            </rollover>
+            <rollout>
+                <css name="imgOut">this</css>
+            </rollout>
+            <click>
+                <css name="imgOver">this</css>
+            </click>
+        </event>
+
+        <event id="select">
+            <click>
+                <function name="select">this</function>
+            </click>
+        </event>
+
+        <event id="selectandsubmit">
+            <click>
+                <function name="select">this</function>
+                <function name="submit">this</function>
+                <function name="loadNextQuestion">this</function>
+            </click>
+        </event>
+
+        <event id="submit">
+            <click>
+                <function name="submit">this</function>
+            </click>
+        </event>
+
+        <event id="reset">
+            <click>
+                <function name="reset">this</function>
+            </click>
+        </event>
+
+        <event id="sca">
+            <click>
+                <function name="sca">this</function>
+            </click>
+        </event>
+
+        <event id="loadNextQuestion">
+            <click>
+                <function name="loadNextQuestion">this</function>
+            </click>
+        </event>
+
+        <event id="loadPreviousQuestion">
+            <click>
+                <function name="loadPreviousQuestion">this</function>
+            </click>
+        </event>
+
+        <event id="jumpToEnd">
+            <click>
+                <function name="jumpToEnd">this</function>
+            </click>
+        </event>
+
+        <event id="jumpToEndPopUp">
+            <click>
+                <function name="jumpToEndPopUp">this</function>
+            </click>
+        </event>
+
+        <event id="restart">
+            <click>
+                <function name="restart">this</function>
+            </click>
+        </event>
+
+        <event id="loadAnotherPage">
+            <click>
+                <url address="http://www.essemble.co.uk" window="true">this</url>
+            </click>
+        </event>
+    </events>
+
+    <!--timer-->
+    <div id="timerContainer" anim="none" class="timerContainer"/>
+
+    <!--quiz-->
+    <custom type="quiz" id="quiz" width="100%">
+        <settings cheatmode="false" timer="false" radiobutton="false" radiobuttonx="10" radiobuttony="10"
+                  correctx="calc(100% - 30px)" correcty="5" attempts="1"/>
+
+        <question id="q0" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Libri janë i vjetër.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Libri është të vjetër.</text>
+            </option>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Libri është i vjetër.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+        </question>
+
+        <question id="q1" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unë kam një motër.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unë kam një motra.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unë ka një motër.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q2" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Në tavolinë janë dy gota.</text>
+            </option>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Në tavolinë ka dy gota.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Në tavolinë është dy gota.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q3" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ne nisemi në orën tetë.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ne niset në orën tetë.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ne nisetmi në orën tetë.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q4" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ardi është njëzet vjeç.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ardi ka njëzet vjeç.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Ardi janë njëzet vjeç.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q5" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unë kam një makinë.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unë kam një makina.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unë kam makinë një.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q6" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unë dhe Sara duhet studiojmë.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unë dhe Sara duhesh të studiojmë.</text>
+            </option>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Unë dhe Sara duhet të studiojmë.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q7" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Moti është i keq.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Moti është keq.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Moti ka keq.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q8" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Kursi mbaron pas dy muajsh.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Kursi mbaron për dy muajsh.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Kursi mbaron nga dy muajsh.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q9" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Tirana është një qyteti i madh.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Tirana është qytet një i madh.</text>
+            </option>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Tirana është një qytet i madh.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q10" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Mund të flisni ngadalë? Nuk kuptova.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Mund të flisni ngadalë? Nuk kuptojta.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Mund të flisni ngadalë? Nuk kuptuar.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q11" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Prindërit e mi ka ardhur.</text>
+            </option>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Prindërit e mi kanë ardhur.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Prindërit e mi janë ardhur.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q12" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Dje kam fjetur shumë.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Dje jam fjetur shumë.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Dje kam flejtur shumëra.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q13" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">E hape derën?</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Hape ti derën?</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Je hapur derën?</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q14" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Shkon në punë çdo ditë? Po, shkoj atje.</text>
+            </option>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Shkon në punë çdo ditë? Po, shkoj.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Shkon në punë çdo ditë? Po, e shkoj.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q15" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Kjo çantë është e Anës? Po, është e saja.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Kjo çantë është e Anës? Po, është e tij.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Kjo çantë është e Anës? Po, është saj.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q16" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Gjyshërit mi jetojnë në fshat.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Gjyshërit e mia jetojnë në fshat.</text>
+            </option>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Gjyshërit e mi jetojnë në fshat.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q17" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Vitin tjetër Bora do të udhëtojë.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Vitin tjetër Bora do udhëtoj.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Vitin tjetër Bora udhëtojë do.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q18" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">E njeh Paulin? Po, e njoh atëherë.</text>
+            </option>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">E njeh Paulin? Po, e njoh.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">E njeh Paulin? Po, njoh atë.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q19" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Nuk fjeta sepse nuk kam gjumë.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Nuk fjeta sepse nuk pata gjumi.</text>
+            </option>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Nuk fjeta sepse nuk kisha gjumë.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q20" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">I ke shpenzuar të gjitha paratë? Po, i kam shpenzuar.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">I ke shpenzuar të gjitha paratë? Po, kam shpenzuar ato.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">I ke shpenzuar të gjitha paratë? Po, i kam shpenzoj.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q21" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">I shkrove Anës? Po, i shkrova.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">I shkrove Anës? Po, e shkrova.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">I shkrove Anës? Po, shkrova asaj.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q22" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">E lexove librin? Të pëlqejnë?</text>
+            </option>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">E lexove librin? Të pëlqeu?</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">E lexove librin? Të pëlqente?</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q23" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Shkon në universitet çdo ditë? Po, shkoj.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Shkon në universitet çdo ditë? Po, atje shkoj.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Shkon në universitet çdo ditë? Po, e shkoj.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q24" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sa studentë janë në klasë? Janë shumëra.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sa studentë ka në klasë? Janë ka shumë.</text>
+            </option>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Sa studentë ka në klasë? Ka shumë.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q25" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Isha i sigurt që do të vije javën tjetër.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Isha i sigurt që vije javën tjetër.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Isha i sigurt që do vijej javën tjetër.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q26" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Makina jote është më e shpejtë se e imja.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Makina jote është më e shpejtë nga e imja.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Makina jote është më shpejtë se imja.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q27" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A është e rëndë çanta? Ma jep, ta mbaj unë.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A është e rëndë çanta? Më jep atë, ta mbaj unë.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">A është e rëndë çanta? Ma jepësh, ta mbaj unë.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q28" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Lufta e Dytë Botërore përfundonte në vitin 1945.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Lufta e Dytë Botërore ka përfunduar në 1945-ënte.</text>
+            </option>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Lufta e Dytë Botërore përfundoi në vitin 1945.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+        <question id="q29" event="">
+            <text id="question" margin-bottom="30" anim="none">Scegli la forma corretta.</text>
+            <option correct="true">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Më tha se do të vinte.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Më tha se vjen.</text>
+            </option>
+            <option correct="false">
+                <text margin-bottom="5" anim="none" event="optionover,selectandsubmit" class="optionBox">Më tha se do vijëte.</text>
+            </option>
+            <fb id="pass" event=""></fb>
+            <fb id="fail" event=""></fb>
+            <button margin-top="30" anim="none" event="btnover,loadPreviousQuestion">Indietro</button>
+            <button margin-top="30" anim="none" event="btnover,jumpToEndPopUp">Consegna adesso</button>
+        </question>
+
+
+        <!--score screen-->
+        <score masteryscore="80">
+            <pass event="">
+                <text margin-bottom="50" anim="show" animtime="1" animdelay="0.2" ease="Bounce.easeOut">
+                    <![CDATA[<p><h2 id="titolo2">Per ricevere maggiori informazioni inserisci i tuoi dati:</h2></p>
+                        <div id="quiz_contact">
+                            <div id="spinner" class="loader"></div>
+                            <div id="fc1" class="form-contact">
+                                <div class="form-contact-col-4">
+                                    <label for="userEmail">Email<span class="wpProQuiz_required">*</span></label>
+                                </div>
+                                <div class="form-contact-col-8">
+                                    <input name="userEmail" id="userEmail" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;" onkeyup="evalUserEmail()">
+                                </div>
+                            </div>
+                            <input type="hidden" id="lang" name="lang" value="8"/>
+                            <div id="fc2" class="form-contact">
+                                <div class="form-contact-col-4">
+                                    <label for="userName">Nome<span class="wpProQuiz_required"></span></label>
+                                </div>
+                                <div class="form-contact-col-8">
+                                    <input type="text" id="userName" name="userName" value="" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;"/>
+                                </div>
+                            </div>
+                            <div id="fc3" class="form-contact">
+                                <div class="form-contact-col-4">
+                                    <label for="userLastName">Cognome<span class="wpProQuiz_required"></span></label>
+                                </div>
+                                <div class="form-contact-col-8">
+                                    <input type="text" id="userLastName" name="userLastName" value="" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;"/>
+                                </div>
+                            </div>
+                            <div id="fc4" class="form-contact">
+                                <div class="form-contact-col-4">
+                                    <label for="userCity">Città<span class="wpProQuiz_required"></span></label>
+                                </div>
+                                <div class="form-contact-col-8">
+                                    <input type="text" id="userCity" name="userCity" value="" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;"/>
+                                </div>
+                            </div>
+                            <div id="fc5" class="form-contact">
+                                <div class="form-contact-col-4">
+                                    <label for="userTel">Telefono<span class="wpProQuiz_required"></span></label>
+                                </div>
+                                <div class="form-contact-col-8">
+                                    <input type="text" id="userTel" name="userTel" value="" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;"/>
+                                </div>
+                            </div>
+                            <div id="fc6" class="form-contact">
+                                <div class="form-contact-col-4">
+                                    <label for="tipo">Sono<span></span></label>
+                                </div>
+                                <div class="form-contact-col-8">
+                                    <select name="tipo" id="tipo" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;">
+                                        <option value="" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;"></option>
+                                        <option value="Privato" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;">Privato</option>
+                                        <option value="Azienda" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;">Azienda</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    ]]>
+                </text>
+                <div>
+                    <button id="btn2" class="disable" type="button" margin-bottom="30" anim="show" animtime="1"
+                            animdelay="0.1" ease="Bounce.easeOut"
+                            event="btnover,sendResult,disabled">Invia
+                    </button>
+                </div>
+            </pass>
+
+            <fail event="">
+                <text margin-bottom="50" anim="show" animtime="1" animdelay="0.2" ease="Bounce.easeOut">
+                    <![CDATA[<p><h2 id="titolo2">Per ricevere maggiori informazioni inserisci i tuoi dati:</h2></p>
+                        <div id="quiz_contact">
+                            <div id="spinner" class="loader"></div>
+                            <div id="fc1" class="form-contact">
+                                <div class="form-contact-col-4">
+                                    <label for="userEmail">Email<span class="wpProQuiz_required">*</span></label>
+                                </div>
+                                <div class="form-contact-col-8">
+                                    <input name="userEmail" id="userEmail" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;" onkeyup="evalUserEmail()">
+                                </div>
+                            </div>
+                            <input type="hidden" id="lang" name="lang" value="8"/>
+                            <div id="fc2" class="form-contact">
+                                <div class="form-contact-col-4">
+                                    <label for="userName">Nome<span class="wpProQuiz_required"></span></label>
+                                </div>
+                                <div class="form-contact-col-8">
+                                    <input type="text" id="userName" name="userName" value="" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;"/>
+                                </div>
+                            </div>
+                            <div id="fc3" class="form-contact">
+                                <div class="form-contact-col-4">
+                                    <label for="userLastName">Cognome<span class="wpProQuiz_required"></span></label>
+                                </div>
+                                <div class="form-contact-col-8">
+                                    <input type="text" id="userLastName" name="userLastName" value="" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;"/>
+                                </div>
+                            </div>
+                            <div id="fc4" class="form-contact">
+                                <div class="form-contact-col-4">
+                                    <label for="userCity">Città<span class="wpProQuiz_required"></span></label>
+                                </div>
+                                <div class="form-contact-col-8">
+                                    <input type="text" id="userCity" name="userCity" value="" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;"/>
+                                </div>
+                            </div>
+                            <div id="fc5" class="form-contact">
+                                <div class="form-contact-col-4">
+                                    <label for="userTel">Telefono<span class="wpProQuiz_required"></span></label>
+                                </div>
+                                <div class="form-contact-col-8">
+                                    <input type="text" id="userTel" name="userTel" value="" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;"/>
+                                </div>
+                            </div>
+                            <div id="fc6" class="form-contact">
+                                <div class="form-contact-col-4">
+                                    <label for="tipo">Sono<span></span></label>
+                                </div>
+                                <div class="form-contact-col-8">
+                                    <select name="tipo" id="tipo" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;">
+                                        <option value="" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;"></option>
+                                        <option value="Privato" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;">Privato</option>
+                                        <option value="Azienda" style="color:#666; height:36px; padding:0px 0px 0px 5px; background:#fff;">Azienda</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    ]]>
+                </text>
+                <div>
+                    <button id="btn2" class="disable" type="button" margin-bottom="30" anim="show" animtime="1"
+                            animdelay="0.1" ease="Bounce.easeOut"
+                            event="btnover,sendResult,disabled">Invia
+                    </button>
+                </div>
+            </fail>
+        </score>
+    </custom>
+
+    <!--progress bar and footer elements have reserved ids-->
+    <div id="quiz_footer" margin-top="30" height="47" anim="hide" width="100%" text-align="center">
+        <div id="quiz_progress_outer">
+            <div id="quiz_progress_inner"></div>
+        </div>
+        <text float="left" margin-top="13" width="33.33%"></text>
+        <text id="footer_page" float="left" margin-top="13" width="33.33%">
+            <![CDATA[<p>Domanda [current]]/[total]]</p>]]></text>
+        <text id="footer_next" float="left" margin-top="5" text-align="right" width="33.33%"><![CDATA[]]></text>
+    </div>
+
+</data>
