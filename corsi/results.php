@@ -85,6 +85,10 @@ switch ($lang) {
         $lang_slug=" Albanese ";
         $tot_domande= 30;
         break;
+    case 9:
+        $lang_slug=" Greco ";
+        $tot_domande= 30;
+        break;
 }
 
 $mpdf = new \Mpdf\Mpdf();
