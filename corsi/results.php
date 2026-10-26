@@ -89,6 +89,10 @@ switch ($lang) {
         $lang_slug=" Greco ";
         $tot_domande= 30;
         break;
+    case 10:
+        $lang_slug=" Coreano ";
+        $tot_domande= 30;
+        break;
 }
 
 $mpdf = new \Mpdf\Mpdf();
